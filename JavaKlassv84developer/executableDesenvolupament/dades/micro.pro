@@ -1,0 +1,5 @@
+((0 Display) (nil 1 13 Q (COLOR-TV B-&-W-TV BUILT-IN TERMINAL)))
+ ((0 RAM)((32 64) 1 13 C NIL))
+((0 ROM)((1 80) 1 13 C NIL))
+ ((0 MP)(NIL 1 13 Q (6502 6502A Z80 8080A HP 6502C)))
+ ((0 Keys) (NIL 1 13 Q (52 57-63 64-73 92 53-56)))

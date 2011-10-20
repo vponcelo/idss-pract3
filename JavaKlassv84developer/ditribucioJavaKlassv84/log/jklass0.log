@@ -1,0 +1,446 @@
+21-ene-2010 23:45:45 java.awt.KeyboardFocusManager shouldNativelyFocusHeavyweight
+FINEST: 0. Native focused window jklass.iu.FrPrincipal[frame0,338,234,690x300,layout=java.awt.BorderLayout,title=Java-KLASS,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,4,30,682x266,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+21-ene-2010 23:45:45 java.awt.KeyboardFocusManager shouldNativelyFocusHeavyweight
+FINEST: Request null
+21-ene-2010 23:45:45 java.awt.DefaultKeyboardFocusManager enqueueKeyEvents
+FINER: Enqueue at 1.264.113.944.803 for jklass.iu.FrPrincipal[frame0,338,234,690x300,layout=java.awt.BorderLayout,title=Java-KLASS,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,4,30,682x266,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+21-ene-2010 23:45:45 java.awt.KeyboardFocusManager shouldNativelyFocusHeavyweight
+FINEST: 5. SNFH_PROCEED for jklass.iu.FrPrincipal[frame0,338,234,690x300,layout=java.awt.BorderLayout,title=Java-KLASS,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,4,30,682x266,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+21-ene-2010 23:45:45 java.awt.Component requestFocusHelper
+FINEST: Pass for jklass.iu.FrPrincipal[frame0,338,234,690x300,layout=java.awt.BorderLayout,title=Java-KLASS,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,4,30,682x266,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+21-ene-2010 23:45:45 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.WindowEvent[WINDOW_GAINED_FOCUS,opposite=null,oldState=0,newState=0] on frame0
+21-ene-2010 23:45:45 java.awt.Container mixOnValidating
+FINE: this = jklass.iu.FrPrincipal[frame0,338,234,690x300,layout=java.awt.BorderLayout,title=Java-KLASS,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,4,30,682x266,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+21-ene-2010 23:45:45 java.awt.Component isMixingNeeded
+FINE: containing window = jklass.iu.FrPrincipal[frame0,338,234,690x300,layout=java.awt.BorderLayout,title=Java-KLASS,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,4,30,682x266,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]; has h/w descendants = false; has l/w descendants = true
+21-ene-2010 23:45:45 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_RESIZED (338,234 690x300)] on frame0
+21-ene-2010 23:45:45 javax.swing.BufferStrategyPaintManager beginPaint
+FINEST: beginPaint
+21-ene-2010 23:45:45 javax.swing.BufferStrategyPaintManager prepare
+FINER: prepare: new BufferInfo: jklass.iu.FrPrincipal[frame0,338,234,690x300,layout=java.awt.BorderLayout,title=Java-KLASS,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,4,30,682x266,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+21-ene-2010 23:45:45 javax.swing.BufferStrategyPaintManager$BufferInfo getBufferStrategy
+FINER: getBufferStrategy: created bs: java.awt.Component$BltSubRegionBufferStrategy@1d439fe
+21-ene-2010 23:45:45 javax.swing.BufferStrategyPaintManager prepare
+FINER: prepare: contents restored in prepare
+21-ene-2010 23:45:45 javax.swing.BufferStrategyPaintManager endPaint
+FINEST: endPaint: region 4 30 686 296
+21-ene-2010 23:45:45 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (338,234 690x300)] on frame0
+21-ene-2010 23:45:45 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.WindowEvent[WINDOW_OPENED,opposite=null,oldState=0,newState=0] on frame0
+21-ene-2010 23:45:45 java.awt.KeyboardFocusManager retargetFocusEvent
+FINER: >>> java.awt.event.WindowEvent[WINDOW_OPENED,opposite=null,oldState=0,newState=0] on frame0
+21-ene-2010 23:45:45 java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: java.awt.event.WindowEvent[WINDOW_OPENED,opposite=null,oldState=0,newState=0] on frame0
+21-ene-2010 23:45:45 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.FocusEvent[FOCUS_GAINED,permanent,opposite=null] on frame0
+21-ene-2010 23:45:45 java.awt.KeyboardFocusManager retargetFocusEvent
+FINER: >>> java.awt.event.FocusEvent[FOCUS_GAINED,permanent,opposite=null] on frame0
+21-ene-2010 23:45:45 java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: java.awt.FocusEvent[FOCUS_GAINED,permanent,opposite=null,cause=ACTIVATION] on jklass.iu.FrPrincipal[frame0,338,234,690x300,layout=java.awt.BorderLayout,title=Java-KLASS,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,4,30,682x266,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+21-ene-2010 23:45:45 java.awt.KeyboardFocusManager setNativeFocusOwner
+FINEST: Calling peer sun.awt.KeyboardFocusManagerPeerImpl@383118 setCurrentFocusOwner for jklass.iu.FrPrincipal[frame0,338,234,690x300,layout=java.awt.BorderLayout,title=Java-KLASS,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,4,30,682x266,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+21-ene-2010 23:45:45 java.awt.DefaultKeyboardFocusManager typeAheadAssertions
+FINEST: Markers before FOCUS_GAINED on jklass.iu.FrPrincipal[frame0,338,234,690x300,layout=java.awt.BorderLayout,title=Java-KLASS,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,4,30,682x266,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+21-ene-2010 23:45:45 java.awt.DefaultKeyboardFocusManager dumpMarkers
+FINEST: >>> Markers dump, time: 1.264.113.945.928
+21-ene-2010 23:45:45 java.awt.DefaultKeyboardFocusManager dumpMarkers
+FINEST:     >>> Marker after 1264113944803 on jklass.iu.FrPrincipal[frame0,338,234,690x300,layout=java.awt.BorderLayout,title=Java-KLASS,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,4,30,682x266,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+21-ene-2010 23:45:45 java.awt.DefaultKeyboardFocusManager typeAheadAssertions
+FINEST: Markers after FOCUS_GAINED
+21-ene-2010 23:45:45 java.awt.DefaultKeyboardFocusManager dumpMarkers
+FINEST: >>> Markers dump, time: 1.264.113.945.928
+21-ene-2010 23:45:45 java.awt.Component dispatchEventImpl
+FINEST: java.awt.FocusEvent[FOCUS_GAINED,permanent,opposite=null,cause=ACTIVATION] on jklass.iu.FrPrincipal[frame0,338,234,690x300,layout=java.awt.BorderLayout,title=Java-KLASS,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,4,30,682x266,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+21-ene-2010 23:45:45 java.awt.Component dispatchEventImpl
+FINE: java.awt.FocusEvent[FOCUS_GAINED,permanent,opposite=null,cause=ACTIVATION] on jklass.iu.FrPrincipal[frame0,338,234,690x300,layout=java.awt.BorderLayout,title=Java-KLASS,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,4,30,682x266,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+21-ene-2010 23:45:45 sun.awt.im.InputContext activateInputMethod
+FINE: Current client component jklass.iu.FrPrincipal[frame0,338,234,690x300,layout=java.awt.BorderLayout,title=Java-KLASS,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,4,30,682x266,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+21-ene-2010 23:45:45 java.awt.Component dispatchEventImpl
+FINEST: sun.awt.event.IgnorePaintEvent[PAINT,updateRect=java.awt.Rectangle[x=4,y=30,width=682,height=266]] on frame0
+21-ene-2010 23:46:00 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (327,234 690x300)] on frame0
+21-ene-2010 23:46:00 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (321,234 690x300)] on frame0
+21-ene-2010 23:46:00 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (313,234 690x300)] on frame0
+21-ene-2010 23:46:00 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (277,234 690x300)] on frame0
+21-ene-2010 23:46:00 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (260,234 690x300)] on frame0
+21-ene-2010 23:46:00 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (218,234 690x300)] on frame0
+21-ene-2010 23:46:00 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (193,234 690x300)] on frame0
+21-ene-2010 23:46:00 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (165,234 690x300)] on frame0
+21-ene-2010 23:46:00 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (137,234 690x300)] on frame0
+21-ene-2010 23:46:00 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (258,264 690x300)] on frame0
+21-ene-2010 23:46:00 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (309,312 690x300)] on frame0
+21-ene-2010 23:46:00 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (324,336 690x300)] on frame0
+21-ene-2010 23:46:00 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (337,362 690x300)] on frame0
+21-ene-2010 23:46:00 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (340,371 690x300)] on frame0
+21-ene-2010 23:46:00 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (340,371 690x300)] on frame0
+21-ene-2010 23:46:00 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (340,371 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (340,371 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (344,385 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (344,385 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (344,385 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (344,394 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (344,394 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (344,396 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (344,396 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (344,397 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (344,397 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (344,397 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (344,397 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (344,397 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (343,399 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (343,399 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (343,399 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (343,401 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (343,401 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (343,401 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (343,401 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_ENTERED,(375,67),absolute(633,331),button=0,modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (343,401 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (343,401 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (343,401 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_EXITED,(327,28),absolute(664,390),button=0,modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (343,401 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_ENTERED,(49,3),absolute(668,404),button=0,modifiers=Button1,extModifiers=Button1,clickCount=0] on javax.swing.JMenu[,275,0,69x19,disabled,alignmentX=0.0,alignmentY=0.0,border=javax.swing.plaf.basic.BasicBorders$MarginBorder@fd918a,flags=392,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=2,bottom=2,right=2],paintBorder=false,paintFocus=false,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=Classificació]
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (343,401 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_EXITED,(45,-2),absolute(668,413),button=0,modifiers=Button1,extModifiers=Button1,clickCount=0] on javax.swing.JMenu[,275,0,69x19,disabled,alignmentX=0.0,alignmentY=0.0,border=javax.swing.plaf.basic.BasicBorders$MarginBorder@fd918a,flags=392,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=2,bottom=2,right=2],paintBorder=false,paintFocus=false,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=Classificació]
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (342,401 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (342,401 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (342,401 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (342,401 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (342,401 690x300)] on frame0
+21-ene-2010 23:46:01 javax.swing.BufferStrategyPaintManager beginPaint
+FINEST: beginPaint
+21-ene-2010 23:46:01 javax.swing.BufferStrategyPaintManager endPaint
+FINEST: endPaint: region 279 30 348 49
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (342,401 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (341,401 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (340,401 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (339,401 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (339,400 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (338,399 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (338,398 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (337,395 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (334,386 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (330,374 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (328,368 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (326,361 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (324,352 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (317,328 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (315,321 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (313,312 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (308,290 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (306,284 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (305,277 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (303,271 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (301,259 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (300,255 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (299,247 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (299,241 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (298,235 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (298,232 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (298,230 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (298,221 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (298,218 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (298,218 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (298,207 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (298,202 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (300,197 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (300,197 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (302,195 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (303,192 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (313,187 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (317,186 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (317,186 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (332,181 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (339,180 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (352,176 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (359,175 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (370,173 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (374,173 690x300)] on frame0
+21-ene-2010 23:46:01 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (382,173 690x300)] on frame0
+21-ene-2010 23:46:02 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (385,173 690x300)] on frame0
+21-ene-2010 23:46:02 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (387,173 690x300)] on frame0
+21-ene-2010 23:46:02 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (389,173 690x300)] on frame0
+21-ene-2010 23:46:02 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (395,173 690x300)] on frame0
+21-ene-2010 23:46:02 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (396,174 690x300)] on frame0
+21-ene-2010 23:46:02 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (400,175 690x300)] on frame0
+21-ene-2010 23:46:02 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (400,176 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (398,181 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (392,185 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (387,189 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (369,198 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_ENTERED,(5,5),absolute(653,233),button=0,modifiers=Button1,extModifiers=Button1,clickCount=0] on javax.swing.JMenu[,275,0,69x19,disabled,alignmentX=0.0,alignmentY=0.0,border=javax.swing.plaf.basic.BasicBorders$MarginBorder@fd918a,flags=392,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=2,bottom=2,right=2],paintBorder=false,paintFocus=false,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=Classificació]
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (292,227 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_EXITED,(28,-6),absolute(636,238),button=0,modifiers=Button1,extModifiers=Button1,clickCount=0] on javax.swing.JMenu[,275,0,69x19,disabled,alignmentX=0.0,alignmentY=0.0,border=javax.swing.plaf.basic.BasicBorders$MarginBorder@fd918a,flags=392,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=2,bottom=2,right=2],paintBorder=false,paintFocus=false,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=Classificació]
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (211,256 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (211,256 690x300)] on frame0
+21-ene-2010 23:46:03 javax.swing.BufferStrategyPaintManager beginPaint
+FINEST: beginPaint
+21-ene-2010 23:46:03 javax.swing.BufferStrategyPaintManager endPaint
+FINEST: endPaint: region 279 30 348 49
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (206,258 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_ENTERED,(3,3),absolute(557,265),button=0,modifiers=Button1,extModifiers=Button1,clickCount=0] on javax.swing.JMenu[,275,0,69x19,disabled,alignmentX=0.0,alignmentY=0.0,border=javax.swing.plaf.basic.BasicBorders$MarginBorder@fd918a,flags=392,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=2,bottom=2,right=2],paintBorder=false,paintFocus=false,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=Classificació]
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (206,258 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_EXITED,(36,-6),absolute(548,270),button=0,modifiers=Button1,extModifiers=Button1,clickCount=0] on javax.swing.JMenu[,275,0,69x19,disabled,alignmentX=0.0,alignmentY=0.0,border=javax.swing.plaf.basic.BasicBorders$MarginBorder@fd918a,flags=392,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=2,bottom=2,right=2],paintBorder=false,paintFocus=false,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=Classificació]
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (206,258 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (206,258 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (206,258 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (206,258 690x300)] on frame0
+21-ene-2010 23:46:03 javax.swing.BufferStrategyPaintManager beginPaint
+FINEST: beginPaint
+21-ene-2010 23:46:03 javax.swing.BufferStrategyPaintManager endPaint
+FINEST: endPaint: region 279 30 348 49
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (208,258 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (211,258 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (215,258 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (223,258 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (261,258 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (280,258 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (302,258 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (397,266 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (403,268 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (404,269 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (404,269 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (404,269 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (404,269 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (405,269 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (405,269 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (407,269 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (410,269 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (410,269 690x300)] on frame0
+21-ene-2010 23:46:03 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.ComponentEvent[COMPONENT_MOVED (410,269 690x300)] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_ENTERED,(31,5),absolute(720,304),button=0,clickCount=0] on javax.swing.JMenu[,275,0,69x19,disabled,alignmentX=0.0,alignmentY=0.0,border=javax.swing.plaf.basic.BasicBorders$MarginBorder@fd918a,flags=392,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=2,bottom=2,right=2],paintBorder=false,paintFocus=false,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=Classificació]
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(26,11),absolute(715,310),button=0,clickCount=0] on javax.swing.JMenu[,275,0,69x19,disabled,alignmentX=0.0,alignmentY=0.0,border=javax.swing.plaf.basic.BasicBorders$MarginBorder@fd918a,flags=392,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=2,bottom=2,right=2],paintBorder=false,paintFocus=false,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=Classificació]
+21-ene-2010 23:46:04 javax.swing.BufferStrategyPaintManager beginPaint
+FINEST: beginPaint
+21-ene-2010 23:46:04 javax.swing.BufferStrategyPaintManager endPaint
+FINEST: endPaint: region 279 30 348 49
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_EXITED,(9,32),absolute(698,331),button=0,clickCount=0] on javax.swing.JMenu[,275,0,69x19,disabled,alignmentX=0.0,alignmentY=0.0,border=javax.swing.plaf.basic.BasicBorders$MarginBorder@fd918a,flags=392,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=2,bottom=2,right=2],paintBorder=false,paintFocus=false,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=Classificació]
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(288,62),absolute(698,331),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(266,83),absolute(676,352),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 javax.swing.BufferStrategyPaintManager beginPaint
+FINEST: beginPaint
+21-ene-2010 23:46:04 javax.swing.BufferStrategyPaintManager endPaint
+FINEST: endPaint: region 279 30 348 49
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(259,91),absolute(669,360),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(252,98),absolute(662,367),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(239,107),absolute(649,376),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(234,112),absolute(644,381),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(228,116),absolute(638,385),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(223,119),absolute(633,388),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(212,125),absolute(622,394),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(208,128),absolute(618,397),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(203,130),absolute(613,399),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(200,131),absolute(610,400),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(193,134),absolute(603,403),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(190,135),absolute(600,404),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(188,136),absolute(598,405),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(185,137),absolute(595,406),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(184,138),absolute(594,407),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(181,139),absolute(591,408),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(124,184),absolute(534,453),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(117,187),absolute(527,456),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(104,193),absolute(514,462),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(98,195),absolute(508,464),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(90,197),absolute(500,466),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(85,198),absolute(495,467),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(69,199),absolute(479,468),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(61,199),absolute(471,468),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(53,197),absolute(463,466),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(44,192),absolute(454,461),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(35,187),absolute(445,456),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(17,167),absolute(427,436),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_MOVED,(8,152),absolute(418,421),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:04 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.MouseEvent[MOUSE_EXITED,(2,137),absolute(412,406),button=0,clickCount=0] on frame0
+21-ene-2010 23:46:08 java.awt.Component dispatchEventImpl
+FINEST: java.awt.event.WindowEvent[WINDOW_CLOSING,opposite=null,oldState=0,newState=0] on frame0
+21-ene-2010 23:46:08 java.awt.KeyboardFocusManager retargetFocusEvent
+FINER: >>> java.awt.event.WindowEvent[WINDOW_CLOSING,opposite=null,oldState=0,newState=0] on frame0
+21-ene-2010 23:46:08 java.awt.DefaultKeyboardFocusManager dispatchEvent
+FINE: java.awt.event.WindowEvent[WINDOW_CLOSING,opposite=null,oldState=0,newState=0] on frame0
+21-ene-2010 23:46:08 java.awt.Component mixOnHiding
+FINE: this = jklass.iu.FrPrincipal[frame0,410,269,690x300,hidden,layout=java.awt.BorderLayout,title=Java-KLASS,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,4,30,682x266,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]; isLightweight = false
+21-ene-2010 23:46:08 java.awt.Component isMixingNeeded
+FINE: containing window = jklass.iu.FrPrincipal[frame0,410,269,690x300,hidden,layout=java.awt.BorderLayout,title=Java-KLASS,resizable,normal,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,4,30,682x266,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]; has h/w descendants = false; has l/w descendants = true
+21-ene-2010 23:46:08 javax.swing.SortingFocusTraversalPolicy getComponentAfter
+FINE: ### Searching in frame0 for component after frame0
+21-ene-2010 23:46:08 javax.swing.SortingFocusTraversalPolicy getFirstComponent
+FINE: ### Getting first component in frame0
+21-ene-2010 23:46:08 javax.swing.SortingFocusTraversalPolicy getFirstComponent
+FINE: ### Getting first component in frame0

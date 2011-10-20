@@ -1,0 +1,3 @@
+\select@language {catalan}
+\contentsline {chapter}{\numberline {1}Requeriments previs}{2}
+\contentsline {chapter}{\numberline {2}Proc\'es d'insta\hbox {l\kern -.1em\raise .5ex\hbox {.}\kern -.1em l}aci\'o}{3}

@@ -1,0 +1,2133 @@
+\chapter{Manual d'usuari}
+\label{sec:ManualDus}
+
+\newpage
+
+\vspace*{5cm}
+
+\begin{center}
+
+
+{\Huge\bf JAVA-KLASS v2.0
+
+\vspace*{1cm}
+
+  Manual d'usuari}
+
+\vspace*{2cm}
+
+Jose Ignacio Mateos Clavero
+
+Mª del Mar Colillas
+
+Karina Gibert Oliveras
+
+juliol de 2007
+
+
+\end{center}
+
+
+
+ \newpage
+En aquest manual es proporcionen algunes explicacions per facilitar
+l'ús de l'aplicació als nous usuaris.
+
+\section{Tipus de finestres i disseny de formularis a Java-KLASS}
+
+\subsection{Tipus de finestres}
+
+L'aplicació \textbf{Java-KLASS} té bàsicament tres tipus de
+finestres:
+\begin{itemize}
+
+
+
+    \item La \emph{finestra bàsica} (veure figura \ref{fig:Basica}): És la finestra principal de l'aplicació, que sempre estarà oberta mentre l'aplicació estigui oberta, i on es van mostrant els formularis principals de les diferents funcionalitats a les que es tenen accés. Té tres àrees diferenciades, com es pot veure a les figures \ref{fig:Basica} i \ref{fig:UnivError}:
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/Basica.eps}
+    \caption{Finestra bàsica: 1)\emph{barra de menús}; 2)\emph{panell central}; 3)\emph{barra d'estat}}
+    \label{fig:Basica}
+\end{figure}
+
+        \begin{enumerate}
+            \item Barra de menús: sempre es troba a la part superior de la finestra i permet accedir a les funcionalitats de l'aplicació.
+            \item Panell central: es troba a la zona central de la finestra i és on es mostren els formularis que permeten introduir tota la informació perquè es realitzi l'operació desitjada. Si no es té seleccionada cap operació aquest panell estarà buit com és veu a la figura \ref{fig:Basica}.
+            \item Barra d'estat: es troba a la part inferior de la finestra i és la zona on apareixen els missatges d'error o informatius resultants de les operacions que es realitzen a la aplicació.
+        \end{enumerate}
+
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/UnivError.eps}
+    \caption{Estructura de la finestra bàsica}
+    \label{fig:UnivError}
+\end{figure}
+
+
+    \item La \emph{finestra d'opcions} (veure figura \ref{fig:OpcHisto} i \ref{fig:OpcMinko}): És la que permet que es puguin especificar les opcions amb les que vol que es realitzi el càlcul que s'ha seleccionat. S'hi accedeix mitjançant els botons d'Opcions que apareixen als formularis de la finestra bàsica. S'estructura de la següent manera:
+        \begin{enumerate}
+            \item a la zona superior es mostraran les diferents opcions que pot seleccionar l'usuari pel càlcul o gràfic seleccionat.
+            \item a la part inferior tindrà tres botons per tornar a les opcions per defecte establertes pel sistema, per guardar les modificacions introduïdes i per cance\lge lar l'operació de modificació de les opcions; el botó de les opcions per defecte s'ha separat per distingir aquesta funcionalitat de la resta.
+        \end{enumerate}
+
+
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/OpcHisto.eps}
+    \caption{Finestra d'opcions 1}
+    \label{fig:OpcHisto}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=0.5\textwidth] {usuari/pantalles/min.eps}
+    \caption{Finestra d'opcions 2}
+    \label{fig:OpcMinko}
+\end{figure}
+
+
+
+    \item La \emph{finestra de confirmació} (veure figura \ref{fig:ConfirmarDef}): És la que apareix per demanar que es confirmi una acció abans que el sistema la dugui a terme. Així, es mostrarà a la part superior un pregunta, que s'haurà de contestar polsant un dels botons de la part inferior.
+
+\newpage
+
+\end{itemize}
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/ConfirmarDef.eps}
+    \caption{Finestra de confirmació}
+    \label{fig:ConfirmarDef}
+\end{figure}
+
+
+
+\subsection{Disseny de formularis}
+
+El disseny de formularis de \textbf{Java-KLASS} va seguint sempre la
+mateixa filosofia i s'ha intentat que siguin el més homogènies
+possible, fent que a tots apareguin els següents elements, amb
+variacions depenent de les necessitats de cada cas:
+\begin{itemize}
+    \item Llista de variables que conformen la matriu de dades, diferenciant les numèriques de les categòriques.
+    \item Llista de variables seleccionades sobre les que realitzar les diferents operacions, de forma que es pugui realitzar una mateixa combinació de càl\-culs i gràfics per diverses variables (o parells o ternes) alhora. Aquesta pos\-si\-bi\-li\-tat pro\-por\-cio\-na molta potència al sistema i permet que, amb una sola es\-pe\-ci\-fi\-ca\-ció, s'analitzi tot el joc de dades.
+    \item Botons per poder passar elements de la llista general de variables a la llista de seleccionades, i a l'inrevés. Això proporciona comoditat, doncs permet, per exemple, seleccionar o eliminar totes les variables de cop.
+    \item Selecció múltiple de càlculs o representacions gràfiques a realitzar amb les variables seleccionades, diferenciant també unes de les altres segons el tipus de variable o combinació de variables sobre les que s'apliquen.
+    \item Botó d''Opcions' al costat de cada càlcul o gràfic que permet indicar diferents modificacions que s'expliquen més endavant. Aquest botó només estarà habilitat quan el càlcul o gràfic corresponent estigui seleccionat.
+    \item Botó 'Per defecte' que permet passar a seleccionar la configuració mes adient per a les dades carregades. Com s'ha comentat en la introducció sobre les finestres d'opcions, aquest botó s'ha separat dels altres per qüestions d'usabilitat, per facilitar a l'usuari la distinció d'aquesta funcionalitat de la resta.
+    \item Botó 'D'acord' per passar a executar la petició de càlcul;
+    \item Botó 'Cance\lge lar' per suspendre la petició demanada.
+    \item Botó 'Netejar' elimina tota la selecció d'opcions i dades
+    introduïdes per deixar el formulari \emph{net}.
+\end{itemize}
+
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/Biv.eps}
+        \caption{Menu Descriptiva Bivariant}
+        \label{bivari}
+\end{figure}
+
+\newpage
+
+Pel que fa a la distribució d'aquest elements a la pantalla, cal
+remarcar que atenent al fet que alguns gràfics o càlculs requereixen
+variables de tipus específics es presenten en llistes separades els
+grups de variables seleccionades segons es combinen els seus tipus
+,per exemple, \textit{num $\times$ num}, o \textit{cat $\times$ cat
+$\times$ num} del formulari d'estadística descriptiva bivariant de
+la fig \ref{bivari}. En tot moment s'ha buscat la proximitat física
+entre la llista d'on triar les variables i la de selecció. A més, al
+costat o sota de cada llista, depenent de la disposició de la
+finestra, es presenten els càlculs o gràfics corresponents a aquella
+combinació. En general, s'ha buscat que el formulari quedi dividit
+en àrees i que les diferents càlculs o gràfics quedin físicament a
+prop de les variables seleccionades.
+
+
+
+\section{Funcionalitats de Java-KLASS}
+
+\subsection{Menu principal}
+
+La barra de menús de la finestra bàsica s'ha organitzat en nou
+submenús desplegables que es cor\-res\-po\-nen amb els grups de
+funcionalitats definits a l'aplicació. La part de gestió de dades
+s'ha dividit en dos per distingir les funcionalitats de gestió de
+dades que impliquen explícitament la lectura o escriptura de fitxers
+seguint l'estàndard Windows. Hi ha moltes de les funcionalitats que
+es troben en desenvolupament o encara no s'han asigant a cap
+desenvolupador, i encara que les anomenarem no podran ser
+seleccionades per l'usuari. D'acord amb això, els submenús queden
+estructurats seguint la següent jerarquia:
+\begin{itemize}
+    \item \emph{Fitxer}
+        \begin{itemize}
+            \item \emph{Obre}: Permet carregar diferents arxius.
+            \begin{itemize}
+                \item \emph{Dades sense regles}: Permet carregar una matriu de dades sense regles a partir de fitxers en format KLASS (explicat a l'apèndix \ref{fitxers entrada}),actualment {\bf Java-KLASS v2.0} permet fins a 10 matrius obertes simultaneament.
+                \item \emph{Dades amb regles}: Permet carregar una matriu de dades amb regles.
+                \item \emph{Regles}: Aquesta opció només està activa si en el sistema hi ha alguna matriu de dades carregada i serveix per importar una base de coneixement en format de fitxer .reg
+                \item \emph{Dendograma}: Aquesta opció només està
+                activa si en el sistema hi ha alguna matriu de dades carregada i serveix per importar una classificació ascendent
+            jeràrquica de la matriu activa a partir d'un fitxer nomMatriuActiva.drm.
+                \item \emph{Història}: Aquesta opció només està activa si en el sistema hi ha alguna
+matriu de dades carregada i serveix per importar una classifcació
+ascendent jeràrquica de la matriu activa a partir d'un fitxer
+nomMatriuActiva.his.
+            \end{itemize}
+            \item \emph{Tanca}: Permet tancar la matriu actual amb la que s'està treballant, deixant de tenir-la carregada al sistema.
+            \item \emph{Anomena i desa}: Salva la matriu actual amb la que s'està treballant en format KLASS.
+            \item \emph{Importa}: Permet importar una matriu de dades en format .dat estàndard.
+            \item \emph{Exporta}: Permet exportar una matriu de dades en format .dat estàndard.
+            \item \emph{Configuració}: Permet configurar el nombre màxim de matrius car\-re\-ga\-des al sistema, i les comandes que l'aplicació farà servir per compilar els fitxers font de {\LaTeX} i generar DVI o PDF, i també les comandes per visualitzar-los.
+            \item \emph{Localització de resultats}: Permet seleccionar quin sera el directori destì dels fitxers de resultat.
+            \item \emph{Surt}: Permet sortir de l'aplicació tancant totes les matrius carregades al sistema.
+        \end{itemize}
+    \item \emph{Dades}
+        \begin{itemize}
+        \item \emph{Seleccionar submatriu}: Permet crear una nova matriu de dades per selecció de columnes (variables) i de files (objectes) de la matriu actual.
+        \item \emph{Tractament de mancants}: Permet subtituir tots els missings de la matriu per un valor.
+        \item \emph{Integra classificació}: Afegeix a la matriu de dades en curs una columna nova que conté la classe de pertinença de cada
+                                                    objecte, llegint un fitxer d'extensió \emph{.cls}.
+        \item \emph{Canvia matriu actual}: Permet canviar la matriu activa amb la que treballa l'aplicació.
+        \item \emph{Defineix ordenacions}: Permet definir l'ordre amb que es presentaràn les variables de la matriu activa \emph {(i les modalitats de cada variable categòrica)} en els informes de resultats de \textbf{Java-KLASS}.
+         \item \emph{Matriu de dades}: Mostra una taula que visualitza la matriu actual.
+      \end{itemize}
+    \item \emph{Descriptiva}
+        \begin{itemize}
+            \item \emph{Univariant}: Permet realitzar l'anàlisi descriptiva univariant d'una o més variables seleccionant els elements descriptius univariants (gràfics i numèrics) a mostrar.
+            \item \emph{Bivariant}: Permet realitzar l'anàlisi descriptiva bivariant d'un o més parells de variables seleccionant els elements descriptius bivariants (gràfics i numèrics) a mostrar en cada cas.
+            \item \emph{Matriu de correlacions/covariàncies}: Permet calcular la matriu de correlacions o covariàncies d'un conjunt de variables numèriques.
+            \item \emph{Trivariant}: Permet realitzar l'anàlisi descriptiva trivariant d'una o més ternes de variables seleccionant els elements descriptius trivariants (gràfics i numèrics) a mostrar en cada cas.
+            \item \emph{Descr. per classes}: Permet realitzar l'anàlisi descriptiva d'una o més  variables seleccionant els elements descriptius (gràfics i numèrics) a mostrar en cada cas,
+            segons les classes que indiqui la variable de classe.
+        \end{itemize}
+    \item \emph{Classificació}
+        \begin{itemize}
+            \item \emph{Classifica}: Realitza una classificació automàtica de la matriu de dades per diferents metodes.
+            \item \emph{Dendograma}: Aquesta opció només està activa
+            si en el sistema hi ha alguna classificació ascendent
+            jeràrquica de la matriu activa, ja sigui perquè s'ha
+            realitzat dins el propi sistema o perquè s'ha importat
+            d'un altre entorn. Si existeixen classificacions es
+            podràn realitzar les següents operacions:
+            \begin{itemize}
+                \item \emph{Visualitza}: Representa gràficament
+                l'arbre ascendent jeràrquic.
+                \item \emph{Talla arbre}: Permet practicar talls
+                horitzontals de l'arbre segons diferents criteris.
+                \item \emph{Produeix classificació}: Només activa si
+                s'han realitzat talls en algún arbre del sistema. En
+                aquest cas genera  una columna amb la classe de
+                pertinença de cada objecte de la matriu de dades
+                segons el tall seleccionat i permet generar un
+                fitxer de format .cls.
+            \end{itemize}
+        \end{itemize}
+    \item \emph{Distàncies}
+        \begin{itemize}
+            \item \emph{Càlcul Directe}: Permet calcular diferents distàncies entre 2 vectors introduïts per l'usuari.
+            \item \emph{Càlcul Matriu}: Permet calcular les diferents distàncies sobre la matriu de dades activa.
+        \end{itemize}
+    \item \emph{Interpretació}
+        \begin{itemize}
+            \item \emph{Discretització "boxplot-based"}: A partir
+            d'una variable de classe, discretitza una variable
+            numèrica pel mètode \emph{boxplot-based
+            discretitzation.}
+        \end{itemize}
+    \item \emph{Informes}
+        \begin{itemize}
+            \item \emph{Informe automàtic}: Permet generar un informe automàtic sobre la matriu actual.
+            \item \emph{Informe personalitzat}: Permet generar un
+            informe amb el contingut que dissenyi l'usuari.
+            \item \emph{Visualitzar Latex}: Permet seleccionar
+            fitxers latex ja creats per l'aplicació per tornar-los a
+            visualitzar.
+        \end{itemize}
+    \item \emph{Sàte\lge lits}
+        \begin{itemize}
+            \item \emph{CIADEC}: Permet accedir al sàte\lge lit CIADEC.
+            \item \emph{Columbus}: Permet accedir al sàte\lge lit Columbus.
+        \end{itemize}
+    \item Ajuda:
+        \begin{itemize}
+            \item \emph{Manual}: Visualitza aquest manual en pantalla.
+            \item \emph{Quant al Java-KLASS}: Permet accedir a la informació sobre \textbf{Java-KLASS}.
+        \end{itemize}
+\end{itemize}
+
+
+\subsection{Fitxer} \label{Fitxer}
+L'opció Fitxer, permet tant obrir com guardar matrius de dades i
+altres estructures que es manipulen dins l'aplicatiu.
+
+\subsubsection{Obre}
+Aquesta opció és la que permet carregar les matrius de dades dintre
+del sistema, hi ha diferents matrius a carregar i per cada una
+s'utilitza un del submenús següents:
+
+\paragraph{Dades sense Regles} Permet carregar l'estructura bàsica de {\bf Java-KLASS} que és una matriu de dades
+a partir de fitxers en format {\bf KLASS}, és a dir la informació
+per a definir una matriu de {\bf Java-KLASS} està dividida en
+fitxers \emph{.dat .obj i .pro.}.
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/senseregles.eps}
+    \caption{Dades sense Regles}
+    \label{fig:sensereg}
+\end{figure}
+
+
+Al \emph{premer} sobre l'opció es mostra el directori de lectura de
+dades per defecte, és a dir el subdirectori \emph{dades} de la
+carpeta on està instal·lat {\bf Java-KLASS}, es permet navegar pel
+sistema de directoris \emph{(veure figura \ref{finestra})} i
+seleccionar la matriu que es vol carregar, després aquesta matriu es
+carrega al sistema automaticament i es deixa com a matriu activa,
+conservant les que ja estaven obertes com a desactivades.
+
+Al navegar pels diferents subdirectoris, unicament es mostren
+aquells fitxers dels que existeix la família completa \emph{.dat
+.obj i .pro.}.
+
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/directo.eps}
+    \caption{Finestra del directori de dades}
+    \label{finestra}
+\end{figure}
+
+\newpage
+
+\paragraph{Dendograma...}
+
+Aquesta opció, només activa si hi ha una matriu de dades carregada
+al sistema, carrega un arxiu \emph{.cls} que conte una columna amb
+la classe de pertinença de cada objecte de la matriu de dades segons
+el tall preseleccionat.
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/dendo.eps}
+    \caption{Dendograma...}
+\end{figure}
+
+
+\newpage
+
+\subsubsection{Tanca}
+Aquesta opció nomès estarà activa si primer s'ha caregat alguna
+matriu, ja que sino no es podra tancar. Tancar és l'opció que
+elimina la matriu activa de la llista de matrius carregades al
+sistema. Al \emph{premer} sobre l'opció sortirà un diàleg de
+confirmació per confirmar que es vol eliminar.
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/tanca.eps}
+    \caption{Menu Tanca}
+\end{figure}
+
+\newpage
+
+
+\subsubsection{Anomena i desa}
+Aquesta opció permet guardar la matriu activa si primer s'ha caregat alguna matriu.
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/anomena.eps}
+    \caption{Menu Anomena i desa}
+\end{figure}
+
+\newpage
+
+Al \emph{premer} sobre l'opció apareix una finestra que indica el
+directori per defecte on són les dades, i un quadre de text per
+escriure el nom amb el qual es vol guardar la matriu. Al
+\emph{premer} guardar, es guardarà la matriu amb els diferents
+.dat,.pro i .obj, la figura \ref{ano} mostra aquesta finestra.
+
+\newpage
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/anomena1.eps}
+    \caption{Finestra per guardar la matriu}
+    \label{ano}
+\end{figure}
+
+
+\subsubsection{Configuració}
+Per defecte, l'aplicació utilitza uns parametres per a la configuració del màxim de matrius carregades i la localització dels
+ejecutables per construïr i visualitzar els arxius {\LaTeX}.
+
+\newpage
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/conf.eps}
+    \caption{Menu Configuració}
+\end{figure}
+
+Al \emph{premer} sobre l'opció apareix una finestra on es pot
+seleccionar la ruta dels ejecutables de {\LaTeX} i canviar el nombre
+màxim de matrius al sistema, la figura \ref{config2} mostra aquesta
+finestra.
+
+\newpage
+
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/config.eps}
+    \caption{Finestra de Configuració}
+    \label{config2}
+\end{figure}
+
+
+\subsubsection{Localització de resultats}
+Per defecte, l'aplicació genera els resultats en un subdirectori
+anomenat \emph{'resultats'} dins del directori on estan els fitxers
+de la matriu de dades.
+
+\newpage
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/loc.eps}
+    \caption{Menu Localització de resultats}
+\end{figure}
+
+
+Al \emph{premer} sobre l'opció apareix un diàleg de confirmació per
+confirmar si es vol canviar la localització actual dels fitxers
+resultats.
+
+
+
+\begin{figure}[ht]
+     \centering
+         \includegraphics[width=0.7\textwidth]{usuari/pantalles/loc3.eps}
+     \caption{Finestra de confirmació}
+\end{figure}
+
+
+Al indicar que es vol canviar es mostra una finestra amb el menú per
+seleccionar qualsevol altre directori on l'aplicació guardarà els
+fitxers resultats que generi.
+
+\newpage
+
+\begin{figure}[ht]
+     \centering
+         \includegraphics[width=\textwidth]{usuari/pantalles/loc2.eps}
+     \caption{Finestra de directoris per Localització de resultats}
+\end{figure}
+
+
+
+\subsubsection{Surt}
+Aquesta opció es la que tanca l'aplicatiu.
+
+\newpage
+
+\begin{figure}[ht]
+     \centering
+         \includegraphics[width=\textwidth]{usuari/pantalles/surt.eps}
+     \caption{Menu Surt}
+\end{figure}
+
+
+
+\subsection{Dades} \label{Dades}
+L'opció Dades, permet manipular la matriu de dades activa, per
+obtenir una nova matriu amb alguns canvis necesaris per fer algun
+tipus d'operació.
+
+
+\subsubsection{Selecciona Submatriu}
+
+Dintre del menu \emph{Dades} es troba un formulari per seleccionar
+una sub-matriu de la matriu activa.
+
+\newpage
+
+\begin{figure}[ht]
+     \centering
+         \includegraphics[width=\textwidth]{usuari/pantalles/sel.eps}
+     \caption{Menu Selecciona Submatriu}
+\end{figure}
+
+
+
+Com es pot veure en la figura \ref{fig:Sub} el formulari té 2 àrees
+clares. Esquerra per les variables i dreta pels objectes. Hi ha 3
+apartats per omplir.
+
+\begin{itemize}
+    \item \emph{Variables Numèriques}: On seleccionem de la llista de les variables numèriques originals, quines volem mantenir a la matriu resultant.
+    \item \emph{Variables Categòriques}: On seleccionem de la llista de les variables categòriques originals, quines volem mantenir a la matriu resultant.
+    \item \emph{Objectes}: On seleccionem de la llista d'objectes originals, quins volem mantenir a la matriu resultant.
+\end{itemize}
+
+\newpage
+
+\begin{figure}[ht]
+    \centering
+       \includegraphics[width=\textwidth]{usuari/pantalles/Sub.eps}
+        \caption{Selecciona Submatriu}
+    \label{fig:Sub}
+\end{figure}
+
+Utilitzant els botons d'afegir i treure s'anira definint
+l'estructura de la nova matriu. Una vegada tenim la matriu amb les
+variables i objectes que voldríem, premem el botó \emph{D'acord} i
+es crearà una nova matriu que s'afegeix al sistema i es converteix
+automàticament en la nova matriu activa. La matriu pare queda
+igualment oberta en el sistema però desactivada.
+
+
+
+\subsubsection{Tractament de Mancants}
+
+Aquest apartat del menu \emph{Dades} és utilitzat per tractar les
+dades mancants que hi ha en les variables numèriques de la matriu
+activa; {\bf Java-KLASS} enten que una dada és mancant \emph{(o
+missing)} si es un "?".
+
+\newpage
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/Trac.eps}
+        \caption{Menu Tractament de Mancants}
+\end{figure}
+
+
+
+Actualment s'ofereixen dues posibilitats:
+\begin{itemize}
+    \item Subtituir-los per 0.
+    \item Substituir-los pel valor de la Mitjana de la variable.
+\end{itemize}
+
+
+La figura \ref{fig:Tracta} mostra el formulari corresponent.
+
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/Tracta.eps}
+        \caption{Tractament de Mancants}
+    \label{fig:Tracta}
+\end{figure}
+
+
+\begin{flushright}\begin{tabular}{l} \emph {\textbf{Tractament de mancants per defecte:}}\\
+    $\bullet$ \emph {Substituir valors per 0.}\\
+\end{tabular}\end{flushright}
+
+\newpage
+
+\subsubsection{Integra classificació}
+
+Aquesta opció del menú de dades permet afegir una nova columna a la matriu de dades activa.
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/integ.eps}
+        \caption{Menu Integra classificació}
+\end{figure}
+
+Per realitzar aquesta operació cal seleccionar el fitxer (.cls) que
+conté les dades de la nova columna que han d'estar en el mateix
+ordre que la matriu activa, és a dir, cada dada de la nova columna
+ha de correspondre al objecte que hi ha en aquella posició a la
+matriu de dades. Es permet indicar el nom de la nova columna a
+afegir (la nova classe o variable) i posar-ne un diferent al que es
+proposa per defecte, 'Classe'.
+
+Quan s'integra una classificació amb la matriu de dades activa, per defecte,
+s'afegeix una columna nova a la matriu actual, però si interessa no modificar
+la matriu actual i crear una nova matriu de dades com a resultat d'aquesta operació
+es pot fer marcant el flag que així ho indica. Al marcar aquest flag es permet indicar
+el nom que es desitjar posar a la nova matriu de dades que conté la classificació que
+es desitjava integrar. Si es genera una matriu nova aquesta passarà a ser la matriu activa.
+
+La figura \ref{integ} mostra el menú esmentat.
+
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/integra.eps}
+        \caption{Finestra d'opcions d'Integra classificació}
+        \label{integ}
+\end{figure}
+
+
+\subsubsection{Canvia matriu activa}
+Aquesta opció permet a l'usuari indicar quina matriu de la llista de
+matrius carregades al sistema vol que sigui l'activa.
+
+En seleccionar l'opcio apareix una llista amb les matrius carregades
+al sistema, en seleccionar de la llista, un matriu aquesta pasa a
+ser la matriu activa.
+
+Cada cop que \emph{s'obre} una nova matriu en el sistema aquesta
+també pasa a la llista de \emph{Canvia matriu activa} i quan es
+tanca una matriu, aquesta també es treu de la llista i la següent
+pasa a ser l'activa.
+
+La figura \ref{can} mostra la llista esmentada.
+
+\newpage
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/canv.eps}
+        \caption{Menu Canvia matriu activa}
+        \label{can}
+\end{figure}
+
+\subsubsection{Defineix ordenacions}
+
+L'aplicació permet, mitjançant aquest submenu establir un ordre de
+presentació per la generació de resultats de la matriu activa tant
+per les variables com per les classes o modalitats de les variables
+categòriques.
+
+\newpage
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/def.eps}
+        \caption{Menu Defineix ordenacions}
+\end{figure}
+
+
+D'aquesta manera el submenú \emph{de variables} permet acceddir a un
+formulari on es té la llista de variables que es poden ordenar
+passant-les cap a l'altra llista com es mostra a la figura
+\ref{defi}.
+
+\newpage
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/defi.eps}
+        \caption{Menu Defineix ordenacions de variables}
+        \label{defi}
+\end{figure}
+
+
+El submenú \emph{de modalitats o classes} permet recuperar la llista
+de modalitats (o classes) de la variable que es selecciona i
+ordenar-les de la mateixa manera que al submenu de variables, figura
+\ref{defm}.
+
+\newpage
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/defm.eps}
+        \caption{Menu Defineix ordenacions de modalitats o classes}
+        \label{defm}
+\end{figure}
+
+\subsection{Anàlisi Descriptiva} \label{Analisi}
+
+L'opció d'Anàlisi descriptiva es desglosa en les següents opcions:
+\begin{itemize}
+    \item \emph{Univariant}: Permet realitzar l'anàlisi descriptiva univariant d'una o més variables seleccionant els elements descriptius univariants (gràfics i numèrics) a mostrar (a l'apartat \ref{AnalisiUniv} es donen més detalls).
+    \item \emph{Bivariant}: Permet realitzar l'anàlisi descriptiva bivariant d'un o més parells de variables seleccionant els elements descriptius bivariants (gràfics i numèrics) a mostrar en cada cas (a l'apartat \ref{AnalisiBiv} es donen més detalls).
+    \item \emph{Matriu de correlacions/covariàncies}: Permet calcular la matriu de correlacions/covariances d'un conjunt de variables numèriques (a l'apartat \ref{Cor/cov} es donen més detalls)..
+    \item \emph{Trivariant}: Permet realitzar l'anàlisi descriptiva trivariant d'una o més ternes de variables seleccionant els elements descriptius trivariants (gràfics i numèrics) a mostrar en cada cas (a l'apartat \ref{AnalisiTriv} es donen més detalls).
+    \item \emph{Descr. per classes}: Permet realitzar l'anàlisi descriptiva per classes d'una o més  variables seleccionant els elements descriptius per classes (gràfics i numèrics) a mostrar en cada cas (a l'apartat \ref{AnalisiClass} es donen més detalls).
+\end{itemize}
+
+\begin{figure} [ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/descri.eps}
+    \caption{Menu Descritiva}
+\end{figure}
+
+
+Cadascuna de les quals desplega el formulari corresponent, que es
+comenta tot seguit.
+
+\newpage
+
+\subsubsection{Anàlisi Descriptiva Univariant} \label{AnalisiUniv}
+
+
+\begin{figure} [ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/Uni.eps}
+    \caption{Pantalla per Anàlisi Descriptiva Univariant}
+    \label{fig:Uni}
+\end{figure}
+
+
+
+El formulari de l'Anàlisi Descriptiva Univariant (veure figura
+\ref{fig:Uni}) té dues àrees clares:
+\begin{itemize}
+    \item l'esquerra per les variables numèriques;
+    \item la dreta per les categòriques.
+\end{itemize}
+
+Es poden seleccionar les variables que es volen analitzar més els
+càlculs o gràfics a realitzar sobre aquestes variables.\\ Cada
+operació estadística ja sigui gràfica o numèrica té el seu propi
+formulari d'opcions. A continuació s'expliquen els diferents
+formularis d'opcions que existeixen per l'Anàlisi Descriptiva
+Univariant.
+
+
+
+
+\paragraph{Histograma}
+
+Fa l'histograma d'una variable numèriques. Pot contenir valors
+mancants. Les opcions de l'\emph{histograma} (figura
+\ref{fig:OpcHisto2}) fan referència bàsicament a aspectes tècnics
+sobre la generació del gràfic:
+\begin{itemize}
+    \item Es permet fer dos tipus histogrames:
+        \begin{itemize}
+            \item un que representa en ordenades els efectius absoluts de cada classe de freqüència,
+            \item l'altre que fa servir les freqüències relatives.
+        \end{itemize}
+    \item També es pot escollir com es calcularà el nombre de classes de freqüència. Es contemplen dos opcions:
+        \begin{itemize}
+            \item càlcul automàtic del nombre adequat de classes per part del sistema mitjançant l'heurístic de David Moore \cite{moo:mcc:93}, segons el qual el nombre de classes és:
+\begin{equation} \label{classes histo}
+%\[
+\left\{ \begin{array}{ll}
+             6 log_{10}(n) & \mbox{, si n $<$ 100} \\
+             & \\
+             1.2 \sqrt{n} & \mbox{, si n $\ge$ 100}
+          \end{array}
+\right.
+%\]
+\end{equation}
+
+            \item definició del nombre de classes a utilitzar.
+        \end{itemize}
+        D'altra banda, es permet que es pugui visualitzar la taula de classes de freqüències utilitzada per la construcció del histograma mitjançant la selecció d'un flag. Aquesta opció pren ple sentit quan es defineix el nombre de classes de freqüència.
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/OpcHisto2.eps}
+    \caption{Opcions per al histograma}
+    \label{fig:OpcHisto2}
+\end{figure}
+
+
+
+
+
+La part inferior del formulari fa referència als eixos del gràfic.
+L'esquerra es reserva per l'especificació sobre l'eix X. Es permet:
+
+\begin{itemize}
+    \item Definir els límits de l'eix d'abcisses de l'histograma, que pot ser:
+        \begin{itemize}
+            \item El rang teòric d'X: indicat al fitxer .pro, en la definició que s'aporta sobre les variables i on s'indica entre quins valors màxim i mínim es pot trobar el valor de la variable teòricament.
+            \item El rang observat d'X: valor mínim i màxim que pren la variable en la matriu de dades concreta que s'està analitzant. Quan es selecciona aquesta opció, l'histograma es re\-pre\-sen\-ta\-rà entre aquests dos valors.
+            \item El rang definit per l'usuari: defineix l'interval d'X del que es re\-pre\-sen\-ta\-rà l'histograma. \newline
+             Establir el rang de valors, els límits, que es mostraran en un grà\-fic per cada eix, permet en certa manera fer un cert tipus de zoom sobre una fi\-nes\-tra definida sobre el gràfic.
+        \end{itemize}
+    \item Com es vol graduar l'eix X, especificant:
+        \begin{itemize}
+            \item quina quantitat de marques es volen posicionar equidistribuïdes sobre l'eix (donant control  sobre el número de marques a utilitzar per graduar els eixos, garantitza que no es superposin les etiquetes quan les magnituds que es representen contenen moltes xifres);
+            \item graduar marcant els límits de cada classe de freqüència.
+        \end{itemize}
+\end{itemize}
+
+La part inferior dreta es reserva a la informació sobre l'eix Y. De
+forma anàloga al que passa amb l'eix X, es permet:
+
+\begin{itemize}
+    \item Definir els límits de l'eix d'ordenades de l'histograma, que pot ser:
+        \begin{itemize}
+            \item Eix complet: es representarà tot el rang de valors possibles, de 0 al nombre d'objectes de la variable, en el cas de l'histograma amb efectius absoluts, o de 0 a 1, en el cas del de freqüències relatives.
+            \item Automàtic: només es representarà de 0 al nombre màxim de dades observades entre totes les classes de freqüència que s'utilitzin.
+            \item Rang definit per l'usuari: defineix l'interval de valors d'Y del que es representarà l'histograma.
+        \end{itemize}
+    \item Com es vol graduar l'eix Y, especificant la quantitat de marques que es volen posicionar equidistribuïdes sobre l'eix.
+\end{itemize}
+
+
+
+
+
+
+La figura \ref{fig:OpcHisto2} mostra com, si es decideix que es
+volen definir els límits de l'eix (X ó Y), apareix una nova zona per
+omplir els valors extrems de l'eix (mínim i màxim).
+
+Tot aquest conjunt d'opcions aporten una gran flexibilitat per
+adaptar l'histograma al que més interessi.
+
+\begin{flushright}\begin{tabular}{l} \emph {\textbf{Histograma per defecte:}}\\
+    $\bullet$ \emph {efectius absoluts.}\\
+    $\bullet$ \emph {nombre de classes de freqüència calculat}\\
+      \emph {de forma automàtica.}\\
+    $\bullet$ \emph {rang observat d'X.}\\
+    $\bullet$ \emph {eix complet per l'Y.}\\
+    $\bullet$ \emph {5 marques a tots dos eixos.}\\
+\end{tabular}\end{flushright}
+
+
+
+
+\paragraph{Boxplot} Nomès per variables numèriques. Pot contenir valors mancants. Les opcions del \emph{boxplot} (figura
+\ref{fig:OpcBoxp}), a l'igual que les de l'histograma, fan més aviat
+referència a aspectes tècnics del propi gràfic. Es permet
+seleccionar:
+
+
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/OpcBoxp.eps}
+    \caption{Opcions per al boxplot}
+    \label{fig:OpcBoxp}
+\end{figure}
+
+
+
+
+
+
+\begin{itemize}
+    \item amb quin rang de valors es vol treballar a l'eix X (com a l'histograma es té rang teòric, rang observat i definit per l'usuari)
+    \item com es vol graduar l'eix X, contemplant dues possibilitats:
+        \begin{itemize}
+            \item repartir el nombre de marques indicat de forma e\-qui\-dis\-tri\-bu\-ï\-da,
+            \item marcar els cinc valors del Resum en 5 números.
+        \end{itemize}
+\end{itemize}
+
+
+\begin{flushright}\begin{tabular}{l} \emph {\textbf{Boxplot per defecte:}}\\
+    $\bullet$ \emph {rang observat d'X.}\\
+    $\bullet$ \emph {5 mar\-ques e\-qui\-dis\-tri\-bu\-ï\-des.}\\
+\end{tabular}\end{flushright}
+
+
+
+
+
+
+
+
+\paragraph{Estadístics sumaris} Nomès per variables numèriques. Pot contenir valors mancants. Pels \emph{estadístics sumaris} (figura
+\ref{fig:OpcEstSum}) es dóna l'opció d'escollir quins estadístics es
+volen calcular. La llista d'estadístics possibles s'organitza en
+tres grups:
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/OpcEstSum.eps}
+    \caption{Opcions per als estadístics sumaris}
+    \label{fig:OpcEstSum}
+\end{figure}
+
+
+\begin{enumerate}
+    \item Estadístics bàsics: Dins d'aquest grup es mostra que s'inclou el nombre d'objectes, però no es permet que es pugui deseleccionar perquè es considera important que aparegui sempre. En realitat, aquest es presentarà desglossat en objectes útils i mancants. Els altres estadístics són el mínim, el màxim i la mitjana.
+    \item Estadístics robustos, incloent la possibilitat d'obtenir la distància in\-ter\-quar\-tí\lge li\-ca.
+    \item Estadístics que mesuren la dispersió.
+\end{enumerate}
+
+
+\begin{flushright}\begin{tabular}{l} \emph {\textbf{Estadístics sumaris per defecte:}}\\
+    $\bullet$ \emph {nombre d'objectes útils i mancants.}\\
+    $\bullet$ \emph {mínim.}\\
+    $\bullet$ \emph {màxim.}\\
+    $\bullet$ \emph {mitjana.}\\
+    $\bullet$ \emph {mediana.}\\
+    $\bullet$ \emph {quartils.}\\
+    $\bullet$ \emph {quasi-desviació tí\-pi\-ca.}\\
+    $\bullet$ \emph {coeficient de va\-ri\-a\-ció}\\
+\end{tabular}\end{flushright}
+
+
+
+
+\paragraph{Diagrama de barres} Nomès per variables numèriques. Els mancants es tracten com una modalitat més. Les opcions per al
+\emph{diagrama de barres} (figura \ref{fig:OpcDiagDBar}), a l'igual
+que per a l'histograma, permeten seleccionar:
+
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/OpcDiagDBar.eps}
+    \caption{Opcions per la diagrama de barres}
+    \label{fig:OpcDiagDBar}
+\end{figure}
+
+
+
+
+\begin{itemize}
+    \item si les barres representaran efectius absoluts o freqüències relatives (per defecte, efectius absoluts),
+    \item amb quin rang de dades es vol treballar a l'eix Y (per defecte es té Eix complet)
+            \begin{itemize}
+            \item Eix complet: es representarà tot el rang de valors possibles, de 0 al nombre d'objectes de la variable, en el cas del diagrama amb efectius absoluts, o de 0 a 1, en el cas del de freqüències relatives.
+            \item Automàtic: només es representarà de 0 a la freqüència màxima entre totes les modalitats de la variable categòrica.
+            \item Rang definit per l'usuari: defineix l'interval de valors d'Y del que es representarà el diagrama de barres.
+            \end{itemize}
+    \item com es vol graduar aquest eix, indicant la quantitat de marques que es desitgen que es distribuiran uniformement al llarg de l'eix.
+\end{itemize}
+
+
+\begin{flushright}\begin{tabular}{l} \emph {\textbf{Diagrama de barres per defecte:}}\\
+    $\bullet$ \emph {efectius absoluts.}\\
+    $\bullet$ \emph {eix complet.}\\
+    $\bullet$ \emph {5 marques a l'eix.}\\
+\end{tabular}\end{flushright}
+
+
+
+
+\paragraph{Taula de Freqüencies} Nomès per variables numèriques. Els mancants es tracten com una modalitat més. Les opcions de la \emph{taula
+de freqüències} (figura \ref{fig:OpcTaulaFreq}) permeten
+se\-lec\-cio\-nar qui\-nes columnes es desitja que apareguin a la
+taula. La columna de freqüències ab\-so\-lu\-tes no es permet
+deseleccionar, sempre apareixerà, i es permet seleccionar lliurement
+entre les de freqüències relatives, les de fre\-qüèn\-cies absolutes
+acumulades i les de fre\-qüèn\-cies relatives acumulades, recordant
+que aquestes dues darreres es mostraran només per aquelles variables
+que són ordinals.
+
+
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/OpcTaulaFreq.eps}
+    \caption{Opcions per a la taula de freqüències}
+    \label{fig:OpcTaulaFreq}
+\end{figure}
+
+
+
+\begin{flushright}\begin{tabular}{l} \emph {\textbf{Taula de Freqüències per defecte:}}\\
+    $\bullet$ \emph {freqüències relatives.}\\
+    $\bullet$ \emph {fre\-qüèn\-cies absolutes acumulades.}\\
+    $\bullet$ \emph {fre\-qüèn\-cies relatives acumulades.}\\
+\end{tabular}\end{flushright}
+
+
+
+
+\subsubsection{Anàlisi Descriptiva Bivariant} \label{AnalisiBiv}
+
+Al formulari de l'Anàlisi Descriptiva Bivariant (veure figura
+\ref{fig:Biv}) distingim tres àrees:
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/Biv.eps}
+    \caption{Anàlisi Descriptiva Bivariant}
+    \label{fig:Biv}
+\end{figure}
+
+
+
+\begin{itemize}
+    \item la superior per parells de variables numèriques;
+    \item la inferior per parells de variables categòriques;
+    \item la intermèdia per parells mixtes d'una variable numèrica i una categòrica.
+\end{itemize}
+
+A continuació s'expliquen els diferents formularis d'opcions que
+existeixen per aquest tipus de formulari.
+
+
+\paragraph{Plot} Fa el Plot de 2 variables numèriques.Admet dades mancants. No representa els parells
+amb algun mancant. A l'igual que per altres gràfics que comporten
+l'ús d'eixos graduats, les opcions del \emph{plot} (figura
+\ref{fig:OpcPlot}) permeten establir per cada eix (X i Y):
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/OpcPlot.eps}
+    \caption{Opcions per al plot}
+    \label{fig:OpcPlot}
+\end{figure}
+
+\begin{itemize}
+    \item Quin interval de l'eix es vol visualitzar:
+        \begin{itemize}
+            \item tot el rang teòric,
+            \item el rang observat de valors que pren la variable,
+            \item una finestra definida per l'usuari.
+        \end{itemize}
+
+    \item Com es gradua l'eix, especificant la quantitat de marques que es volen posicionar equidistantment en cada dimensió.
+\end{itemize}
+
+\begin{flushright}\begin{tabular}{l} \emph {\textbf{Plot per defecte:}}\\
+    $\bullet$ \emph {Rang observat d'X.}\\
+    $\bullet$ \emph {Rang observat d'Y.}\\
+    $\bullet$ \emph {3 marques a l'eix X.}\\
+    $\bullet$ \emph {3 marques a l'eix Y.}\\
+\end{tabular}\end{flushright}
+
+
+
+
+
+\paragraph{Histograma múltiple} Fa l'histograma múltiple d'una variable numèrica
+versus una variable categòrica. Si alguna de les dues és mancant no
+representa l'objecte. Les opcions per l'\emph{histograma múltiple}
+(figura \ref{fig:OpcHistoMult}) són pràcticament les ma\-tei\-xes
+que per l'histograma simple. L'única diferència és que no es poden
+vi\-sua\-lit\-zar les taules de classe de freqüències que determinen
+la construcció de cada histograma, bà\-si\-ca\-ment perquè s'hauria
+de fer una taula per cada mo\-da\-li\-tat de la va\-ri\-a\-ble
+ca\-te\-gò\-ri\-ca, el que representa una despesa d'espai important.
+És for\-çat que les di\-men\-sions dels eixos X i Y siguin les
+mateixes en l'histograma de tots els grups i per això s'especifica
+un sol cop per a tots.
+\newline
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/OpcHistoMult.eps}
+    \caption{Opcions per al histograma múltiple}
+    \label{fig:OpcHistoMult}
+\end{figure}
+
+\begin{flushright}\begin{tabular}{l} \emph {\textbf{Histograma múltiple per defecte:}}\\
+    $\bullet$ \emph {efectius absoluts.}\\
+    $\bullet$ \emph {nombre de classes de freqüència calculat}\\
+      \emph {de forma automàtica.}\\
+    $\bullet$ \emph {rang observat d'X.}\\
+    $\bullet$ \emph {eix complet per l'Y.}\\
+    $\bullet$ \emph {5 marques a tots dos eixos.}\\
+\end{tabular}\end{flushright}
+
+
+\paragraph{Boxplot múltiple} Fa el boxplot múltiple d'una variable numèrica
+versus una variable categòrica. Si alguna de les dues és mancant no
+representa l'objecte. Les opcions per al \emph{boxplot múltiple}
+(figura \ref{fig:OpcBoxpMult}) són gai\-re\-bé les ma\-tei\-xes que
+pel boxplot simple, el que no es permet es graduar l'eix X amb el
+Resum en 5 nú\-me\-ros, ja que en general n'hi ha un de diferent per
+cada modalitat i fàcilment les marques resultants podrien resultar
+confuses. No obstant es manté la flexibilitat de de\-ci\-dir
+quan\-tes marques es volen.
+\newline
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/OpcBoxpMult.eps}
+    \caption{Opcions per al boxplot múltiple}
+    \label{fig:OpcBoxpMult}
+\end{figure}
+
+
+
+\begin{flushright}\begin{tabular}{l} \emph {\textbf{Boxplot múltiple per defecte:}}\\
+    $\bullet$ \emph {rang observat d'X.}\\
+    $\bullet$ \emph {5 mar\-ques e\-qui\-dis\-tri\-bu\-ï\-des.}\\
+\end{tabular}\end{flushright}
+
+
+\paragraph{Descriptiva per grups} Fa la descriptiva per grups d'una variable numèrica
+versus una variable categòrica. Capta els mancants. Les opcions per
+la \emph{descriptiva per grups} són les mateixes que pels
+es\-ta\-dís\-tics su\-ma\-ris (figura \ref{fig:OpcEstSum}). No es
+poden seleccionar estadístics diferents per les di\-fe\-rents
+modalitats de la variable categòrica, sino que es tractaran tots els
+grups de forma homogènia.
+
+\begin{flushright}\begin{tabular}{l} \emph {\textbf{Descriptiva per grups per defecte:}}\\
+    $\bullet$ \emph {Flag Mìnim seleccionat.}\\
+    $\bullet$ \emph {Flag Mànim seleccionat.}\\
+    $\bullet$ \emph {Flag Mitjana seleccionat.}\\
+    $\bullet$ \emph {Flag Mediana seleccionat.}\\
+    $\bullet$ \emph {Flag Quartils seleccionat.}\\
+    $\bullet$ \emph {Flag Quasi-desviació típica seleccionat.}\\
+    $\bullet$ \emph {Flag Coeficient de variació seleccionat.}\\
+\end{tabular}\end{flushright}
+
+
+
+\paragraph{Diagrama de barres múltiple} Fa la descriptiva de barres múltiple de 2 variables categòriques.
+Tracta els mancants com una modalitat més. Capta els mancants. Les
+opcions pel \emph{diagrama de barres múltiple} són idèntiques a les
+que es tenen pel diagrama de barres simple (figura
+\ref{fig:OpcDiagDBar}).
+
+
+\begin{flushright}\begin{tabular}{l} \emph {\textbf{Diagrama de barres múltiple per defecte:}}\\
+    $\bullet$ \emph {efectius absoluts.}\\
+    $\bullet$ \emph {eix complet.}\\
+    $\bullet$ \emph {5 marques a l'eix.}\\
+\end{tabular}\end{flushright}
+
+
+
+\paragraph{Taula de contingència} Fa la descriptiva de barres múltiple de 2 variables categòriques.
+Tracta els mancants com una modalitat més. Capta els mancants. Les
+opcions per la \emph{taula de contingència} (figura
+\ref{fig:OpcTaulaCont} permeten especificar el màxim nombre de
+modalitats en horitzontal que es representaran a la mateixa pàgina,
+el que estableix el nombre de columnes que tindrà la taula i la seva
+amplada. És necessari donar aquest control a l'usuari perquè, si bé
+per defecte \textbf{Java-KLASS} utilitza un nombre fix de columnes,
+és molt laboriós controlar per programa si les etiquetes de les
+modalitats a representar són massa llargues i cal dividir la taula
+en més pàgines. Malgrat que es podria haver fet així, s'ha decidit
+passar el control a l'usuari en aquest punt de tal forma que, si veu
+que la taula surt per la dreta de la pàgina, la pot refer demanant
+menys modalitats per pàgina, i així invertir esforços en altres
+aspectes més imprescindibles, com ara permetre un histograma amb
+gran flexibilitat en el número de classes de freqüència o en la
+finestra a representar. També es permet seleccionar el contingut de
+les caselles (efectius absoluts o freqüències condicionades a files
+o columnes) i marcar un flag si es desitja generar un fitxer de
+text, amb extensió .tc, per cada parell de variables amb nom:
+nomVarFila\_nomVarCol.tc; i amb els valors separats per espais en
+blanc.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=0.6\textwidth]{usuari/pantalles/OpcTaulaCont.eps}
+    \caption{Opcions per a la Taula de contingència}
+    \label{fig:OpcTaulaCont}
+\end{figure}
+
+
+\begin{flushright}\begin{tabular}{l} \emph {\textbf{Taula de contingència per defecte:}}\\
+    $\bullet$ \emph {Nombre màxim de modalitats per pagina = 5.}\\
+    $\bullet$ \emph {efectius absoluts.}\\
+\end{tabular}\end{flushright}
+
+\newpage
+
+\subsubsection{Matriu de Correlacions/Covariàncies}
+\label{Cor/cov}
+
+Aquest apartat del submenú \emph{Descriptiva} s'ha inclós amb sentit
+pràctic, donat que a l'anàlisi bivariant ja es poden obtenir les
+correlacions/covariàncies entre dos variables numèriques. En aquest
+cas es calcula la correlació o covariància entre tots els parells de
+variables numèriques que hi hagi en la matriu activa i es mostra en
+pantalla la matriu de correlacions/covariàncies resultant (on les
+files i columnes corresponen a les variables numèriques de la
+matriu). No admet valors mancants. El formulari té sota uns
+\emph{flags} que serveixen per:
+
+\begin{itemize}
+    \item Guardar el resultat en un arxiu d'extensió \emph{.co}.
+    \item Que el resultat sigui de la correlació al quadrat.
+    \item Si es vol calcular les covariàncies.
+\end{itemize}
+
+En la figura \ref{fig:Corre} es mostra aquest formulari:
+
+\newpage
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/corre.eps}
+        \caption{Matriu de Correlacions Covariàncies}
+    \label{fig:Corre}
+\end{figure}
+
+\newpage
+
+
+
+\subsubsection{Anàlisi Descriptiva Trivariant} \label{AnalisiTriv}
+
+Al formulari de l'Anàlisi Descriptiva Trivariant (veure figura
+\ref{fig:Triv}) es troben dues àrees:
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=1.1\textwidth]{usuari/pantalles/triv.eps}
+        \caption{Anàlisi Descriptiva Trivariant}
+    \label{fig:Triv}
+\end{figure}
+
+
+
+\begin{itemize}
+    \item la superior per ternes de dues variables numèriques i una categòrica;
+    \item la inferior per ternes de dues variables categòriques i una numèrica.
+\end{itemize}
+
+A continuació s'expliquen els diferents formularis d'opcions que
+existeixen a l'aplicació en el cas de l' Anàlisi Descriptiva
+Trivariant.
+
+
+
+\paragraph{Letterplot} Fa el Letterplot de dos variables numèriques i 1 categòrica.
+Si alguna de les variables numèriques conté mancants no es
+representa el punt. Les opcions per al \emph{letterplot} (figura
+\ref{fig:OpcLetterplot}) són iguals a les del plot però afegint
+l'opció de seleccionar si es desitja un letterplot en color o en
+blanc i negre:
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/OpcLetterplot.eps}
+        \caption{Opcions per al letterplot}
+    \label{fig:OpcLetterplot}
+\end{figure}
+\begin{itemize}
+    \item Si es fa en color, s'assignen un màxim de colors diferents (en aquesta versió seran 10), i si el nombre de modalitats de la variable categòrica supera aquest màxim s'informa a l'usuari per a que aquest pugui ajustar el nombre de modalitats.
+    \item Si es demana en blanc i negre, es faran servir símbols i tots ells tindran la mateixa grandària i llavors no es pot representar la superposició de punts.
+\end{itemize}
+
+
+\begin{flushright}\begin{tabular}{l} \emph {\textbf{Letterplot per defecte:}}\\
+    $\bullet$ \emph {En color.}\\
+    $\bullet$ \emph {Rang observat d'X.}\\
+    $\bullet$ \emph {Rang observat d'Y.}\\
+    $\bullet$ \emph {3 marques a l'eix X.}
+    $\bullet$ \emph {3 marques a l'eix Y.}\\
+\end{tabular}\end{flushright}
+
+
+\paragraph{Taula cat$ \times $cat$ \times $num} Creua dues variables categòriques i representa l'estadístic seleccionat
+per la variable numèrica. Si aquesta és mancant no la té en compte.
+Les opcions per la \emph{taula cat$ \times $cat$ \times $num}
+(figura \ref{fig:OpcTaulaCCN}) permenten seleccionar:
+
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/OpcTaulaCCN.eps}
+    \caption{Opcions per a la taula cat$ \times $cat$ \times $num}
+    \label{fig:OpcTaulaCCN}
+\end{figure}
+
+\begin{itemize}
+    \item el màxim nombre de modalitats en horitzontal que es posaran per pàgina, i així establir el nombre de columnes que tindrà la taula i la seva amplada per la mateixa raó que es feia a la taula de contigència,
+    \item estadístic que es calcularà a cada casella de la taula, que serà un de sol.
+\end{itemize}
+
+
+\begin{flushright}\begin{tabular}{l} \emph {\textbf{Taula cat$ \times $cat$ \times $num per defecte:}}\\
+    $\bullet$ \emph {la mitjana.}\\
+    $\bullet$ \emph {ombre màxim de modalitats per pagina 5.}\\
+\end{tabular}\end{flushright}
+
+
+\subsubsection{Anàlisi Descriptiva per Classes} \label{AnalisiClass}
+
+Per últim, al formulari de l'Anàlisi Descriptiva per Classes (veure
+figura \ref{fig:Class}) hi ha en realitat una única àrea
+d'operacions però tres llistes on dirigir les variables
+seleccionades ja que cal distingir:
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/class.eps}
+    \caption{Anàlisi Descriptiva per Classes}
+    \label{fig:Class}
+\end{figure}
+
+
+\begin{itemize}
+    \item les variables categòriques que es faran servir com variables de classe,
+    \item les variables numèriques que interessa estudiar,
+    \item i les variables categòriques que interessa estudiar.
+\end{itemize}
+
+\begin{sloppypar}
+A continuació s'expliquen els diferents formularis d'opcions que existeixen a l'Anà\-li\-si Descriptiva per Classes.\\
+\end{sloppypar}
+
+
+\paragraph{Descripció extensional} Les opcions per la \emph{descripció extensional}
+permet indicar si es vol la relació d'objectes de cada modalitat de
+la variable de classe en una taula o en una llista.
+
+\paragraph{Distribucions condicionades} Les opcions per les \emph{distribucions condicionades}
+(figura \ref{fig:OpcDistCond}) permeten especificar:
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/OpcDistCond.eps}
+        \caption{Opcions per a les distribucions condicionades}
+    \label{fig:OpcDistCond}
+\end{figure}
+
+\begin{itemize}
+    \item el tipus de representació gràfica que es visualitzarà per les diferents variables. Hi ha quatre possibilitats:
+        \begin{itemize}
+            \item histograma, per les variables numèriques, i diagrama de barres, per les variables categòriques, d'efectius absoluts;
+            \item histograma, per les variables numèriques, i diagrama de barres, per les variables categòriques, de freqüències relatives;
+            \item boxplot, per les variables numèriques, i diagrama de barres, per les variables categòriques, d'efectius absoluts;
+            \item boxplot, per les variables numèriques, i diagrama de barres, per les variables categòriques, de freqüències relatives.
+        \end{itemize}
+Per les que incorporen histogrames i diagrames de barres
+simultàniament no té sentit barrejar freqüències absolutes i
+relatives, i per això no s'ha fet com en altres formularis que hi
+havia botons d'opcions diferents per a l'histograma i el diagrama de
+barres.
+    \item si es vol el panell de classes (o class-panel graph)\cite{NNW} que dóna panoràmica de totes les variables
+    que entren en una pàgina, cal activar el flag \emph {vista d'ocell}.
+\end{itemize}
+\begin{sloppypar}
+Com que aquestes representacions pretenen donar una perspectiva
+ge\-ne\-ral les e\-ti\-que\-tes dels eixos es redueixen en aquest
+cas a mínim i màxim i l'u\-su\-a\-ri no ho pot can\-vi\-ar. Si es
+vol més detall es pot recórrer al corresponent formulari bivariant.
+\newline
+\end{sloppypar}
+
+
+
+
+\paragraph{Descriptiva de les classes} Les opcions per la \emph{descriptiva de les classes}
+(figura \ref{fig:OpcDescrClas}) són les mateixes que pels
+estadístics sumaris o descriptiva per grups, afegint l'especificació
+del màxim nombre de classes en horitzontal que es posaran per pàgina
+per les variables numèriques i per les variables categòriques, i
+així establir el nombre de columnes que tindrà la taula per cada
+tipus de variables i la seva corresponent amplada. Les raons són les
+mateixes que les exposades per la taula de contingència, però es
+distingeix entre variables numèriques i categòriques perquè es
+generen dues taules, una per cada tipus de variable.
+
+
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/OpcDescrClas.eps}
+        \caption{Opcions per a la descriptiva de les classes}
+    \label{fig:OpcDescrClas}
+\end{figure}
+
+
+\subsection{Classificació}
+
+
+\subsubsection{Dendograma}
+
+El menú dendograma només té actiu el submenú \emph{Produeix
+classificació...} quan es carrega una matriu de dades. Per activar
+els altres submenús, \emph{Visualitza} i \emph{Talla arbre}, cal
+carregar un fitxer .his de dendograma:
+
+\emph{Obre-$>$Dendograma...}
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/den.eps}
+        \caption{Menu }
+\end{figure}
+
+
+
+\paragraph{Visualitza} simplement permet visualitzar
+gràficament l'arbre ascendent jeràrquic carregat al sistema
+mitjançant l'opció de menú \emph{Obre-$>$Dendograma...}.
+
+\paragraph{Talla arbre} permet generar una partició  de les
+dades realitzant un tall de l'arbre. Per fer-ho cal especificar el
+tipus de tall que es vol realitzar indicant l'index de nivell o el
+nombre de classes, en funció del tipus. Es permet visualitzar el
+tall amb tot l'etiquetetat o restringint-lo. També es permer decidir
+si volem que es generi el fitxer .par corresponent a la partició
+generada pel tall i quin nom se li vol donar al tall (que és el del
+fitxer generat). Per defecte, es proposa un nom pel tall en funció
+del tipus de tall.
+
+\paragraph{Produeix classificació...} permet
+seleccionar un
+fitxer .par per generar un fitxer .cls que es pugui integrar a la
+matriu de dades. El fitxer .par conté un element del tipus partició,
+és a dir, el resultat d'haver efectuat un tall horitzontal de
+l'arbre de classificació; representa la partició extesa, la classe i
+una llista d'objectes pertanyents a ella, amb una estructura del
+tipus ((c1 (o1 o2)) (c2 (o3 o4 o5)) ...). El fitxer .cls conté una
+llista de parelles del tipus objecte de la partició o classificació
+i classe a la que pertany, i es genera fent que les files mantinguin
+exactament la mateixa ordenació d'objectes que els fitxers .obj i
+.dat.
+
+
+
+\subsection{Distàncies}
+
+Aquesta opció permet fer càlculs amb diferents distàncies o mesures
+de dessimilitud.
+
+En la figura \ref{fig:Distan} mostra el submenu de \emph{Distàncies}
+en el que podem seleccionar entre \emph{Calcul Directe} i
+\emph{Càlcul Matriu}. Aquesta darrera opció només es podrà
+seleccionar si primer s'ha carregat una matriu de dades.
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/Distan.eps}
+        \caption{Submenu de Distàncies}
+    \label{fig:Distan}
+\end{figure}
+
+\newpage
+
+\subsubsection{Càlcul Directe} \label{CalculD}
+
+Aquest és un formulari molt simple que permet que l'usuari entri les
+components de dos vectors en pantalla per calcular diferents
+distàncies entre ells; com es pot veure en la figura
+\ref{fig:CalculD} el formulari es divideix en 2 parts principals:
+
+\newpage
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/CalculD.eps}
+        \caption{Calcul Directe}
+    \label{fig:CalculD}
+\end{figure}
+
+
+
+\begin{itemize}
+    \item a l'esquerra tenim dues taules per a que l'usuari
+    introdueixi les components dels 2 vectors amb que els que es
+    faràn els càlculs.
+    Aquesta part esquerra es divideix també en 2 parts, com es
+    habitual en \textbf{Java-KLASS}.
+    \begin{itemize}
+        \item \emph{Dades Numèriques}: Per introduir els valors per les components
+        numèriques \emph{(quantitatives)}.
+        \item \emph{Dades Categòriques}: Per introduir els valors per les components
+        categòriques \emph{(qualitatives)}.
+    \end{itemize}
+    \item a la dreta un àrea on escollir la distància que volem fer
+    servir.
+\end{itemize}
+
+
+
+
+
+Una vegada entrades les dades corresponents als vectors dels que es
+vol calcular la distància \emph{(com a màxim amb 25 components
+numèriques i 25 components categòriques per als 2 vectors)} s'ha de
+seleccionar la distància a calcular sobre la part dreta del
+formulari.
+
+Hi ha distàncies que en seleccionar-les s'activa un botó d'opcions.
+Aquest botó \emph{Opcions} serveix per especificar com realitzar el
+càlcul de la distància i/o per omplir alguns paràmetres necessaris
+en les diferents distàncies. Una distància amb opcions no pot ser
+càlculada si primer no s'han plenat aquestes opcions, això fa que
+l'usuari sempre tingui present quina modalitat de les diferents
+sobre una mateixa distància s'ha fet servir. Un ejemple és la figura
+\ref{fig:OpcEucli} on es mostren les opcions d'una distància
+Euclídia.
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/OpcEucli.eps}
+        \caption{Opcions distància Euclidia}
+    \label{fig:OpcEucli}
+\end{figure}
+
+
+En la figura \ref{fig:CalculD} es mostren les distàncies
+implementades a \textbf{Java-KLASS v2.0} ordenades per si són
+vectors de:
+
+\begin{itemize}
+    \item \emph{Variables Numèriques}: On els càlculs només es poden fer si totes les components dels vectors son
+    numèriques. Actualment es pot optar entre:
+
+    \begin{itemize}
+        \item {\bf Euclídia:} Figura \ref{oeu}. No admet dades mancants a la matriu de dades. Si n'hi hagués cal tractar-los
+        amb l'opció \emph{Tractar valors mancants} o bé definir una submatriu que no contingués aquests valors mancants,
+        explicats a l'apartat anterior. Opcions:
+            \begin{itemize}
+            \item No normalitzar: Distància euclídia original.
+            \[
+                d(i,i') = \sqrt[2]{ \sum_{k=1}^{K} (x_{ik} -
+                x_{i'k})^{2}}
+            \]
+            \item Normalitzar per la desviacció típica:
+            \[
+                d(i,i') = \sqrt[2]{\sum_{k=1}^{K} \frac{(x_{ik} -
+                x_{i'k})^{2}}{s_{k}^{2}}}
+            \]
+            on donades $n$ observacions d'una variable $X$,  $(x_{1} \ldots
+                x_{n})$ es defineix la $s_{k}^{2}$ com:
+            \[
+                s_{k}^{2} = \frac{\sum_{i=1}^{n} (x_{i} - \bar{x})^{2}}{n}
+            \]
+            \item Normalitzar pel rang:
+            \[
+                d(i,i') = \sqrt[2]{\sum_{k=1}^{K} \frac{(x_{ik} -
+                x_{i'k})^{2}}{{R_k}^{2}}}
+            \]
+                on donades $n$ observacions d'una variable $X$,  $(x_{1} \ldots
+                x_{n})$ es defineix el ${R_k}$ com:
+            \[
+                R_X = maxX - minX
+            \]
+            \item Treballar amb distàncies ponderades: Flag per indicar
+            si es vol treballar amb individus amb pesos diferents de
+            1, obtenim les següents metriques:
+            \begin{itemize}
+            \item No normalitzar i ponderar.
+            \[
+                d(i,i') = \sqrt[2]{\sum_{k=1}^{K} (w_{i}x_{ik} -
+                w_{i'}x_{i'k})^{2}}
+            \]
+            on ${wi}$ és el pes de l'objecte $i$ $\epsilon$ $I$
+        \item Normalitzar per la desviacció típica i ponderar:
+            \[
+                d(i,i') = \sqrt[2]{\sum_{k=1}^{K} \frac{(w_{i}x_{ik} -
+                w_{i'}x_{i'k})^{2}}{s_{k}^{2}}}
+            \]
+               on donades $n$ observacions d'una variable $X$, $(x_{1} \ldots
+                x_{n})$ es defineix $s_{k}^{2}$ com:
+            \[
+                s_{k}^{2} = \frac{\sum_{i=1}^{n} (w_{i}x_{ik} - \bar{x})^{2}}{(\sum_{i=1}^{n} w_{i})-1}
+            \]
+            i
+            \[
+                \overline{x} \: = \: \frac{\sum_{i=1}^{n}
+                    x_{i}*w_{i}}{\sum_{i=1}^{n} w_{i}}
+            \]
+        \item Normalitzar pel rang i ponderar:
+            \[
+                d(i,i') = \sqrt[2]{\sum_{k=1}^{K} \frac{(w_{i}x_{ik} -
+                w_{i'}x_{i'k})^{2}}{{R_k}^{2}}}
+            \]
+                on donades $n$ observacions d'una variable $X$,  $(x_{1} \ldots
+                x_{n})$ es defineix ${R_k}$ com:
+            \[
+                R_X = maxX - minX
+            \]
+            \end{itemize}
+            \item Treballar amb distàncies al quadrat: Flag per indicar
+            si es vol elevar al quadrat la distància calculada o no, s'obtenen les mateixes formules eliminant l'arrel quadrada.
+            \end{itemize}
+
+\newpage
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/OpcEucli.eps}
+        \caption{Opcions distància Euclídia}
+        \label{oeu}
+\end{figure}
+
+\begin{flushright}\begin{tabular}{l} \emph {\textbf{Euclídia per defecte:}}\\
+    $\bullet$ \emph {No normalitzar}\\
+    $\bullet$ \emph {flag al quadrat desactivat}\\
+    $\bullet$ \emph {flag de ponderar objectes desactivat}\\
+\end{tabular}\end{flushright}
+
+        \item {\bf Valor Absolut:} Figura \ref{oab}. No admet dades mancants a la matriu de dades. Si n'hi hagués cal tractar-los
+        amb l'opció \emph{Tractar valors mancants} o bé definir una submatriu que no contingués aquests valors mancants,
+        explicats a l'apartat anterior.
+        \[
+                    d(i,i') = \sum_{k=1}^{K} | x_{ik} -
+                    x_{i'k} |
+                \]
+
+             Opcions:
+            \begin{itemize}
+            \item Normalitzar pel rang:
+            \[
+                    d(i,i') = \sum_{k=1}^{K} \frac{ | x_{ik} - x_{i'k} | }{R_k}
+                \]
+                 on donades $n$ observacions d'una variable $X$,  $(x_{1} \ldots
+                x_{n})$ es defineix el ${R_k}$ com:
+            \[
+                R_X = maxX - minX
+            \]
+            \newpage
+            \item Flag per indicar
+            si es vol treballar amb individus amb pesos diferents de
+            1, obtenim les següents metriques:
+            \begin{itemize}
+
+             \item Valor absolut i ponderat.
+               \[
+                    d(i,i') = \sum_{k=1}^{K} | w_{i}x_{ik} -
+                    w_{i'}x_{i'k} |
+                \]
+
+
+            \item Normalitzar pel rang i ponderat:
+            \[
+                    d(i,i') = \sum_{k=1}^{K} \frac{ | w_{i}x_{ik} - w_{i'}x_{i'k} | }{R_k}
+            \]
+            on donades $n$ observacions d'una variable $X$,  $(x_{1} \ldots
+                x_{n})$ es defineix el ${R_k}$ com:
+            \[
+                R_X = maxX - minX
+            \]
+            \end{itemize}
+
+
+\end{itemize}
+
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/val.eps}
+        \caption{Opcions distància en valor absolut}
+        \label{oab}
+\end{figure}
+
+
+
+\begin{flushright}\begin{tabular}{l} \emph {\textbf{Valor Absolut per defecte:}}\\
+    $\bullet$ \emph {Normalitzar pel rang}\\
+    $\bullet$ \emph {flag de ponderar objectes desactivat}\\
+\end{tabular}\end{flushright}
+
+        \item {\bf Minkovski:} Figura \ref{omin}. No admet dades mancants a la matriu de dades. Si n'hi hagués cal tractar-los
+        amb l'opció \emph{Tractar valors mancants} o bé definir una submatriu que no contingués aquests valors mancants,
+        explicats a l'apartat anterior.
+          \[
+d_p(i,i') = \sqrt[p]{\sum_{k=1}^{K}  | x_{ik} -
+                    x_{i'k} | ^p}
+\]
+ Opcions:
+            \begin{itemize}
+            \item Normalitzar pel rang:
+
+         \[
+d_p(i,i') = \sqrt[p]{\sum_{k=1}^{K} \left( \frac{ | x_{ik} - x_{i'k}
+| }{R_k} \right)^p}
+\]
+
+
+on $R_k$ \'es el rang de la variable
+
+            \item $p$: On es pot indicar l'ordre de la distància de Minkovski, i ha de ser un numero natural.
+            \end{itemize}
+
+
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/min.eps}
+        \caption{Opcions distància de Minkovski}
+        \label{omin}
+\end{figure}
+
+
+            \begin{flushright}\begin{tabular}{l} \emph {\textbf{Minkovski per defecte:}}\\
+    $\bullet$ \emph {Normalitzar pel rang}\\
+    $\bullet$ \emph {p = 2}\\
+\end{tabular}\end{flushright}
+    \end{itemize}
+
+
+
+\item \emph{Variables Categòriques}: On els calculs només es poden fer si totes les components dels vectors son
+        categòriques. Actualment es pot optar entre:
+        \begin{itemize}
+            \item  {\bf $\chi^{2}$:} .Figura \ref{opcchi}. Tracta les dades mancants com una modalitat més.
+ \[
+                \chi^{2} = \sum_{k=1}^{K} d_{k} (i,i')
+ \]
+
+  \[ d_{k} (i,i') = \left\{ \begin{array}{ll}
+    0,  & \mbox{si } x_{ik} = x_{i'k} \\
+    & \\
+    \frac{1}{I_{k^{i}}} + \frac{1}{I_{k^{i'}}}, & \mbox{altrament, si $i$ i $i'$ s\'on compactes en $X_{k}$} \\
+    & \\
+    \frac { (f_{i}^{k_{s}} - 1)^{2}} {I^{k_{s}}} + \sum_{j \neq s}^{n_{k}} \frac{(f_{i}^{k_{j}})^2}{I^{k_{j}}}, & \mbox{si $x_{ik} = c_{S}^{k}$ i $i$ \'es ext\`es en $X_{k}$} \\
+    & \\
+    \sum_{j=1}^{n_{k}} \frac{(f_{i}^{k_{j}}  - f_{i'}^{k_{j}})^2}{I^{k_{j}}}        & \mbox{per $i$ i $i'$ extesos en $X_{k}$ } \\
+    & \\
+
+    \end{array}
+\right. \]
+
+on :
+\begin{itemize}
+    \item{\begin{math} I^{k_{j}}\end{math} \'es el nombre d'individus de la mostra de valor \begin{math}c_{j}^{k}\end{math} per a la variable $X_{k}$}
+    \item{ \begin{math} I_{k^{i}} \end{math} = $card$ \begin{math}(\hat{i}:x_{\hat{i} k} = x_{ik})\end{math}, nombre d'individus de la mostra que, per la {\em k-\`essima} variable, s\'on de la mateixa modalitat que $i$}
+    \item{ \begin{math}(f_{i}^{k_{1}}, f_{i}^{k_{2}}, ...,  f_{i}^{k_{n_{k}}}       )\end{math}  on \begin{math}f_{i}^{k_{j}}, j= 1, 2, ..., n_{k}\end{math}, \'es la proporci\'o d'objectes elementals de la classe representada per l'objecte $i$ que tenen valor \begin{math}c_{j}^{k}\end{math} de la variable categ\`orica $X_{k}$}
+\end{itemize}
+
+
+ Opcions:
+            \begin{itemize}
+            \item Treballar amb distàncies ponderades: Flag per indicar
+            si es vol treballar amb individus amb pesos diferents de
+            1, obtenim la següents mètrica:
+
+ \[
+        \chi^{2} = \sum_{k=1}^{K} d_{k} (i,i')
+        \]
+    on:
+\footnotesize
+    \[ d_{k} (i,i') = \left\{ \begin{array}{ll}
+    0,  & \mbox{si } x_{ik} = x_{i'k} \\
+    & \\
+    \frac{w_{i}}{I_{k^{i}}} + \frac{w_{i'}}{I_{k^{i'}}}, & \mbox{altrament, si $i$ i $i'$ s\'on compactes en $X_{k}$} \\
+    & \\
+    \frac { (w_{i}f_{i}^{k_{s}} - w_{i'})^{2}} {I^{k_{s}}} + \sum_{j \neq s}^{n_{k}} \frac{(w_{i}f_{i}^{k_{j}})^2}{I^{k_{j}}}, & \mbox{si $x_{ik} = c_{S}^{k}$ i $i$ \'es ext\`es en $X_{k}$} \\
+    & \\
+    \sum_{j=1}^{n_{k}} \frac{(w_{i}f_{i}^{k_{j}}  - w_{i'}f_{i'}^{k_{j}})^2}{I^{k_{j}}}        & \mbox{per $i$ i $i'$ extesos en $X_{k}$ } \\
+    & \\
+
+    \end{array}
+\right. \] \normalsize
+
+ on :
+\begin{itemize}
+    \item{ $w_{i}$ és el pes de l'objecte $i$.}
+    \item{\begin{math} I^{k_{j}}\end{math} \'es la suma de pesos dels individus de la mostra de valor \begin{math}c_{j}^{k}\end{math} per a la variable $X_{k}$}
+    \item{ \begin{math} I_{k^{i}} \end{math} = $\sum_{\forall \hat{i}:x_{\hat{i} k} = x_{ik}} w_{\hat{i}}$, nombre d'individus de la mostra que, per la {\em k-\`essima} variable, s\'on de la mateixa modalitat que $i$}
+    \item{ \begin{math}(f_{i}^{k_{1}}, f_{i}^{k_{2}}, ...,  f_{i}^{k_{n_{k}}}       )\end{math}  on \begin{math}f_{i}^{k_{j}}, j= 1, 2, ..., n_{k}\end{math}, \'es la proporci\'o d'objectes elementals de la classe representada per l'objecte qualsevol $i$ sobre la categoria \begin{math}c_{j}^{k}\end{math} de la variable categ\`orica $X_{k}$}
+\end{itemize}
+\end{itemize}
+
+
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/opcpond.eps}
+        \caption{Opcions distància de $\chi^{2}$}
+        \label{opcchi}
+\end{figure}
+
+
+            \begin{flushright}\begin{tabular}{l} \emph {\textbf{$\chi^{2}$ per defecte:}}\\
+     $\bullet$ \emph {flag de ponderar objectes desactivat}\\
+\end{tabular}\end{flushright}
+
+
+
+
+
+
+            \item  {\bf Hamming Generalitzat:} Tracta les dades mancants com una modalitat més.
+            \[
+                {d_{h} (i,i')} = \sum_{k=1}^{K} d_{k} (i,i')
+ \]
+on:
+
+\[ d_{k} (i,i') = \left\{ \begin{array}{ll}
+    0,  & \mbox{si } x_{ik} = x_{i'k} \\
+    & \\
+    1,  & \mbox{si } x_{ik} \neq x_{i'k} \\
+
+    \end{array}
+\right. \]
+
+\end{itemize}
+
+
+
+
+    \item \emph{Variables Mixtes}: On els càlculs es podem fer per vectors que tinguin components numèriques i
+    categòriques. Actualment es pot optar entre:
+    \begin{itemize}
+        \item {\bf Mixta Gibert:} Figura \ref{omix}. No admet dades mancants en les components numèriques a la matriu de dades.
+        \[ \label{metmixtcMixte}
+d_{(\alpha,\beta)}^{2}(i,i') = \alpha d_{\zeta}^{2}(i,i') + \beta
+d_{Q}^{2}(i,i')
+\]
+
+\begin{itemize}
+    \item $d_{\zeta}^{2}(i,i')$ es la distància euclídea normalitzada
+    per la desvició tipus al quadrat.
+    \item $d_{Q}^{2}(i,i')$ es la distància $\chi^{2}$.
+\end{itemize}
+
+
+Opcions:
+            \begin{itemize}
+            \item Automàtics: Flag per posar els valors d'alfa i beta automàtics.
+            \item $\alpha$: On es pot indicar el valor de $\alpha$.
+            \item $\beta$: On es pot indicar el valor de $\beta$.
+            \item Treballar amb distàncies ponderades: Flag per indicar
+            si es vol treballar amb individus amb pesos diferents de 1 \emph{(es ponderen les mètriques que formen la distància, és a dir,$d_{\zeta}^{2}(i,i')$ i
+            $d_{Q}^{2}(i,i')$).}
+            \end{itemize}
+
+\newpage
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/opcmix.eps}
+        \caption{Opcions distància Mixta de Gibert}
+        \label{omix}
+\end{figure}
+
+
+
+               \begin{flushright}\begin{tabular}{l} \emph {\textbf{Mixta Gibert per defecte:}}\\
+    $\bullet$ \emph {Automatics}\\
+$\bullet$ \emph {flag de ponderar objectes desactivat}\\
+\end{tabular}\end{flushright}
+
+\item  {\bf Ralambondrainy:} Figura \ref{oral}. No admet dades mancants en les components numèriques a la matriu de
+        dades.
+        \[  \label{metmixtcRalambondrainy}
+            d^{2}(i,i') = \pi_{1} d_{1/\sigma^{2}}^{2}(i,i') + \pi_{2}
+            d_{\chi^{2}}^{2}(i,i')
+            \]
+
+\begin{itemize}
+    \item $d_{1/\sigma^{2}}^{2}(i,i')$ es la distància euclídea normalitzada
+    per la desvició tipus al quadrat.
+    \item $d_{\chi^{2}}^{2}(i,i')$ es la distància $\chi^{2}$.
+\end{itemize}
+
+        Opcions:
+            \begin{itemize}
+            \item Inercia:\[
+   \pi_{1} = \frac {1}{Card(Q)}
+   \]
+   \[
+   \pi_{2} = \frac {1}{n_{k} -1}
+   \]
+            \item Norma:\[
+   \pi_{1} = \frac {1}{\sqrt{\sum \{ \rho^{2} (X_{k}, X_{k'}) \| k,k' \in \c{$\cal C$}    \}}}
+   \]
+   \[
+   \pi_{2} = \sqrt {n_{k} -1}
+   \]
+            \item Treballar amb distàncies ponderades: Flag per indicar
+            si es vol treballar amb individus amb pesos diferents de 1 \emph{(es ponderen les mètriques que formen la distància, és a dir,$d_{1/\sigma^{2}}^{2}(i,i')$ i
+            $d_{\chi^{2}}^{2}(i,i')$).}
+
+
+
+            \end{itemize}
+
+
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/opcral.eps}
+        \caption{Opcions distància Ralambondrainy}
+        \label{oral}
+\end{figure}
+
+
+
+              \begin{flushright}\begin{tabular}{l} \emph {\textbf{Ralambondrainy per defecte:}}\\
+                $\bullet$ \emph {Inercia}\\
+               \end{tabular}\end{flushright}
+
+\end{itemize}
+
+
+        \item {\bf Gower:} Admet dades mancants.
+
+
+        \[ s( i , i' ) = \frac{ \sum_{k=1}^{K} w_{k} ( i , i' ) s_{k} ( i , i' ) }{ \sum_{k=1}^{K} w_{k} ( i , i' ) }
+\]
+
+\[ s_{k}( i , i' ) = \left\{ \begin{array}{ll}
+\frac{ | x_{ik} - x_{i'k}| }{ R_{k} } & \mbox{ $X_{k}$ quantitativa} \\
+0 & \mbox{ $X_{k}$ qualitativa i $x_{ik} = x_{i'k}$ } \\
+1 & \mbox{ $X_{k}$ qualitativa i $x_{ik} \neq x_{i'k}$ } \\
+(f_C^{k_o}-1)^2 +\sum_{j=1, j\neq o}^s (f_C^{k_j})^2 &\mbox{ $X_{k}$
+qualitativa i } x_{ik} \mbox{ extes i }
+x_{i'k}= c_o^k\\[0.5em]
+\sum_{j=1}^s (f_{C'}^{k_j}-f_C^{k_j})^2 &\mbox{ $X_{k}$ qualitativa i} x_{ik}, x_{i'k} \mbox{ extesos}\\
+\end{array} \right. \]
+
+
+
+
+
+        \item {\bf Gowda-Diday:} No admet dades mancants en les components numèriques a la matriu de dades.
+
+\[
+ D_k(i,i') = D_kp(i,i')+D_ks(i,i')+D_kc(i,i')
+\]
+on
+\begin{small}
+\[
+  D_k(i,i') = \left \{ \begin{array}{ll}
+     \frac{|x_{ik}-x_{i'k}|}{R_k} & \mbox{si ($X_k$ \'es num\`erica)} \\
+     0 & \mbox{si ($X_k$ \'es categ\`orica),$i$,$i'$ compactes i $x_{ik} = x_{i'k}$} \\
+     1 & \mbox{si ($X_k$ \'es categ\`orica),$i$,$i'$ compactes i $x_{ik} \neq x_{i'k}$} \\
+      \frac{2 \cdot \left( 1 - f_{i'}^{k_o} \right)}{1 +
+ \sum_{s \neq o}{f_{i'}^{k_s}}} & \mbox{si ($X_k$ \'es categ\`orica), $i$ compacte : $x_{ik}=c_{s}^{k}$ i $i'$ ext\`es} \\
+     \frac{2 \cdot \left( 1- \sum_{j=1}^{n_k}Min(f_{i}^{k_j},f_{i'}^{k_j}) \right)}{\sum_{j=1}^{n_k}Max(f_{i}^{k_j},f_{i'}^{k_j})} & \mbox{si ($X_k$ \'es categ\`orica), $i$,$i'$ extesos}
+   \end{array}
+  \right.
+\]
+\end{small}
+
+on $R_k$ \'es el rang de la variable $X_k$.
+
+
+        \item  {\bf Ichino-Yaguchi:} Figura \ref{opcichi}. No admet dades mancants en les components numèriques a la matriu de dades.
+        \[
+d_p(i,i') = \sqrt[p]{\sum_{k=1}^{K} \left(
+\frac{\phi(x_{ik},x_{i'k})}{|U_k|}\right)^p}
+\]
+on
+
+\[
+ |U_k| = \left \{ \begin{array}{ll}
+     R_k \mbox{ o rang de la variable} & \mbox{si $X_k$ \'es num\`erica} \\
+     n_k \mbox{ o nombre de valors inclosos al domini } & \mbox{si $X_k$ \'es categ\`orica}
+   \end{array}
+  \right.
+\]
+
+La funci\'o $\phi(x_{ik},x_{i'k})$ mesura la dist\`ancia de la
+variable k-\`esima entre els individus $i$ i $i'$, i es defineix com
+
+
+\begin{equation}
+            \label{tallxt23phi}
+                \phi(x_{ik},x_{i'k}) = |x_{ik} \oplus x_{i'k}|-|x_{ik} \otimes x_{i'k}|+
+\gamma \cdot ( 2 \cdot |x_{ik} \otimes x_{i'k}|-|x_{ik}|-|x_{i'k}|)
+            \end{equation}
+
+
+Pel cas de {\bf Java-KLASS}:
+
+\[
+ |x_{ik}| = \left \{ \begin{array}{ll}
+     0 & \mbox{si $X_k$ \'es num\`erica} \\
+     1 & \mbox{si $X_k$ \'es categ\`orica}
+   \end{array}
+  \right.
+\]
+
+
+\[
+ |x_{ik} \oplus x_{i'k}| = \left \{ \begin{array}{ll}
+     |x_{ik} - x_{i'k}| & \mbox{si $X_k$ \'es num\`erica} \\
+     1 & \mbox{si $X_k$ \'es categ\`orica i $x_{ik} = x_{i'k}$} \\
+     2 & \mbox{si $X_k$ \'es categ\`orica i $x_{ik} \neq x_{i'k}$}
+   \end{array}
+  \right.
+\]
+
+\[
+ |x_{ik} \otimes x_{i'k}| = x_{ik} \cap x_{i'k} = \left \{ \begin{array}{ll}
+     1 & \mbox{si $x_{ik} = x_{i'k}$} \\
+     0 & \mbox{si $x_{ik} \neq x_{i'k}$}
+   \end{array}
+  \right.
+\]
+
+        Opcions:
+            \begin{itemize}
+            \item $p$: On es pot indicar el valor del parametre p.
+            \item $\gamma$: On es pot indicar el valor del parametre $\gamma$
+            \end{itemize}
+
+
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/opcichi.eps}
+        \caption{Opcions distància Ichino-Yaguchi}
+        \label{opcichi}
+\end{figure}
+
+
+             \begin{flushright}\begin{tabular}{l} \emph {\textbf{Ichino-Yaguchi per defecte:}}\\
+    $\bullet$ \emph {$p$ = 2}\\
+ $\bullet$ \emph {$\gamma$ = 0.5}\\
+\end{tabular}\end{flushright}
+
+
+\end{itemize}
+
+
+
+A la part inferior tenim:
+\begin{itemize}
+    \item el \emph {flag} \emph{Salvar l'arxiu .dis} que permet salvar \emph{(si es selecciona)} el valor de la distància calculada en un arxiu \emph{.dis} dintre del directori de resultats.
+    \item el \emph {flag} \emph{Salvar l'arxiu Dis.tex} que permet salvar \emph{(si es selecciona)} el valor de la distància calculada en un arxiu \emph{Dis.tex} dintre del directori de resultats.
+    \item el recuadre \emph{Resultat} on apareixera el resultat de la distància calculada.
+\end{itemize}
+
+Per últim, a sota de tot apareix un botó nou, el botó \emph{Netejar}
+que servirà per deixar com al principi el formulari, és a dir
+borrarà la selecció de la distància i els valors que estaven
+introduïts, deixant el formulari net per calcular una nova distància
+sobre 2 vectors nous.
+
+\subsubsection{Càlcul Matriu} \label{CalculM}
+
+Per poder seleccionar aquesta opció primer s'ha d'haver carregat una
+matriu de dades utilitzant el menú \emph{Fitxer}. Aquesta opció
+calcula la matriu de distàncies entre tots els parells d'objectes de
+la matriu activa en el sistema i la mostra per pantalla.
+
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/CalculM.eps}
+        \caption{Càlcul Matriu}
+    \label{fig:CalculM}
+\end{figure}
+
+\newpage
+
+
+El formulari que es mostra a la figura \ref{fig:CalculM} es divideix
+en tres parts:
+
+\begin{itemize}
+    \item \emph{Distància}: Ocupa la part esquerra del formulari i permet elegir el tipus de distància a calcular \emph{(per més informació cal mirar l'apartat
+    \ref{CalculD}).}
+    \item \emph{Matriu de Resultats}: Ocupa la part dreta de la pantalla i mostra la matriu de distàncies on per files i columnes té els objectes de la matriu de dades activa, i en cada casella
+    la distància entre l'objecte fila i columna segons la distància seleccionada.
+    \item \emph{Salvar l'arxiu .dis i Salvar l'arxiu Dis.tex}: Igual que en l'apartat del càlcul directe, per mes informació sobre aquest arxius mirar a l'apartat \ref{fitxers entrada}
+\end{itemize}
+
+\
+
+\subsection{Interpretació}
+Aquesta opció del menu genera, després de categoritzar la variable
+numèrica segons la varible categòrica, un par de fitxers amb els
+mínims i els màxims, el fitxer .mk amb els màxims i mínims per a
+cada modalitat de la variable categórica i el fitxer .zk amb aquests
+mateixos valors pero ordenats.
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/inter.eps}
+        \caption{Interpretació}
+\end{figure}
+
+\newpage
+
+\subsubsection{Discretització boxplot-based}
+
+Així es generan els fitxers corresponents creuant totes les
+variables numèriques seleccionades contra totes les categòriques
+seleccionades i asignan un nombre de fitxer amb el nom de la
+variable numèrica seguit de la variable categòrica.
+
+\newpage
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/box.eps}
+        \caption{Discretització boxplot-based}
+\end{figure}
+
+
+\subsection{Informes}
+Aquest apartat esta destinat tant a crear informes sobre les dades i
+calculs realitzats com per a poder visualitzarlos.
+
+
+\newpage
+
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/info.eps}
+        \caption{Informes}
+\end{figure}
+
+
+\subsubsection{Informes automàtics}
+
+En seleccionar aquesta opció es genera un informe automatic ja en
+format \emph{.pdf} de totes les variables:
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/infoau.eps}
+        \caption{Informes automàtics}
+\end{figure}
+
+
+\begin{itemize}
+    \item  En les variables numèriques es genera l'histograma, el boxplot i els
+estadístics sumaris.
+    \item En les variables categòriques es genera el diagrama de
+    barres i la taula de freqüencies i l'analisi descriptiva per
+    classes.
+\end{itemize}
+
+\newpage
+
+\subsubsection{Visualitzar Latex} \label{visulatex}
+En seleccionar aquesta funcionalitat es mostra una finestra sobre el
+directori de resultats de {\bf Java-KLASS} d'on es pot seleccionar
+el fitxer Latex que es vol visualitzar. En la següent figura es
+mostra aquesta finestra.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/visu.eps}
+        \caption{Visualitzar Latex}
+\end{figure}
+
+\newpage
+
+\subsection{Sàtel·lits}
+\subsubsection{CIADEC}
+%ni idea
+\subsubsection{Columbus}
+%\input{usuari/columbus.tex}
+
+
+
+
+\subsection{Ajuda}
+Aquest apartat es de tipus informatiu.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/ajuda.eps}
+        \caption{Ajuda}
+\end{figure}
+
+\newpage
+
+\subsubsection{Manual}
+En seleccionar aquesta funcionalitat es mostra aquest mateix manual.
+Això permet a l'usuari poder accedir al manual de forma electronica,
+és a dir no cal acompañar l'aplicació de material extern.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=\textwidth]{usuari/pantalles/manu.eps}
+        \caption{Manual}
+\end{figure}
+
+\newpage
+
+
+\subsubsection{Quant al Java-Klass}
+En seleccionar aquesta funcionalitat es mostra un cuadre amb
+l'informació de la versió data i desenvolupadors de {\bf
+Java-KLASS}.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=0.5\textwidth]{usuari/pantalles/quan.eps}
+        \caption{Quant al Java-Klass}
+\end{figure}

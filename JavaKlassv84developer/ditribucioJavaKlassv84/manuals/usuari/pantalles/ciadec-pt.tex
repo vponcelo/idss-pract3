@@ -1,0 +1,589 @@
+
+En esta segunda parte del proyecto de tesis, se hace una breve
+introducci\'on al sistema CIADEC~\footnote{de las primeras letras
+del nombre Caracterizaci\'on e Interpretaci\'on Autom\'atica de
+Descripciones Conceptuales.}, se describe su estructura y sus
+funcionalidades.
+
+\section{\bf Introducci\'on}
+
+El sistema CIADEC implementa la metodolog\'{\i}a que se defini\'o
+en~\cite{vaz:gib:02} cuyo t\'{\i}tulo es ``Automatic Generation of
+Fuzzy Rules in ill-Structured Domains"~\cite{vaz:gib:01}, la que
+permite caracterizar las diferentes clases a partir de una
+clasificaci\'on previamente establecida, en dominios poco
+estructurados y obtener autom\'aticamente interpretaciones
+conceptuales de \'estas, con respecto a atributos cuantitativos.
+
+\section{\bf Dise\~{n}o modular del sistema CIADEC}
+
+El sistema CIADEC, surge de la necesidad de automatizar la
+caracterizaci\'on e interpretaci\'on de clases en dominios poco
+estructurados previamente particionados combinando conceptos,
+t\'ecnicas de inteligencia artificial y estad\'{\i}stica. Mediante
+la automatizaci\'on se persigue reducir el tiempo necesario para
+llevar a cabo esta tarea, agilizando tanto las actividades
+asociadas al an\'alisis de datos como a la obtenci\'on de
+informaci\'on relevante que posteriormente sea \'util en la
+gesti\'on y/o toma de decisiones en esos dominios.
+
+\subsection{\bf Arquitectura del sistema CIADEC}
+
+La entrada del sistema es la matriz de datos $X$ y la partici\'on
+de referencia $P$, teniendo como salidas, seg\'un la opci\'on del
+usuario:
+
+\begin{itemize}
+\item La asignaci\'on de clases a un conjunto de objetos nuevos.
+\item La calidad de asignaci\'on del sistema de reglas.
+\item La representaci\'on gr\'afica de las funciones de pertenencia
+por atributo. Dichos gr\'aficos son generados en c\'odigo \LaTeX\
+y se pueden exportar a cualquier documento o bien ser visualizados
+en pantalla conectando con el visualizador de \LaTeX.  Este
+tratamiento se adec\'ua a la filosof\'{\i}a de otras herramientas
+que se comparten en el mismo equipo de trabajo y que, en un
+futuro, se han de integrar en una plataforma com\'un.
+\end{itemize}
+
+A nivel conceptual el sistema CIADEC esta formado por los
+siguientes cinco m\'odulos:
+
+\begin{itemize}
+    \item M\'odulo I. Generador de Intervalos de Longitud Variable (GILOVA)
+    \item M\'odulo II. Generador de Tablas de Distribuciones (Funciones de
+            Pertenencia) Condicionadas a  Intervalos (GETADI)
+    \item M\'odulo III. Generador de Sistemas de Reglas (GESIRE)
+    \item M\'odulo IV. Generador de Gr\'aficos de funciones de pertenencia
+     de $X_{k}|C$ (GEGRALA)
+    \item M\'odulo V. Validaci\'on (VALIDA)
+\end{itemize}
+
+\begin{figure}
+\begin{center}
+\scalebox{0.8}{\includegraphics{bien}}
+%%\mbox{}
+%%\vspace{-4 cm}
+\caption{\label{fig:uno}}{Diagrama Conceptual del Proceso CIADEC}
+\end{center}
+\end{figure}
+
+\subsection{\bf Estructuras de datos}
+En este apartado se explica la representaci\'on de datos y la
+estructura de ficheros que el sistema CIADEC necesita para que
+funcione.
+
+\subsubsection{Representaci\'on de datos}
+
+Los individuos que forman el conjunto $T_{0}$ est\'an descritos
+por una serie de atributos o caracter\'{\i}sticas y pueden ser de
+dos tipos:
+\begin{itemize}
+    \item Atributos cualitativos o categ\'oricos: Corresponden a un tipo de
+    caracter\'{\i}stica de los individuos que se expresan mediante
+    adjetivos. Estos atributos cualitativos se dividen en
+    ordinales~\footnote{Son aquellas para las que existe una relaci\'on de
+    orden} y nominales~\footnote{Son aquellas que no presentan una
+    ordenaci\'on de sus valores}.
+    \item Atributos cuantitativos: Son caracter\'{\i}sticas
+    medibles y se expresan en forma num\'erica.
+\end{itemize}
+Si se dispone de $n$ individuos y de $k$ atributos que los
+describen, los valores de todas estas variables para el conjunto
+de individuos se representan mediante una matriz rectangular $X$
+de dimensiones ($n$, $k$). Las filas de la matriz contendr\'an la
+informaci\'on de los individuos, mientras que las columnas hacen
+referencia a los atributos. Si los individuos son caracterizados
+simult\'aneamente con atributos cuantitativos y cualitativos, la
+matriz de datos se considera heterog\'enea.
+
+A las observaciones no presentes en la matriz de datos $X$ se les
+denomina valores faltantes. En caso de valores faltantes les
+asignamos un $``*"$ con valor NaN (Not a Number) para que sea
+tratable desde el punto de vista del algoritmo.
+
+La Figura~\ref{fig:uno} muestra la arquitectura modular del
+sistema CIADEC.
+
+\subsection{\bf Estructuras de ficheros}
+En este apartado se la estructura de ficheros que el sistema
+CIADEC necesita para que funcione.
+
+Las estructuras de los ficheros que describen el flujo de datos en
+el sistema CIADEC son de dos tipos de entrada y salida y
+extensiones: dat, par, iks, dci, tex, srg, srr, tcp, vsg, vsm y
+coi.
+
+\begin{itemize}
+    \item $<nombre\_fichero.dat>$\ \ Contiene la matriz de
+    datos $X$ por renglones. Para cada individuo u objeto $i$ hay una
+    lista con las coordenadas que le definen en cada atributo y su
+    formato es el est\'andar de este tipo de fichero: Los elementos
+    de una l\'{\i}nea estar\'an separados por al menos un espacio. En la
+    primera l\'{\i}nea van los nombres de los atributos, en caso
+    de que no est\'en los nombres se asignar\'an a los atributos
+    los nombres por defecto NONAMEk, donde k es el n\'umero del
+    atributo en consideraci\'on. El Cuadro~\ref{uno} muestra el
+    formato de un fichero con extensi\'on dat.
+\begin{table}[h]
+\begin{center}
+    \begin{tabular}{lrrrrl}
+   $x_{1}$& $x_{2}$ & \ldots & \ldots &$x_{n}$ & xx
+     \\
+     $v_{11}$&$v_{12}$ & \ldots & \ldots & $v_{1n}$ & $id_{1}$  \\
+      $v_{21}$&$v_{22}$ & \ldots & \ldots & $v_{2n}$ & $id_{2}$ \\
+    \ldots  & \ldots  & \ldots  & \ldots  & \ldots & \ldots \\
+    \ldots  & \ldots & \ldots & \ldots & \ldots & \ldots  \\
+     $v_{m1}$&$v_{m2}$ & \ldots & \ldots & $v_{mn}$ & $id_{m}$
+    \end{tabular}
+\caption{Estructura de un fichero extensi\'on dat}
+   \label{uno}
+\end{center}
+\end{table}
+%\vspace{-1cm}
+\item $<nombre\_fichero.par>$\ \ Cuando la partici\'on de referencia no est\'a
+inclu\'{\i}da  en la matriz de datos $X$, este fichero contiene
+informaci\'on referida a dicha partici\'on, su estructura es una
+columna que conserva el orden de asignaci\'on de la clase de
+referencia con respecto al orden de los individuos en el conjunto
+de datos de la matriz $X$. El Cuadro~\ref{luna} muestra el formato
+de un fichero con extensi\'on par.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{cc}
+ nom\_Obj &  Clase \\
+ nom\_1 &  $id_{1}$  \\
+ nom\_2 &    $id_{2}$  \\
+ \ldots & \ldots \\
+ \ldots & \ldots \\
+  \ldots & \ldots \\
+nom\_n &     $id_{n}$
+\end{tabular}
+\caption{Estructura de un fichero extensi\'on par}
+   \label{luna}
+\end{center}
+\end{table}
+
+\item $<nombre\_fichero.iks>$\ \ Un fichero con extensi\'on iks
+contiene informaci\'on sobre el sistema de intervalos de longitud
+variable correspondiente a el atributo $X_{k}$, su estructura
+consiste de un rengl\'on donde se encuentran los $2\xi$ valores
+l\'{\i}mites del sistema de intervalos separados por al menos un
+espacio. El Cuadro~\ref{unico} muestra el formato de un fichero
+con extensi\'on iks.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{ccccccc}
+$Z_{1}$ & $Z_{2}$ & $Z_{3}$ & \ldots & \ldots & $Z_{2\xi-1}$ &
+$Z_{2\xi}$
+\end{tabular}
+\caption{Estructura de un fichero extensi\'on iks}
+   \label{unico}
+\end{center}
+\end{table}
+
+\item $<nombre\_fichero.dci>$\ \ Un fichero con extensi\'on dci
+      contiene informaci\'on sobre la tabla de distribuciones condicionadas
+      a intervalos para un cierto atributo $X_{k}$ cuya estructura es la
+      siguiente:  en la primera l\'{\i}nea van los l\'{\i}mites de los
+      intervalos y en el resto de las casillas los valores de la funci\'on de
+      pertenencia $p_{sc}$ por clase $C$, todos sus elementos est\'an separados
+      por al menos un espacio. El Cuadro~\ref{dos} muestra el formato de
+      un fichero con extensi\'on dci.
+
+\begin{table}[h]
+\begin{center}
+    \begin{tabular}{ccccccc}
+%%$Z_{1}$ & $Z_{2}$ & $Z_{3}$ & \ldots & \ldots & $Z_{2\xi-1}$ &
+%%$Z_{2\xi}$ \\
+$p_{11}$ &$p_{21}$ &$p_{31}$ &\ldots &\ldots
+&$p_{(2\xi-1)1}$ & \\
+$p_{12}$ &$p_{22}$ &$p_{32}$ &\ldots &\ldots
+&$p_{(2\xi-1)2}$ &  \\
+\ldots & \ldots & \ldots & \ldots & \ldots & \ldots &  \\
+$p_{1\xi}$ &$p_{2\xi}$ &$p_{3\xi}$ &\ldots &\ldots
+&$p_{(2\xi-1)\xi}$ &
+    \end{tabular}
+\caption{Estructura de un fichero extensi\'on dci}
+   \label{dos}
+\end{center}
+\end{table}
+
+%\vspace{-1cm}
+\item $<nombre\_fichero.tex>$\ \ Fichero que contiene la
+      estructura de las instrucciones en c\'odigo \LaTeX\ de
+      los gr\'aficos de las funciones de pertenencia condicionadas
+      a intervalos por atributo $X_{k}$ y por clase $C$ . El
+      Cuadro~\ref{tres} muestra el formato de un fichero con
+      extensi\'on tex.
+
+\begin{table}[h]
+\begin{center}
+    \begin{tabular}{l}
+ \% Contenido de la \emph{figura grande} para el atributo $X_{k}$\\
+       $\backslash begin\{figure\}$ \\
+       \{$\backslash setlength\
+       \{\backslash unitlength \{1pt\}$\} \\
+       $\backslash begin\{picture\} (540, 700) (50, -175)$ \\
+        \% Para cada clase $Ci$ el origen de cada grafo se coloca en la posici\'on \\
+        \% (0, $140 \cdot c$), donde $c$ var\'{\i}a de 0 a 3 en cada hoja
+        tama\~no\\
+         a4, utilizando la instrucci\'on: \\
+       $\backslash put(0, 140 \cdot c) \{G_{C}\}$ \\
+        donde $G_{C}$ es el c\'odigo \LaTeX\ del grafo para la clase $C$, con
+        $1 \leq $C$ \leq \xi$. \\
+       $\backslash end\{picture\}$ \\
+       $\backslash end\{figure\}$
+       \end{tabular}
+\caption{Estructura de un fichero extensi\'on tex}\label{tres}
+\end{center}
+\end{table}
+
+\item $<nombre\_fichero.srg>$\ \ Fichero que contiene la
+estructura del sistema de reglas globales $\mathcal{\Re}(X_{k},
+\mathcal{P})$ para el atributo seleccionado $X_{k}$, el contenido
+de este fichero es recomendable sea tipo latex. Es un fichero en
+forma de columna de $(2\xi-1)(\xi)$ elementos, el sub-\'{\i}ndice
+de la regla nos marca la posici\'on en que se dispara la regla. El
+Cuadro~\ref{mar} muestra el formato de un fichero con extensi\'on
+srg.
+
+\begin{table}[h]
+\begin{center}
+    \begin{tabular}{c}
+$ r_{11}:\ x_{ik}\in
+I_{1}^{k}\stackrel{p_{sc}}{\longrightarrow}C1$ \\
+$ r_{12}:\ x_{ik}\in
+I_{1}^{k}\stackrel{p_{sc}}{\longrightarrow}C1$ \\
+\ldots \\
+\ldots \\
+$ r_{2\xi-1,\xi}:\ x_{ik}\in
+I_{2\xi-1}^{k}\stackrel{p_{sc}}{\longrightarrow}C\xi$
+    \end{tabular}
+\caption{Estructura de un fichero extensi\'on srg}
+   \label{mar}
+\end{center}
+\end{table}
+
+\item $<nombre\_fichero.srr>$\ \ Fichero que contiene la
+estructura de un sistema reducido de reglas
+$\mathcal{\Re}^{*}(X_{k}, \mathcal{P})$ para el atributo
+seleccionada $X_{k}$ cuando se ha optado por escoger alg\'un
+criterio de agregaci\'on. Como una primera aproximaci\'on en este
+trabajo hemos elegido el criterio de m\'axima probabilidad,
+as\'{\i} que tenemos una regla por cada intervalo $I_{s}^{k}$ del
+sistema $\mathcal{I}^{k}$. El Cuadro~\ref{sol} muestra el formato
+de un fichero con extensi\'on srr.
+
+\begin{table}[h]
+\begin{center}
+    \begin{tabular}{c}
+$ r_{1}:\ x_{ik}\in
+I_{1}^{k}\stackrel{p_{max}}{\longrightarrow}C$ \\
+%
+$ r_{2}:\ x_{ik}\in
+I_{2}^{k}\stackrel{p_{max}}{\longrightarrow}C$ \\
+%
+\ldots  \\
+\ldots  \\
+%
+$ r_{2\xi-1}:\ x_{ik}\in
+I_{2\xi-1}^{k}\stackrel{p_{max}}{\longrightarrow}C$
+    \end{tabular}
+\caption{Estructura de un fichero extensi\'on srr}
+   \label{sol}
+\end{center}
+\end{table}
+
+\item $<nombre\_fichero.tcp>$\ \ Fichero que contiene
+informaci\'on sobre la comparaci\'on entre la clasificaci\'on de
+referencia ($C$) y la obtenida por el sistema de reglas
+($\hat{C}$) en cada atributo, donde $c_{ij}$ es el n\'umero de
+coincidencias entre ambas clasificaciones para el atributo
+$X_{k}$. El Cuadro~\ref{venus} muestra el formato de un fichero
+con extensi\'on tcp.
+
+\begin{table}[h]
+\begin{center}
+    \begin{tabular}{lrrrl}
+         & $C_{1}$ &  \ldots & \ldots &$C_{\xi}$
+     \\
+     $\hat{C1}$ & $c_{11}$ & \ldots & \ldots & $c_{1\xi}$  \\
+      $\hat{C2}$&$c_{21}$ & \ldots & \ldots & $c_{2\xi}$  \\
+    \ldots  & \ldots  & \ldots  & \ldots  & \ldots  \\
+    \ldots  & \ldots & \ldots & \ldots & \ldots  \\
+     $\hat{C}\xi$&$c_{\xi 1}$ & \ldots & \ldots & $c_{\xi \xi}$
+    \end{tabular}
+\caption{Estructura de un fichero extensi\'on tcp}
+   \label{venus}
+\end{center}
+\end{table}
+
+\item $<nombre\_fichero.vsg>$\ \ Fichero que contiene la
+informaci\'on de las probabilidades y consecuentes de las reglas
+que se dispar\'an para los individuos del conjunto de prueba
+$P_{0}$. El Cuadro~\ref{vale} muestra el formato de este tipo de
+fichero.
+
+\begin{table}[h]
+\begin{center}
+    \begin{tabular}{lrrrrl}
+    No.  & $C$ & $P$ & \ldots & $C$ & $P$ \\
+     1 & $C_{11}$ & $p_{11}$ & \ldots & $C_{1\xi}$ & $p_{1\xi}$
+     \\
+     2 & $C_{21}$ & $p_{21}$ & \ldots & $C_{2\xi}$ & $p_{2\xi}$  \\
+    \ldots  & \ldots  & \ldots  & \ldots  & \ldots & \ldots \\
+    \ldots  & \ldots & \ldots & \ldots & \ldots & \ldots \\
+     n &$C_{n 1}$ & $p_{n1}$ & \ldots & $c_{n \xi}$ & $p_{n\xi}$
+    \end{tabular}
+\caption{Estructura de un fichero extensi\'on vsg}
+   \label{vale}
+\end{center}
+\end{table}
+\item $<nombre\_fichero.vsm>$\ \ Fichero que contiene la
+informaci\'on de las probabilidades m\'aximas y consecuentes de
+las reglas que se dispar\'an para los individuos del conjunto de
+prueba $P_{0}$. El Cuadro~\ref{cero} muestra el formato de este
+tipo de fichero.
+\begin{table}[h]
+\begin{center}
+    \begin{tabular}{lcr}
+    No.  & $C$ & $P_{max}$  \\
+     1 & $C_{1}$ & $p_{1max}$
+     \\
+     2 & $C_{2}$ & $p_{2max}$  \\
+    \ldots  & \ldots  & \ldots   \\
+    \ldots  & \ldots & \ldots  \\
+     n &$C_{n}$ & $p_{nmax}$
+    \end{tabular}
+\caption{Estructura de un fichero extensi\'on vsm}
+   \label{cero}
+\end{center}
+\end{table}
+\item $<nombre\_fichero.coi>$\ \ Fichero que contiene la
+informaci\'on sobre la coincidencias entre las clases de
+predicci\'on ($\hat{C}$) y la referencia ($C$) para cada uno de
+los individuos del conjunto de prueba. El Cuadro~\ref{pila}
+muestra la estructura de este tipo de fichero con extenci\'on coi.
+\begin{table}[h]
+\begin{center}
+    \begin{tabular}{lcr}
+    No.  & $\hat{C}$ & $C$  \\
+     1 & $\hat{C}_{1}$ & $C_{1}$
+     \\
+     2 & $\hat{C}_{2}$ & $C_{2}$  \\
+    \ldots  & \ldots  & \ldots   \\
+    \ldots  & \ldots & \ldots  \\
+     n &$\hat{C}_{n}$ & $C_{n}$ \\
+     N\'umero &  de &coincidencias:
+    \end{tabular}
+\caption{Estructura de un fichero extensi\'on coi}
+   \label{pila}
+\end{center}
+\end{table}
+\end{itemize}
+
+\subsection{\bf Descripci\'on de los m\'odulos del sistema CIADEC}
+
+La descripci\'on de los m\'odulos que forman la aquitectura de
+CIADEC se enfoca sobre el objetivo principal, la entrada, salida y
+expectativas de funcionamiento de cada uno de ellos.
+
+\subsubsection{M\'odulo I: Generaci\'on de Intervalos de Longitud
+Variable (GILOVA)} Dada el atributo de estudio $X_{k}$ el m\'odulo
+I tiene como principal objetivo el de generar un sistema de
+intervalos de longitud variable calculando los valores de
+$\mathcal{I}^{k}$. La llamada a la funci\'on principal del
+m\'odulo es:
+\begin{center}
+    TablaInterv($X$, $X_{k}$, $P$, int nclases)
+\end{center}
+\paragraph{Entrada:} Los par\'ametros de entrada en este m\'odulo son:
+el atributo a seleccionar $X_{k}$, la matriz de datos $X$ y en su
+caso la partici\'on $P$ del conjunto de datos y el n\'umero de
+clases nclases de la partici\'on.
+\paragraph{Salida:}
+Para cada atributo seleccionado $X_{k}$, como salida un vector que
+representa el sistema de intervalos de longitud variable y cuya
+estructura es la de un fichero con extensi\'on iks, digamos el
+nombre del atributo en estudio y representado por $<X_{k}.iks>$.
+
+\paragraph{Descripci\'on:}
+En este m\'odulo se realizan las siguientes funciones al hacer la
+llamada a la funci\'on principal y son: Construir un vector con el
+m\'{\i}nimo y m\'aximo de $X_{k}$ en cada clase, ordenar los
+valores de ese vector de menor a mayor y generar el fichero .iks.
+
+\subsubsection{M\'odulo II: Generaci\'on de la Tabla de Distribuciones
+Condicionadas a Intervalos (GETADI)}
+
+El m\'odulo II GETADI tiene como principal objetivo la
+generaci\'on de la tabla de distribuciones condicionadas a
+intervalos (o funciones de pertenencia). La llamada a la funci\'on
+principal del m\'odulo es:
+\begin{center}
+    TablaFrec($X$, $X_{k}$, $P$, short nClases, short nInterv)
+\end{center}
+\paragraph{Entrada:} Este m\'odulo tiene como entrada el conjunto de datos $X$,
+el atributo seleccionado $X_{k}$, la partici\'on $P$, el n\'umero
+de clases nClases y el n\'umero de intervalos nInterv.
+
+\paragraph{Salida:} La salida en este m\'odulo es una tabla de
+distribuciones condicionada a intervalos de la forma
+$\mathcal{P}|I^{k}$ representada por medio de un fichero el nombre
+del atributo y con extensi\'on dci ($<X_{k}.dci>$).
+
+\paragraph{Descripci\'on:} En esta parte se lee nuevamente la columna
+$X_{k}$ de la matriz de datos $X$, ubicando cada valor $x_{ik}$ en
+el intervalo $\mathcal{I}_{s}^{k}$ y clase $C$ correspondiente,
+contando el n\'umero de elementos en cada una de las casillas de
+la tabla $\mathcal{P}|I^{k}$ desde $k=1 : 2\xi-1$ y posteriormente
+sumando columnas obtenemos los $n_{I_{s}^{k}}$ para dividir cada
+casilla por su $n_{I_{s}^{k}}$ y determinar las probabilidades
+$p_{sc}$ correspondientes.
+
+\subsubsection{M\'odulo III:  Generaci\'on de Sistemas de Reglas (GESIRE)}
+
+El m\'odulo III GESIRE genera primero, un sistema de reglas
+difusas de inducci\'on basado en la matriz de distribuciones
+condicionada a intervalos por atributo seleccionado $X_{k}$,
+$\mathcal{\Re}(X_{k}, \mathcal{P})$ en un fichero de tipo .srg
+para el sistema de reglas completo y una vez que hemos elegido un
+cierto criterio de agregaci\'on para reducir la ambiguedad
+inherente al sistema de reglas obtenemos un sistema de reglas
+reducido $\mathcal{\Re}^{*}(X_{k},\mathcal{P})$ que se guarda en
+un fichero tipo .srr. La llamada a la funci\'on principal del
+m\'odulo es:
+\begin{center}
+    GeneradorReglas($<X_{k}.dci>$, $X_{k}$, short nClases, short nInterv)
+\end{center}
+\paragraph{Entrada:} La entrada es un fichero con extensi\'on
+.dci que representan la tabla $\mathcal{P}|I^{k}$ de
+distribuciones condicionada a intervalos del atributo $X_{k}$ en
+estudio y sus dimensiones nClases y nInterv.
+\paragraph{Salida:} La salida es a dos niveles dependiendo del inter\'es
+del usuario: si se desea el conjunto global de reglas es un
+fichero con extensi\'on src, por otro lado si se desea elegir
+alg\'un criterio de agregaci\'on la salida ser\'a un fichero con
+extensi\'on srr.
+
+\paragraph{Descripci\'on:} En este m\'odulo se construye el
+sistema global de reglas $\mathcal{\Re}(X_{k}, \mathcal{P})$ por
+atributo seleccionado $X_{k}$ a partir de la tabla  de
+distribuciones condicionada a intervalos y considerando un
+criterio de agregaci\'on (pj., el de probabilidad m\'axima)
+obtenemos un sistema reducido de reglas $\mathcal{\Re}^{*}(X_{k},
+\mathcal{P})$.
+
+\subsubsection{M\'odulo IV:  Generaci\'on de Gr\'aficos en
+\LaTeX\ (GEGRALA)}
+
+El m\'odulo IV GEGRALA tiene como objetivo generar gr\'aficos para
+las funciones de pertenencia $f(X_{k}|C)$. La llamada a la
+funci\'on principal del m\'odulo es:
+\begin{center}
+    GeneradorGrafico($<X_{k}.dci>, X_{k}.tex, X_{k}$)
+\end{center}
+\paragraph{Entrada:} El fichero de entrada para la generaci\'on
+de gr\'aficos \LaTeX\ es la tabla $\mathcal{P}|I^{k}$
+representadas por un fichero con extensi\'on dci ($<X_{k}.dci>$).
+
+\paragraph{Salida:} La salida es de dos tipos:
+    \begin{itemize}
+    \item Como fichero con extensi\'on .tex, con el nombre del atributo de estudio
+($<nombre\_Atributo.tex>$).
+    \item Y visualizaci\'on en pantalla del gráfico.
+    \end{itemize}
+La estructura de los ficheros tex es la que sigue un formato de
+ fichero en \LaTeX\ (ver Cuadro~\ref{tres}) que dibuje el gráfico.
+
+\paragraph{Descripci\'on:} En este m\'odulo la generaci\'on
+de gr\'aficos de las tablas $\mathcal{P}|I^{k}$ de distribuciones
+se hace a partir de la tabla de distribuciones generada en el
+m\'odulo II y considerando las operaciones de transfomaci\'on en
+\ref{gengra}.
+
+\subsubsection{M\'odulo V:  Validaci\'on del Sistema de Reglas (VALIDA)}
+
+Este m\'odulo representa la etapa final del proceso y es donde se
+realiza la validaci\'on del sistema de reglas que hemos obtenido
+cuando existe un conjunto de validaci\'on $P_{0}$, primero para
+cada una de los atributos $X_{k}$ y luego una vez hecha la
+asignaci\'on de la clase correspondiente $C$ a cada uno de los
+individuos $i$ del conjunto de prueba $P_{0}$, comparándola con la
+clase de referencia asociada a cada uno de \'estos obtener la
+calidad de asignaci\'on del sistema. La llamada a la funci\'on
+principal del m\'odulo es:
+
+\begin{center}
+    ValidaReglas(FileDat $P_{0}.dat$, short nInterv)
+\end{center}
+
+\paragraph{Entrada:} Recibe como entrada el conjunto de
+prueba $P_{0}$ donde cada individuo tiene asignada la clase ($C$)
+que le corresponde de acuerdo a la clasificaci\'on de referencia y
+por otro lado, la tabla $\mathcal{I}^{k}|P$ ($<X_{k}.dci>$). Con
+esta tabla y el valor $x_{ik}$ se puede calcular la  clase de
+predicci\'on ($\hat{C}$) de cada individuo y aplicando el criterio
+de probabilidad m\'axima obtener el sistema reducido de reglas.
+
+\paragraph{Salida:} La salida es un fichero con extensi\'on tcp
+que determina el n\'umero de coincidencias entre las clases de
+referencia ($C$) y de predicci\'on ($\hat{C}$) para los elementos
+de $P_{0}$.
+
+\paragraph{Descripci\'on:} En este m\'odulo se hace una
+comparaci\'on cruzada entre la clase asignada (la de referencia) y
+la de predicci\'on (la asignada debido al sistema de reglas
+reducido) para determinar el grado de confiabilidad de nuestro
+sistema de reglas. Se calcula en \% de error.
+
+\subsection{\bf Sobre la Generaci\'on de Gr\'aficos en \LaTeX }
+\label{gengra}
+
+En esta parte se propone una forma de representar gr\'aficamente
+este sistema de reglas que permite obtener conocimiento \'util y
+comprensible para la interpretaci\'on conceptual de las clases
+identificadas.
+
+A nivel diseño este m\'odulo se hizo en forma imbricada a dos
+niveles para la reutilizaci\'on del c\'odigo \LaTeX\ de estos
+gr\'aficos en documentos posteriores.
+\input{disegrafo.tex}
+Utilizando la misma forma imbricada de figuras, el otro tipo de
+gr\'afico en este m\'odulo, el de gr\'aficos que representan la
+combinaci\'on de atributos se hizo de la siguiente forma:
+Considerando como entrada el conjunto de prueba $P_{0}$, se lee
+para el primer individuo $i=1$ el valor de la primer atributo
+$X_{1}$, se localiza el intervalo que le corresponde en la matriz
+de distribuciones condicionadas a intervalos de ese atributo y se
+toma ese rengl\'on con sus clases y probabilidades
+correspondientes y se construye el primer gráfico ; luego se lee
+el segundo atributo $X_{2}$ se localiza el intervalo a que
+corresponde en la matriz de distribuciones de ese atributo y se
+construye este gráfico, que representará todas las clases
+asociadas con sus correspondientes probabilidades y así
+sucesivamente hasta el atributo $X_{17}$, de todo esto obtenemos
+17 gráficos para el primer individuo. En seguida se considera el
+segundo individuo $i=2$ y se repite el proceso anterior y así
+sucesivamente hasta agotar todos los individuos del conjunto de
+prueba (30 elementos), de tal forma que obtengamos 17 gráficos que
+representan las clases y sus correspondientes probabilidades de
+los 17 atributos seleccionadas por individuos en el conjunto de
+prueba $P_{0}$.
+
+A nivel algoritmo se definen dos constructores: Class
+GeneradorGrafico y Class GeneradorLatex.
+
+\section{\bf Implementaci\'on del sistema CIADEC}
+
+CIADEC es un Sistema orientado a la caracterizaci\'on e
+interpretaci\'on auto\-m\'atica de clases en dominios poco
+estructurados implementado en el lenguaje de programaci\'on JAVA 2
+SDK, versi\'on $1.3.1\_01$ en la plataforma Windows 95/ 98/ 2000/
+NT4.0. El sistema deber\'a operar en un entorno de PC\'\ s y se ha
+desarrollado a partir de la metodolog\'{\i}a formal descrita en el
+ya citado reporte~\cite{vaz:gib:01}.
+
+\end{document}

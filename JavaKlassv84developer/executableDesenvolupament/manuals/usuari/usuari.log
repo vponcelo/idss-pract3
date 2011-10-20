@@ -1,0 +1,2973 @@
+This is e-TeX, Version 3.141592-2.2 (MiKTeX 2.4) (preloaded format=latex 2006.10.18)  19 FEB 2010 17:42
+entering extended mode
+**usuari.tex
+(usuari.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8g> and hyphenation patterns for english, french, catalan, spanish, d
+umylang, nohyphenation, loaded.
+(C:\soft\texmf\tex\latex\base\report.cls
+Document Class: report 2005/09/16 v1.4f Standard LaTeX document class
+(C:\soft\texmf\tex\latex\base\size10.clo
+File: size10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(C:\soft\texmf\tex\generic\babel\babel.sty
+Package: babel 2005/05/21 v3.8g The Babel package
+
+(C:\soft\texmf\tex\generic\babel\catalan.ldf
+Language: catalan 2005/03/29 v2.2p Catalan support from the babel system
+
+(C:\soft\texmf\tex\generic\babel\babel.def
+File: babel.def 2005/05/21 v3.8g Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+)
+Package babel Info: Making " an active character on input line 91.
+Warning: You are using encoding OT1 instead of T1.
+Some word breaks will not be found.
+\leftllkern=\dimen104
+\rightllkern=\dimen105
+\raiselldim=\dimen106
+))
+(C:\soft\texmf\tex\latex\base\inputenc.sty
+Package: inputenc 2006/03/04 v1.1b Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(C:\soft\texmf\tex\latex\base\ansinew.def
+File: ansinew.def 2006/03/04 v1.1b Input encoding file
+))
+(C:\soft\texmf\tex\latex\graphics\color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(C:\soft\texmf\tex\latex\00miktex\color.cfg
+File: color.cfg 2005/12/29 v1.1 MiKTeX 'color' configuration
+)
+Package color Info: Driver file: dvips.def on input line 130.
+
+(C:\soft\texmf\tex\latex\graphics\dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)
+(C:\soft\texmf\tex\latex\graphics\dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+(C:\soft\texmf\tex\latex\graphics\epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+(C:\soft\texmf\tex\latex\graphics\graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\soft\texmf\tex\latex\graphics\keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(C:\soft\texmf\tex\latex\graphics\graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\soft\texmf\tex\latex\graphics\trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(C:\soft\texmf\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2005/12/29 v1.2 MiKTeX 'graphics' configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 90.
+)
+\Gin@req@height=\dimen107
+\Gin@req@width=\dimen108
+)
+\epsfxsize=\dimen109
+\epsfysize=\dimen110
+)
+(C:\soft\texmf\tex\latex\oberdiek\epstopdf.sty
+Package: epstopdf 2001/02/04 v1.1 Conversion with epstopdf on the fly (HO)
+
+
+Package epstopdf Warning: Graphics driver file `pdftex.def' not loaded.
+
+) (C:\soft\texmf\tex\latex\eurosym\eurosym.sty
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box26
+)
+(C:\soft\texmf\tex\latex\hyperref\hyperref.sty
+Package: hyperref 2003/11/30 v6.74m Hypertext links for LaTeX
+\@linkdim=\dimen111
+\Hy@linkcounter=\count89
+\Hy@pagecounter=\count90
+
+(C:\soft\texmf\tex\latex\hyperref\pd1enc.def
+File: pd1enc.def 2003/11/30 v6.74m Hyperref: PDFDocEncoding definition (HO)
+)
+(C:\soft\texmf\tex\latex\00miktex\hyperref.cfg
+File: hyperref.cfg 2006/02/14 v1.1 MiKTeX 'hyperref' configuration
+)
+Package hyperref Info: Hyper figures OFF on input line 1880.
+Package hyperref Info: Link nesting OFF on input line 1885.
+Package hyperref Info: Hyper index ON on input line 1888.
+Package hyperref Info: Plain pages ON on input line 1893.
+Package hyperref Info: Backreferencing OFF on input line 1900.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 2004.
+(C:\soft\texmf\tex\latex\ltxmisc\url.sty
+\Urlmuskip=\muskip10
+Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 2143.
+\Fld@menulength=\count91
+\Field@Width=\dimen112
+\Fld@charsize=\dimen113
+\Choice@toks=\toks17
+\Field@toks=\toks18
+Package hyperref Info: Hyper figures OFF on input line 2618.
+Package hyperref Info: Link nesting OFF on input line 2623.
+Package hyperref Info: Hyper index ON on input line 2626.
+Package hyperref Info: backreferencing OFF on input line 2633.
+Package hyperref Info: Link coloring OFF on input line 2638.
+\c@Item=\count92
+\c@Hfootnote=\count93
+)
+*hyperref using default driver hdvips*
+(C:\soft\texmf\tex\latex\hyperref\hdvips.def
+File: hdvips.def 2003/11/30 v6.74m Hyperref driver for dvips
+
+(C:\soft\texmf\tex\latex\hyperref\pdfmark.def
+File: pdfmark.def 2003/11/30 v6.74m Hyperref definitions for pdfmark specials
+\pdf@docset=\toks19
+\pdf@box=\box27
+\pdf@toks=\toks20
+\pdf@defaulttoks=\toks21
+\Fld@listcount=\count94
+\@outlinefile=\write3
+))
+(C:\soft\texmf\tex\latex\multirow\multirow.sty
+\bigstrutjot=\dimen114
+)
+(C:\soft\texmf\tex\latex\amsfonts\amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+\@emptytoks=\toks22
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+)
+(C:\soft\texmf\tex\latex\amsmath\amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(C:\soft\texmf\tex\latex\amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(C:\soft\texmf\tex\latex\amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks23
+\ex@=\dimen115
+))
+(C:\soft\texmf\tex\latex\amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen116
+)
+(C:\soft\texmf\tex\latex\amsmath\amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count95
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count96
+\leftroot@=\count97
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count98
+\DOTSCASE@=\count99
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen117
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count100
+\c@MaxMatrixCols=\count101
+\dotsspace@=\muskip11
+\c@parentequation=\count102
+\dspbrk@lvl=\count103
+\tag@help=\toks24
+\row@=\count104
+\column@=\count105
+\maxfields@=\count106
+\andhelp@=\toks25
+\eqnshift@=\dimen118
+\alignsep@=\dimen119
+\tagshift@=\dimen120
+\tagwidth@=\dimen121
+\totwidth@=\dimen122
+\lineht@=\dimen123
+\@envbody=\toks26
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(C:\soft\texmf\tex\latex\base\ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+) (usuari.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Info: Redefining \l on input line 51.
+LaTeX Info: Redefining \L on input line 51.
+Package hyperref Info: Link coloring OFF on input line 51.
+
+(C:\soft\texmf\tex\latex\hyperref\nameref.sty
+Package: nameref 2003/12/03 v2.21 Cross-referencing by name of section
+\c@section@level=\count107
+)
+LaTeX Info: Redefining \ref on input line 51.
+LaTeX Info: Redefining \pageref on input line 51.
+ (usuari.out) (usuari.out)
+LaTeX Font Info:    Try loading font information for U+msa on input line 78.
+
+(C:\soft\texmf\tex\latex\amsfonts\umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 78.
+
+(C:\soft\texmf\tex\latex\amsfonts\umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+) [1
+
+] (usuari.toc)
+\tf@toc=\write4
+ [1
+
+]
+Cap\'{\i }tol 1.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 140.
+
+(C:\soft\texmf\tex\latex\base\omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 140.
+File: pantalles/Basica.eps Graphic file (type eps)
+ <pantalles/Basica.eps>
+File: pantalles/UnivError.eps Graphic file (type eps)
+
+<pantalles/UnivError.eps> [2
+
+]
+File: pantalles/OpcHisto.eps Graphic file (type eps)
+ <pantalles/OpcHisto.eps>
+File: pantalles/min.eps Graphic file (type eps)
+ <pantalles/min.eps>
+[3]
+File: pantalles/ConfirmarDef.eps Graphic file (type eps)
+ <pantalles/ConfirmarDef.eps> [4] [5] [6]
+File: pantalles/Biv.eps Graphic file (type eps)
+ <pantalles/Biv.eps> [7]
+Cap\'{\i }tol 2.
+
+LaTeX Warning: Reference `fitxers entrada' on page 8 undefined on input line 26
+7.
+
+[8
+
+]
+Overfull \hbox (16.1897pt too wide) in paragraph at lines 276--277
+[][]\OT1/cmr/m/it/10 Importa\OT1/cmr/m/n/10 : Per-met im-por-tar una ma-triu de
+ da-des en for-mat .dat estandard. 
+ []
+
+
+Overfull \hbox (14.1897pt too wide) in paragraph at lines 277--278
+[][]\OT1/cmr/m/it/10 Exporta\OT1/cmr/m/n/10 : Per-met ex-por-tar una ma-triu de
+ da-des en for-mat .dat estandard. 
+ []
+
+[9] [10]
+Overfull \hbox (0.11159pt too wide) in paragraph at lines 312--313
+\OT1/cmr/m/n/10 mes va-ri-a-bles se-lec-ci-o-nant els ele-ments des-crip-tius 
+uni-va-ri-ants (grafics
+ []
+
+[11] [12] [13]
+File: pantalles/senseregles.eps Graphic file (type eps)
+ <pantalles/senseregles.eps> [14]
+File: pantalles/directo.eps Graphic file (type eps)
+ <pantalles/directo.eps>
+[15] [16]
+File: pantalles/ambregles.eps Graphic file (type eps)
+ <pantalles/ambregles.eps>
+File: pantalles/directoregles.eps Graphic file (type eps)
+ <pantalles/directoregles.eps> [17]
+File: pantalles/MissMatriuJaCarregada.eps Graphic file (type eps)
+
+<pantalles/MissMatriuJaCarregada.eps>
+File: pantalles/regles.eps Graphic file (type eps)
+ <pantalles/regles.eps> [18]
+
+! LaTeX Error: Cannot determine size of graphic in pantalles/directoreg.eps (no
+ BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.493 ...dth=\textwidth]{pantalles/directoreg.eps}
+                                                  
+? 
+File: pantalles/directoreg.eps Graphic file (type eps)
+<pantalles/directoreg.eps> [19]
+File: pantalles/dendo.eps Graphic file (type eps)
+ <pantalles/dendo.eps> [20]
+
+! LaTeX Error: Cannot determine size of graphic in pantalles/rober/Historia.eps
+ (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.525 ...\textwidth]{pantalles/rober/Historia.eps}
+                                                  
+? 
+File: pantalles/rober/Historia.eps Graphic file (type eps)
+<pantalles/rober/Historia.eps> [21]
+File: pantalles/tanca.eps Graphic file (type eps)
+ <pantalles/tanca.eps> [22] [23]
+File: pantalles/anomena.eps Graphic file (type eps)
+
+<pantalles/anomena.eps> [24]
+File: pantalles/anomena1.eps Graphic file (type eps)
+ <pantalles/anomena1.eps> [25]
+File: pantalles/Importa.eps Graphic file (type eps)
+
+<pantalles/Importa.eps> [26]
+File: pantalles/directorEstandard.eps Graphic file (type eps)
+ <pantalles/directorEstandard.eps>
+File: pantalles/dialegEstandard.eps Graphic file (type eps)
+
+<pantalles/dialegEstandard.eps> [27]
+File: pantalles/ExportaBC.eps Graphic file (type eps)
+ <pantalles/ExportaBC.eps> [28]
+File: pantalles/PantExportaBC.eps Graphic file (type eps)
+
+<pantalles/PantExportaBC.eps> [29] [30]
+File: pantalles/directoriExportarBC.eps Graphic file (type eps)
+ <pantalles/directoriExportarBC.eps>
+[31]
+File: pantalles/conf.eps Graphic file (type eps)
+ <pantalles/conf.eps> [32]
+File: pantalles/config.eps Graphic file (type eps)
+ <pantalles/config.eps> [33]
+
+! LaTeX Error: Cannot determine size of graphic in pantalles/rober/LocFitxer1.e
+ps (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.709 ...extwidth]{pantalles/rober/LocFitxer1.eps}
+                                                  
+? 
+File: pantalles/rober/LocFitxer1.eps Graphic file (type eps)
+<pantalles/rober/LocFitxer1.eps>
+
+! LaTeX Error: Cannot determine size of graphic in pantalles/rober/LocFitxer2.e
+ps (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.724 ...extwidth]{pantalles/rober/LocFitxer2.eps}
+                                                  
+? 
+File: pantalles/rober/LocFitxer2.eps Graphic file (type eps)
+<pantalles/rober/LocFitxer2.eps> [34]
+
+! LaTeX Error: Cannot determine size of graphic in pantalles/rober/LocFitxer3.e
+ps (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.740 ...extwidth]{pantalles/rober/LocFitxer3.eps}
+                                                  
+? 
+File: pantalles/rober/LocFitxer3.eps Graphic file (type eps)
+<pantalles/rober/LocFitxer3.eps> [35]
+File: pantalles/loc.eps Graphic file (type eps)
+ <pantalles/loc.eps>
+File: pantalles/loc3.eps Graphic file (type eps)
+ <pantalles/loc3.eps>
+[36]
+File: pantalles/loc2.eps Graphic file (type eps)
+ <pantalles/loc2.eps> [37]
+File: pantalles/surt.eps Graphic file (type eps)
+ <pantalles/surt.eps> [38]
+File: pantalles/selsubmatriu.eps Graphic file (type eps)
+
+<pantalles/selsubmatriu.eps>
+Overfull \hbox (11.07611pt too wide) in paragraph at lines 821--822
+[][]\OT1/cmr/m/it/10 Variables Numeriques\OT1/cmr/m/n/10 : On se-lec-ci-o-nem 
+de la llis-ta de les va-ri-a-bles numeriques
+ []
+
+[39]
+File: pantalles/submatriu.eps Graphic file (type eps)
+ <pantalles/submatriu.eps>
+File: pantalles/valorsNum.eps Graphic file (type eps)
+ <pantalles/valorsNum.eps> [40]
+File: pantalles/valorsCat.eps Graphic file (type eps)
+
+<pantalles/valorsCat.eps> [41]
+File: pantalles/editaMetadades.eps Graphic file (type eps)
+ <pantalles/editaMetadades.eps> [42]
+File: pantalles/EditaMetaNum.eps Graphic file (type eps)
+
+<pantalles/EditaMetaNum.eps> [43]
+File: pantalles/EditaMetaCateg.eps Graphic file (type eps)
+ <pantalles/EditaMetaCateg.eps> [44]
+File: pantalles/PanteditaMetadades.eps Graphic file (type eps)
+
+<pantalles/PanteditaMetadades.eps>
+File: pantalles/MenuEliminaProp.eps Graphic file (type eps)
+ <pantalles/MenuEliminaProp.eps> [45]
+[46]
+File: pantalles/EliminaProp.eps Graphic file (type eps)
+ <pantalles/EliminaProp.eps> [47]
+File: pantalles/Andreu/menuDivideixBDD.eps Graphic file (type eps)
+ <pantalles/Andreu/menuDivideixBDD.eps>
+[48]
+File: pantalles/Andreu/divideixBDD.eps Graphic file (type eps)
+ <pantalles/Andreu/divideixBDD.eps> [49]
+File: pantalles/Trac.eps Graphic file (type eps)
+ <pantalles/Trac.eps>
+
+LaTeX Warning: Reference `fig:Tracta' on page 50 undefined on input line 1030.
+
+File: pantalles/Tracta.eps Graphic file (type eps)
+<pantalles/Tracta.eps> [50]
+File: pantalles/integ.eps Graphic file (type eps)
+ <pantalles/integ.eps>
+
+LaTeX Warning: Reference `integ' on page 51 undefined on input line 1074.
+
+File: pantalles/integra.eps Graphic file (type eps)
+<pantalles/integra.eps>
+
+LaTeX Warning: Reference `can' on page 51 undefined on input line 1101.
+
+[51]
+File: pantalles/canv.eps Graphic file (type eps)
+ <pantalles/canv.eps>
+File: pantalles/Andreu/menuCanviDendo.eps Graphic file (type eps)
+ <pantalles/Andreu/menuCanviDendo.eps> [52]
+File: pantalles/Andreu/canviDendo.eps Graphic file (type eps)
+
+<pantalles/Andreu/canviDendo.eps> [53]
+File: pantalles/def.eps Graphic file (type eps)
+ <pantalles/def.eps>
+
+LaTeX Warning: Reference `defi' on page 54 undefined on input line 1157.
+
+[54]
+File: pantalles/defi.eps Graphic file (type eps)
+ <pantalles/defi.eps>
+
+LaTeX Warning: Reference `defm' on page 55 undefined on input line 1173.
+
+[55]
+File: pantalles/defm.eps Graphic file (type eps)
+ <pantalles/defm.eps>
+
+LaTeX Warning: Reference `Reco1' on page 56 undefined on input line 1187.
+
+[56]
+File: pantalles/MenuRecodifica.eps Graphic file (type eps)
+ <pantalles/MenuRecodifica.eps>
+
+LaTeX Warning: Reference `Reco2' on page 57 undefined on input line 1200.
+
+[57]
+File: pantalles/Recodifica.eps Graphic file (type eps)
+ <pantalles/Recodifica.eps>
+
+LaTeX Warning: Reference `SelAgrup' on page 58 undefined on input line 1217.
+
+
+LaTeX Warning: Reference `AfegirMod' on page 58 undefined on input line 1220.
+
+[58]
+File: pantalles/SelAgrupacioRecodifica.eps Graphic file (type eps)
+ <pantalles/SelAgrupacioRecodifica.eps>
+File: pantalles/AfegirModRecodifica.eps Graphic file (type eps)
+
+<pantalles/AfegirModRecodifica.eps>
+
+LaTeX Warning: Reference `ModifMod' on page 59 undefined on input line 1245.
+
+[59]
+File: pantalles/ModifModRecodifica.eps Graphic file (type eps)
+ <pantalles/ModifModRecodifica.eps>
+
+LaTeX Warning: Reference `Discret1' on page 60 undefined on input line 1263.
+
+[60]
+File: pantalles/MenuDiscretitza.eps Graphic file (type eps)
+ <pantalles/MenuDiscretitza.eps>
+
+LaTeX Warning: Reference `Discret2' on page 61 undefined on input line 1276.
+
+[61]
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1279 \begin{figure}[ht]
+                         
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1279 \begin{figure}[ht]
+                         
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1279 \begin{figure}[ht]
+                         
+? 
+File: pantalles/Discretitza.eps Graphic file (type eps)
+<pantalles/Discretitza.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1284 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1284 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1284 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1284 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1284 \end{figure}
+                   
+? 
+! Extra \else.
+\end@float ...pdima \penalty \@floatpenalty \else 
+                                                  \vadjust {\penalty -\@Miv ...
+l.1284 \end{figure}
+                   
+? 
+! You can't use `\vadjust' in vertical mode.
+\end@float ...nalty \@floatpenalty \else \vadjust 
+                                                  {\penalty -\@Miv \vbox {}\...
+l.1284 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1284 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1284 \end{figure}
+                   
+? 
+
+LaTeX Warning: Reference `BoxP' on page 62 undefined on input line 1288.
+
+
+LaTeX Warning: Reference `DManual' on page 62 undefined on input line 1289.
+
+
+LaTeX Warning: Reference `Discret3' on page 62 undefined on input line 1294.
+
+[62]
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1297 \begin{figure}[ht]
+                         
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1297 \begin{figure}[ht]
+                         
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1297 \begin{figure}[ht]
+                         
+? 
+File: pantalles/ConsultarValors.eps Graphic file (type eps)
+<pantalles/ConsultarValors.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1302 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1302 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1302 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1302 \end{figure}
+                   
+? 
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \@elt 
+l.1302 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1302 \end{figure}
+                   
+? 
+
+! LaTeX Error: This may be a LaTeX bug.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1302 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...advance \@tempdima \ht \@marbox 
+                                                  \ifdim \@tempdima >\z@ \@l...
+l.1302 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1302 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.1302 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...vance \@mparbottom \dp \@marbox 
+                                                  \global \advance \@mparbot...
+l.1302 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1302 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
+                                                  \global \setbox \@marbox \...
+l.1302 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1302 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...marbox \global \setbox \@marbox 
+                                                  \vbox {\vskip \@tempdima \...
+l.1302 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1302 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...\vskip \@tempdima \box \@marbox 
+                                                  }\global \ht \@marbox \z@ ...
+l.1302 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.1302 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ... \@marbox }\global \ht \@marbox 
+                                                  \z@ \global \dp \@marbox \...
+l.1302 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1302 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.1302 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...marbox \z@ \global \dp \@marbox 
+                                                  \z@ \kern -\@pagedp \noint...
+l.1302 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \kern 
+l.1302 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \kern 
+l.1302 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...arginparwidth \fi \box \@marbox 
+                                                  \hss }\nointerlineskip \hb...
+l.1302 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \hss 
+l.1302 \end{figure}
+                   
+? 
+
+LaTeX Warning: Reference `BoxP' on page 63 undefined on input line 1312.
+
+[63]
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1315 \begin{figure}[ht]
+                         
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1315 \begin{figure}[ht]
+                         
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1315 \begin{figure}[ht]
+                         
+? 
+File: pantalles/BoxPlot.eps Graphic file (type eps)
+<pantalles/BoxPlot.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1320 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1320 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1320 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1320 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1320 \end{figure}
+                   
+? 
+! Extra \else.
+\end@float ...pdima \penalty \@floatpenalty \else 
+                                                  \vadjust {\penalty -\@Miv ...
+l.1320 \end{figure}
+                   
+? 
+! You can't use `\vadjust' in vertical mode.
+\end@float ...nalty \@floatpenalty \else \vadjust 
+                                                  {\penalty -\@Miv \vbox {}\...
+l.1320 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1320 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1320 \end{figure}
+                   
+? 
+
+LaTeX Warning: Reference `Discret4' on page 64 undefined on input line 1323.
+
+
+Overfull \hbox (7.05658pt too wide) in paragraph at lines 1322--1324
+[][]\OT1/cmr/m/it/10 Discretitzacio uni-for-me\OT1/cmr/m/n/10 : Per-met la cre
+-a-cio de di-ver-ses va-ri-a-bles ca-tegoriques
+ []
+
+[64]
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1325 \begin{figure}[ht]
+                         
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1325 \begin{figure}[ht]
+                         
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1325 \begin{figure}[ht]
+                         
+? 
+File: pantalles/Uniforme.eps Graphic file (type eps)
+<pantalles/Uniforme.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1330 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1330 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1330 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1330 \end{figure}
+                   
+? 
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \@elt 
+l.1330 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1330 \end{figure}
+                   
+? 
+
+! LaTeX Error: This may be a LaTeX bug.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1330 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...advance \@tempdima \ht \@marbox 
+                                                  \ifdim \@tempdima >\z@ \@l...
+l.1330 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1330 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.1330 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...vance \@mparbottom \dp \@marbox 
+                                                  \global \advance \@mparbot...
+l.1330 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1330 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
+                                                  \global \setbox \@marbox \...
+l.1330 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1330 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...marbox \global \setbox \@marbox 
+                                                  \vbox {\vskip \@tempdima \...
+l.1330 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1330 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...\vskip \@tempdima \box \@marbox 
+                                                  }\global \ht \@marbox \z@ ...
+l.1330 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.1330 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ... \@marbox }\global \ht \@marbox 
+                                                  \z@ \global \dp \@marbox \...
+l.1330 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1330 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.1330 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...marbox \z@ \global \dp \@marbox 
+                                                  \z@ \kern -\@pagedp \noint...
+l.1330 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \kern 
+l.1330 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \kern 
+l.1330 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...arginparwidth \fi \box \@marbox 
+                                                  \hss }\nointerlineskip \hb...
+l.1330 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \hss 
+l.1330 \end{figure}
+                   
+? 
+
+LaTeX Warning: Reference `DManual' on page 65 undefined on input line 1335.
+
+[65]
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1338 \begin{figure}[ht]
+                         
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1338 \begin{figure}[ht]
+                         
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1338 \begin{figure}[ht]
+                         
+? 
+File: pantalles/DiscManual.eps Graphic file (type eps)
+<pantalles/DiscManual.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1343 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1343 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1343 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1343 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1343 \end{figure}
+                   
+? 
+! Extra \else.
+\end@float ...pdima \penalty \@floatpenalty \else 
+                                                  \vadjust {\penalty -\@Miv ...
+l.1343 \end{figure}
+                   
+? 
+! You can't use `\vadjust' in vertical mode.
+\end@float ...nalty \@floatpenalty \else \vadjust 
+                                                  {\penalty -\@Miv \vbox {}\...
+l.1343 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1343 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1343 \end{figure}
+                   
+? 
+
+LaTeX Warning: Reference `Calc1' on page 66 undefined on input line 1370.
+
+
+Overfull \hbox (0.69498pt too wide) in paragraph at lines 1368--1371
+[]\OT1/cmr/m/n/10 Permet de-fi-nir no-ves va-ri-a-bles numeriques de-ri-va-des
+ a par-tir de calculs aritmetics
+ []
+
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1372 \begin{figure}[ht]
+                         
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1372 \begin{figure}[ht]
+                         
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1372 \begin{figure}[ht]
+                         
+? 
+File: pantalles/MenuCalc.eps Graphic file (type eps)
+<pantalles/MenuCalc.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1377 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1377 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1377 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1377 \end{figure}
+                   
+? 
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \@elt 
+l.1377 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1377 \end{figure}
+                   
+? 
+
+! LaTeX Error: This may be a LaTeX bug.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1377 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...advance \@tempdima \ht \@marbox 
+                                                  \ifdim \@tempdima >\z@ \@l...
+l.1377 \end{figure}
+                   
+? 
+! Bad register code (-14185365).
+\@addmarginpar ...e \space moved}\else \@tempdima 
+                                                  \z@ \fi \global \@mparbott...
+l.1377 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1377 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.1377 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...vance \@mparbottom \dp \@marbox 
+                                                  \global \advance \@mparbot...
+l.1377 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1377 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
+                                                  \global \setbox \@marbox \...
+l.1377 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1377 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...marbox \global \setbox \@marbox 
+                                                  \vbox {\vskip \@tempdima \...
+l.1377 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1377 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...\vskip \@tempdima \box \@marbox 
+                                                  }\global \ht \@marbox \z@ ...
+l.1377 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.1377 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ... \@marbox }\global \ht \@marbox 
+                                                  \z@ \global \dp \@marbox \...
+l.1377 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1377 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.1377 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...marbox \z@ \global \dp \@marbox 
+                                                  \z@ \kern -\@pagedp \noint...
+l.1377 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \kern 
+l.1377 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \kern 
+l.1377 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...arginparwidth \fi \box \@marbox 
+                                                  \hss }\nointerlineskip \hb...
+l.1377 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \hss 
+l.1377 \end{figure}
+                   
+? 
+[66]
+
+LaTeX Warning: Reference `Calc2' on page 67 undefined on input line 1382.
+
+[67]
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1386 \begin{figure}[ht]
+                         
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1386 \begin{figure}[ht]
+                         
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1386 \begin{figure}[ht]
+                         
+? 
+File: pantalles/Calc.eps Graphic file (type eps)
+<pantalles/Calc.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1391 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1391 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1391 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1391 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1391 \end{figure}
+                   
+? 
+! Extra \else.
+\end@float ...pdima \penalty \@floatpenalty \else 
+                                                  \vadjust {\penalty -\@Miv ...
+l.1391 \end{figure}
+                   
+? 
+! You can't use `\vadjust' in vertical mode.
+\end@float ...nalty \@floatpenalty \else \vadjust 
+                                                  {\penalty -\@Miv \vbox {}\...
+l.1391 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1391 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1391 \end{figure}
+                   
+? 
+[68]
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1418 \begin{figure}[ht]
+                         
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1418 \begin{figure}[ht]
+                         
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1418 \begin{figure}[ht]
+                         
+? 
+File: pantalles/acti.eps Graphic file (type eps)
+<pantalles/acti.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1423 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1423 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1423 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1423 \end{figure}
+                   
+? 
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \@elt 
+l.1423 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1423 \end{figure}
+                   
+? 
+
+! LaTeX Error: This may be a LaTeX bug.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1423 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...advance \@tempdima \ht \@marbox 
+                                                  \ifdim \@tempdima >\z@ \@l...
+l.1423 \end{figure}
+                   
+? 
+! Bad register code (-6976858).
+\@addmarginpar ...e \space moved}\else \@tempdima 
+                                                  \z@ \fi \global \@mparbott...
+l.1423 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1423 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.1423 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...vance \@mparbottom \dp \@marbox 
+                                                  \global \advance \@mparbot...
+l.1423 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1423 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
+                                                  \global \setbox \@marbox \...
+l.1423 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1423 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...marbox \global \setbox \@marbox 
+                                                  \vbox {\vskip \@tempdima \...
+l.1423 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1423 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...\vskip \@tempdima \box \@marbox 
+                                                  }\global \ht \@marbox \z@ ...
+l.1423 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.1423 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ... \@marbox }\global \ht \@marbox 
+                                                  \z@ \global \dp \@marbox \...
+l.1423 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1423 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.1423 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...marbox \z@ \global \dp \@marbox 
+                                                  \z@ \kern -\@pagedp \noint...
+l.1423 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \kern 
+l.1423 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \kern 
+l.1423 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...arginparwidth \fi \box \@marbox 
+                                                  \hss }\nointerlineskip \hb...
+l.1423 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \hss 
+l.1423 \end{figure}
+                   
+? 
+
+LaTeX Warning: Reference `Matr1' on page 69 undefined on input line 1440.
+
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1443 \begin{figure}[ht]
+                         
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1443 \begin{figure}[ht]
+                         
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1443 \begin{figure}[ht]
+                         
+? 
+File: pantalles/matriz.eps Graphic file (type eps)
+<pantalles/matriz.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1448 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1448 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1448 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1448 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1448 \end{figure}
+                   
+? 
+! Extra \else.
+\end@float ...pdima \penalty \@floatpenalty \else 
+                                                  \vadjust {\penalty -\@Miv ...
+l.1448 \end{figure}
+                   
+? 
+! You can't use `\vadjust' in vertical mode.
+\end@float ...nalty \@floatpenalty \else \vadjust 
+                                                  {\penalty -\@Miv \vbox {}\...
+l.1448 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1448 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1448 \end{figure}
+                   
+? 
+
+LaTeX Warning: Reference `Matr2' on page 69 undefined on input line 1459.
+
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1461 \begin{figure}[ht]
+                         
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1461 \begin{figure}[ht]
+                         
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1461 \begin{figure}[ht]
+                         
+? 
+File: pantalles/activas.eps Graphic file (type eps)
+<pantalles/activas.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1466 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1466 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1466 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1466 \end{figure}
+                   
+? 
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \@elt 
+l.1466 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1466 \end{figure}
+                   
+? 
+
+! LaTeX Error: This may be a LaTeX bug.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1466 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...advance \@tempdima \ht \@marbox 
+                                                  \ifdim \@tempdima >\z@ \@l...
+l.1466 \end{figure}
+                   
+? 
+! Bad register code (-5548631).
+\@addmarginpar ...e \space moved}\else \@tempdima 
+                                                  \z@ \fi \global \@mparbott...
+l.1466 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1466 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.1466 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...vance \@mparbottom \dp \@marbox 
+                                                  \global \advance \@mparbot...
+l.1466 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1466 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
+                                                  \global \setbox \@marbox \...
+l.1466 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1466 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...marbox \global \setbox \@marbox 
+                                                  \vbox {\vskip \@tempdima \...
+l.1466 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1466 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...\vskip \@tempdima \box \@marbox 
+                                                  }\global \ht \@marbox \z@ ...
+l.1466 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.1466 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ... \@marbox }\global \ht \@marbox 
+                                                  \z@ \global \dp \@marbox \...
+l.1466 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1466 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.1466 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...marbox \z@ \global \dp \@marbox 
+                                                  \z@ \kern -\@pagedp \noint...
+l.1466 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \kern 
+l.1466 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \kern 
+l.1466 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...arginparwidth \fi \box \@marbox 
+                                                  \hss }\nointerlineskip \hb...
+l.1466 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \hss 
+l.1466 \end{figure}
+                   
+? 
+[69]
+
+LaTeX Warning: Reference `BC1' on page 70 undefined on input line 1481.
+
+[70]
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1483 \begin{figure}[ht]
+                         
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1483 \begin{figure}[ht]
+                         
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1483 \begin{figure}[ht]
+                         
+? 
+File: pantalles/MenuEditarBC.eps Graphic file (type eps)
+<pantalles/MenuEditarBC.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1488 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1488 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1488 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1488 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1488 \end{figure}
+                   
+? 
+! Extra \else.
+\end@float ...pdima \penalty \@floatpenalty \else 
+                                                  \vadjust {\penalty -\@Miv ...
+l.1488 \end{figure}
+                   
+? 
+! You can't use `\vadjust' in vertical mode.
+\end@float ...nalty \@floatpenalty \else \vadjust 
+                                                  {\penalty -\@Miv \vbox {}\...
+l.1488 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1488 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1488 \end{figure}
+                   
+? 
+[71]
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1495 \begin{figure}[ht]
+                         
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1495 \begin{figure}[ht]
+                         
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1495 \begin{figure}[ht]
+                         
+? 
+File: pantalles/EditarBC.eps Graphic file (type eps)
+<pantalles/EditarBC.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1500 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1500 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1500 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1500 \end{figure}
+                   
+? 
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \@elt 
+l.1500 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1500 \end{figure}
+                   
+? 
+
+! LaTeX Error: This may be a LaTeX bug.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1500 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...advance \@tempdima \ht \@marbox 
+                                                  \ifdim \@tempdima >\z@ \@l...
+l.1500 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1500 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.1500 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...vance \@mparbottom \dp \@marbox 
+                                                  \global \advance \@mparbot...
+l.1500 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1500 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
+                                                  \global \setbox \@marbox \...
+l.1500 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1500 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...marbox \global \setbox \@marbox 
+                                                  \vbox {\vskip \@tempdima \...
+l.1500 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1500 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...\vskip \@tempdima \box \@marbox 
+                                                  }\global \ht \@marbox \z@ ...
+l.1500 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.1500 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ... \@marbox }\global \ht \@marbox 
+                                                  \z@ \global \dp \@marbox \...
+l.1500 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1500 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.1500 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...marbox \z@ \global \dp \@marbox 
+                                                  \z@ \kern -\@pagedp \noint...
+l.1500 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \kern 
+l.1500 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \kern 
+l.1500 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...arginparwidth \fi \box \@marbox 
+                                                  \hss }\nointerlineskip \hb...
+l.1500 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \hss 
+l.1500 \end{figure}
+                   
+? 
+
+LaTeX Warning: Reference `CrearBC' on page 72 undefined on input line 1506.
+
+[72]
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1508     \begin{figure}[ht]
+                             
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1508     \begin{figure}[ht]
+                             
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1508     \begin{figure}[ht]
+                             
+? 
+File: pantalles/CrearBC.eps Graphic file (type eps)
+<pantalles/CrearBC.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1513 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1513 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1513 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1513 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1513 \end{figure}
+                   
+? 
+! Extra \else.
+\end@float ...pdima \penalty \@floatpenalty \else 
+                                                  \vadjust {\penalty -\@Miv ...
+l.1513 \end{figure}
+                   
+? 
+! You can't use `\vadjust' in vertical mode.
+\end@float ...nalty \@floatpenalty \else \vadjust 
+                                                  {\penalty -\@Miv \vbox {}\...
+l.1513 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1513 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1513 \end{figure}
+                   
+? 
+
+LaTeX Warning: Reference `EliminarBC' on page 73 undefined on input line 1515.
+
+[73]
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1517     \begin{figure}[ht]
+                             
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1517     \begin{figure}[ht]
+                             
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1517     \begin{figure}[ht]
+                             
+? 
+File: pantalles/EliminarBC.eps Graphic file (type eps)
+<pantalles/EliminarBC.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1522 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1522 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1522 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1522 \end{figure}
+                   
+? 
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \@elt 
+l.1522 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1522 \end{figure}
+                   
+? 
+
+! LaTeX Error: This may be a LaTeX bug.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1522 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...advance \@tempdima \ht \@marbox 
+                                                  \ifdim \@tempdima >\z@ \@l...
+l.1522 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1522 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.1522 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...vance \@mparbottom \dp \@marbox 
+                                                  \global \advance \@mparbot...
+l.1522 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1522 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
+                                                  \global \setbox \@marbox \...
+l.1522 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1522 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...marbox \global \setbox \@marbox 
+                                                  \vbox {\vskip \@tempdima \...
+l.1522 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1522 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...\vskip \@tempdima \box \@marbox 
+                                                  }\global \ht \@marbox \z@ ...
+l.1522 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.1522 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ... \@marbox }\global \ht \@marbox 
+                                                  \z@ \global \dp \@marbox \...
+l.1522 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1522 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.1522 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...marbox \z@ \global \dp \@marbox 
+                                                  \z@ \kern -\@pagedp \noint...
+l.1522 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \kern 
+l.1522 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \kern 
+l.1522 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...arginparwidth \fi \box \@marbox 
+                                                  \hss }\nointerlineskip \hb...
+l.1522 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \hss 
+l.1522 \end{figure}
+                   
+? 
+
+LaTeX Warning: Reference `EditBC' on page 74 undefined on input line 1524.
+
+
+LaTeX Warning: Reference `ValorNum' on page 74 undefined on input line 1529.
+
+
+LaTeX Warning: Reference `ValorCateg' on page 74 undefined on input line 1529.
+
+[74]
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1531      \begin{figure}[ht]
+                              
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1531      \begin{figure}[ht]
+                              
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1531      \begin{figure}[ht]
+                              
+? 
+File: pantalles/ConsValorNum.eps Graphic file (type eps)
+<pantalles/ConsValorNum.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1536 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1536 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1536 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1536 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1536 \end{figure}
+                   
+? 
+! Extra \else.
+\end@float ...pdima \penalty \@floatpenalty \else 
+                                                  \vadjust {\penalty -\@Miv ...
+l.1536 \end{figure}
+                   
+? 
+! You can't use `\vadjust' in vertical mode.
+\end@float ...nalty \@floatpenalty \else \vadjust 
+                                                  {\penalty -\@Miv \vbox {}\...
+l.1536 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1536 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1536 \end{figure}
+                   
+? 
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1538 \begin{figure}[ht]
+                         
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1538 \begin{figure}[ht]
+                         
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1538 \begin{figure}[ht]
+                         
+? 
+File: pantalles/ConsValorCateg.eps Graphic file (type eps)
+<pantalles/ConsValorCateg.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1543 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1543 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1543 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1543 \end{figure}
+                   
+? 
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \@elt 
+l.1543 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1543 \end{figure}
+                   
+? 
+
+! LaTeX Error: This may be a LaTeX bug.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1543 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...advance \@tempdima \ht \@marbox 
+                                                  \ifdim \@tempdima >\z@ \@l...
+l.1543 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1543 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.1543 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...vance \@mparbottom \dp \@marbox 
+                                                  \global \advance \@mparbot...
+l.1543 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1543 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
+                                                  \global \setbox \@marbox \...
+l.1543 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1543 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...marbox \global \setbox \@marbox 
+                                                  \vbox {\vskip \@tempdima \...
+l.1543 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1543 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...\vskip \@tempdima \box \@marbox 
+                                                  }\global \ht \@marbox \z@ ...
+l.1543 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.1543 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ... \@marbox }\global \ht \@marbox 
+                                                  \z@ \global \dp \@marbox \...
+l.1543 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1543 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.1543 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...marbox \z@ \global \dp \@marbox 
+                                                  \z@ \kern -\@pagedp \noint...
+l.1543 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \kern 
+l.1543 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \kern 
+l.1543 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...arginparwidth \fi \box \@marbox 
+                                                  \hss }\nointerlineskip \hb...
+l.1543 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \hss 
+l.1543 \end{figure}
+                   
+? 
+
+LaTeX Warning: Reference `Aval1' on page 75 undefined on input line 1562.
+
+[75]
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1564 \begin{figure}[ht]
+                         
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1564 \begin{figure}[ht]
+                         
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1564 \begin{figure}[ht]
+                         
+? 
+File: pantalles/MenuAvaluarBC.eps Graphic file (type eps)
+<pantalles/MenuAvaluarBC.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1569 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1569 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1569 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1569 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1569 \end{figure}
+                   
+? 
+! Extra \else.
+\end@float ...pdima \penalty \@floatpenalty \else 
+                                                  \vadjust {\penalty -\@Miv ...
+l.1569 \end{figure}
+                   
+? 
+! You can't use `\vadjust' in vertical mode.
+\end@float ...nalty \@floatpenalty \else \vadjust 
+                                                  {\penalty -\@Miv \vbox {}\...
+l.1569 \end{figure}
+                   
+? 
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.1569 \end{figure}
+                   
+? 
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.1569 \end{figure}
+                   
+? 
+
+LaTeX Warning: Reference `Aval2' on page 76 undefined on input line 1574.
+
+[76]
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1577 \begin{figure}[ht]
+                         
+? 
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.1577 \begin{figure}[ht]
+                         
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.1577 \begin{figure}[ht]
+                         
+? 
+File: pantalles/AvaluarBC.eps Graphic file (type eps)
+<pantalles/AvaluarBC.eps>
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.1582 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.1582 \end{figure}
+                   
+? 
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.1582 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1582 \end{figure}
+                   
+? 
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \@elt 
+l.1582 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.1582 \end{figure}
+                   
+? 
+
+! LaTeX Error: This may be a LaTeX bug.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1582 \end{figure}
+                   
+? 
+! Undefined control sequence.
+\@addmarginpar ...advance \@tempdima \ht \@marbox 
+                                                  \ifdim \@tempdima >\z@ \@l...
+l.1582 \end{figure}
+                   
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.1582 \end{figure}
+                   
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.1582 \end{figure}
+                   
+? x
+ 
+Here is how much of TeX's memory you used:
+ 4416 strings out of 95849
+ 53713 string characters out of 1194731
+ 111969 words of memory out of 1110516
+ 6820 multiletter control sequences out of 60000
+ 13737 words of font info for 52 fonts, out of 1000000 for 2000
+ 40 hyphenation exceptions out of 4999
+ 32i,7n,36p,466b,426s stack positions out of 5000i,500n,10000p,200000b,32768s
+Output written on usuari.dvi (77 pages, 157288 bytes).

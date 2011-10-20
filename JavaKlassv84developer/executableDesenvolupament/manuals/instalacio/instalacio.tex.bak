@@ -1,0 +1,534 @@
+\documentclass{report}
+
+
+\usepackage[catalan]{babel}
+% Instrucció a Windows per a que accepti els caracters amb accents (á é í ó ú...)
+\usepackage[ansinew]{inputenc}
+% Instrucció a Unix per a que accepti els caracters amb accents (á é í ó ú...)
+% \usepackage[latin1]{inputenc}
+
+% Opcions a usar per PostScript
+\usepackage[dvips] {graphicx}
+\usepackage[dvips] {color}
+%\input{epsf}
+\usepackage{epsfig}
+% Opcions a usar per PDF
+%\usepackage[pdflatex] {graphicx}
+
+%Pel simbol del euro
+\usepackage{eurosym}
+
+%Per poder fer multirow als tabulars
+\usepackage{multirow}
+
+%Para javadoc---------
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{ifthen}
+\definecolor{Light}{gray}{.90}
+%---------------------
+
+\linespread{1.5}
+
+\definecolor{gris}{gray}{0.9}
+
+
+
+\setcounter{secnumdepth}{3} \setcounter{tocdepth}{3}
+\author{Java-KLASS versió 6}
+\title{Manual de desenvolupador}
+
+
+
+
+\begin{document}
+\setlength{\baselineskip}{1.5em}
+\setlength{\parskip}{0em}
+\setlength{\parsep}{0.5em}
+\newfont{\peq}{cmbx9}
+
+% Definició del estil pels exemples,...
+\newenvironment{exemple}{\begin{quote}\small {\bf Exemple:}}{\end{quote}}
+% Definició entorn demo
+\newcommand{\cuadradito}{\vrule width 1.4mm height 1.4mm depth 0 mm}
+\newcommand{\qed}{\hbox{}\nobreak \hfill \cuadradito \par \goodbreak \smallskip}
+\newenvironment{demo}{\begin{quote}\small {\bf Demostració}} {\qed \end{quote}}
+% Definició Descripció
+\newcommand{\descrip}{\indent{\large \sffamily Descripció}}
+% Definició Atributs
+\newcommand{\atrib}{{\indent\large \sffamily Atributs}}
+% Definició Mètodes
+\newcommand{\metod}{{\indent\large \sffamily Operacions}}
+
+% Per posar la l geminada (encara que existeix una altra manera: \l.l)
+\newcommand{\lge}[1]{\hbox{#1\kern-.1em\raise.5ex\hbox{.}\kern-.1em #1}}
+\alph{enumii}\roman{enumii}
+
+%%%%%%%%%%%%emieza titulo
+
+
+\maketitle
+
+
+
+
+%%%%%%%%%%%%%%%%%%termina tutuolo
+
+%%%% inici texte
+%\input{portadaTIT.tex}
+%\input{agrair.tex}
+% Index general
+\tableofcontents
+% Index de figures
+%\listoffigures
+% Index de taules
+%\listoftables
+%\input{capitulo1/intro.tex}
+%\input{capitol2/conceptes.tex}
+%\input{capitol3/basesConeixement.tex}
+%\input{capitol4/requeriments.tex}
+%\input{capitol5/estructures.tex}
+%\input{capitol6/especificacio.tex}
+%\input{capitol7/disseny.tex}
+%\input{capitol8/implementacio.tex}
+%\input{capitol9/cost.tex}
+%\input{capitol10/conclusions.tex}
+% \addcontentsline{toc}{chapter}{Bibliografia}
+%\bibliographystyle{alpha}
+
+% \bibliography{bibliografia/biblio1,bibliografia/marbib,bibliografia/biblio2}
+
+% Afegim les cites que encara que no s'hagin referenciat interessa que surtin
+%\nocite{*}
+
+% ANNEXOS
+%\appendix
+%\input{instalacio/manualInstal.tex}
+ %\input{usuari/manualUs.tex}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%\chapter{Manual del desenvolupador}
+%\label{sec:desenvolupador}
+
+
+\chapter{Eines} \label{sec:Eines}
+
+Per a poder crear noves funcionalitats o millorar les que ja
+existeixen dins del \textbf{Java-KLASS} s'han de tenir instalades
+unes eines bàsiques depenent de la plataforma utilitzada:
+
+\section{Windows} \label{sec:Windows}
+
+En primer lloc, necesitem un entorn de desenvolupament Java i un
+editor per poder escriure els nostres programes
+\begin{itemize}
+    \item Java: Utilitzarem la versió de desenvolupador j2sdk 1.4.1. o superior \\Si es tenen dubtes sobre la seva insta\lge lació mirar:\\ \small\texttt{http://java.sun.com/products/archive/j2se/1.4.1\_07/jsdk/install.html}.
+    \item Editor: Podem utilitzar qualsevol editor per crear els nostres .java pero recomanen \emph{Crimson} que, a més de ser gratuit, ofereix molt recursos interesants per un desenvolupador, es pot baixar
+    de \small\texttt{http://www.crimsoneditor.com/}.
+    \ \newline
+    Una alternativa al \emph{simple} editor, és instal·lar un entorn JBuilder.
+
+    \item Latex: Una distribució de {\LaTeX} amb un compilador i un visualitzador, com per ejemple MiK{\TeX}. La distribució MiK{\TeX} es pot descarregar i insta\lge lar fent servir l'exe\-cu\-ta\-ble que es troba a:\\ \small\texttt{http://www.tex.ac.uk/tex-archive/systems/win32/miktex/setup/setup.exe} o a: \\ \small\texttt{http://www.miktex.org/setup.html} en l'apartat DOWNLOADS.
+ Per poder fer servir, la sortida latex del \textbf{Java-KLASS} hem
+de configurar les opcions del menu \emph{Fitxer}, dintre l'apartat
+\emph{Configuració} indicant d'intre els \emph{Executable} el
+\emph{path} on es troba l'arxiu de Latex, Dvi...etc, com es mostra
+en la figura \ref{fig:Config2}.
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{pantalles/Config.eps}
+        \caption{Configuració}
+    \label{fig:Config2}
+\end{figure}
+
+\end{itemize}
+
+
+
+\chapter{Diagrama de Clases} \label{sec:Diagrama} En aquest capítol
+es mostra el diagrama de clases actual, per fer al usuari més
+comprensible l'herència i dependència entre les classes de {\bf
+Java-KLASS}. Primer es presenta el diagrama de la Capa de
+presentació i a continuacio el diagrama de la Capa nucli.
+
+\
+\begin{figure}[htbp]
+    \centering
+       \includegraphics[angle=90,width=\textwidth]{pantalles/mod2Laia.eps}
+     \caption{Diagrama de classes general de la capa de presentació}
+    \label{fig:ModelPresentacioGral11}
+\end{figure}
+
+
+
+
+\begin{figure}[htbp]
+    \centering
+       \includegraphics[angle=90,width=\textwidth]{pantalles/mod1Laia.eps}
+     \caption{Diagrama de classes general de la capa de presentació}
+    \label{fig:ModelPresentacioGral12}
+\end{figure}
+
+
+
+\begin{figure}[htbp]
+    \centering
+       \includegraphics[angle=90,width=\textwidth]{pantalles/diagramanucli.eps}
+       \caption{Diagrama de classes general de la capa de nucli}
+\end{figure}
+
+\newpage
+
+\chapter{Crear una nova funcionalitat} \label{sec:Funcio}
+
+Per crear una nova funcionalitat dins del \textbf{Java-KLASS}
+s'han de fer tres passos:
+
+\begin{itemize}
+    \item el primer és insertar la nova funcionalitat dins el menu
+principal que implica manipulacions a nivell d'interfície,
+
+    \item després començar a implementar la propia funció a nivell de nucli
+    \item i per últim utilitzar els \emph{imports} de les classes existents per
+poder utilitzar funcionalitats ja creades per altres
+desenvolupadors.
+\end{itemize}
+
+\section{Insertar una nova funcionalitat en el menu principal}
+
+La classe del menu principal es la \emph {FrPrincipal.java}. Per
+crear una nova funcionalitat s'ha de possicionar en el lloc de les
+variables globals i crear:
+
+\begin{itemize}
+    \item un \emph{JMenu}, si la nova funcionalitat és un nou menú.
+    \item un \emph{JMenuItem} si aquesta nova funcionalitat pertany a un menú ja existent.
+\end{itemize}
+
+Una vegada s'ha creat la variable del menu s'ha d'instanciar dins
+la funció \emph{jbInit()} com en l'exemple següent:
+
+
+\begin{figure}[htbp]
+    \centering
+       \includegraphics[width=\textwidth]{pantalles/Jmenu.eps}
+\end{figure}
+
+Després simplement s'ha d'insertar dins el menu al que pertany:
+
+
+\newpage
+
+\begin{itemize}
+    \item dins del menu \emph{jMenuBar1} si es un nou menu, com en l'exemple:
+
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=0.5\textwidth]{pantalles/entra.eps}
+        \end{figure}
+
+    \item dins del menu \emph{JMenu} al que pertany.
+\end{itemize}
+
+
+La majoria de les funcionalitats necessiten una matriu carregada,
+sense una matriu carregada no té sentit utilitzarles, fins i tot
+es podrien donar errors, per això en un principi estan
+deshabilitades fins que es carrega una matriu de dades, i després
+es posen en actiu dins la funció \emph{habilitarOpcionsMenu}; és
+aquí on també s'ha d'habilitar la nova funcionalitat, l'exemple
+mostra com es fa.
+
+\begin{figure}[ht]
+    \centering
+       \includegraphics[width=\textwidth]{pantalles/habilita.eps}
+\end{figure}
+
+
+Per últim nomès falta construïr la funció que crearà el nou menú
+al posar-lo dins el menú principal, és a dir dins del \emph
+{FrPrincipal.java}; l'estructura és molt simple i continuant amb
+l'exemple de la selecció de submatriu es mostra el codi necessari:
+
+\begin{figure}[htbp]
+    \centering
+       \includegraphics[width=0.8\textwidth]{pantalles/JmenuSelec.eps}
+\end{figure}
+
+
+
+\section{Primers passos per implementar la nova funcionalitat}
+
+Una vegada s'han fet els passos de la secció anterior, és el
+moment de començar a crear la nova funcionalitat. Per continuar
+amb el disseny de tots els desenvolupadors dividirem la nova
+funcionalitat en dos parts, l'esquelet i la vista.
+
+\subsection{Creació de l'esquelet}
+
+En la primera línea de codi indicarem a quina de les carpetes de
+clases va la nova classe. Hi ha tres carpetes ben diferenciades:
+
+\begin{itemize}
+    \item IU: Dintre d'aquesta carpeta es troben les classes on l'usuari interacciona amb el sistema, selecciona dades, introdueix valors....etc, és a dir són les classes de la Interficie d'Usuari.
+    \item NUCLI: Dintre d'aquesta carpeta es troben les classes on l'usuari no interacciona amb el sistema, és a dir són les classes que processen, fan càlculs, obren i guarden arxius...etc.
+    \item UTIL: Dintre d'aquesta carpeta es troben les classes que tenen variables estàtiques o configuracions segons el sistema operatiu. Son les classes que per
+    dir-ho d'alguna manera no fan res directament sobre el \textbf{Java-KLASS} sino que serveixen per preparar-lo per fer-lo servir.
+\end{itemize}
+
+Quan ja s'ha decidit on anirà la nova classe depenen de les seves
+caracteristiques, es crea el constructor que crida a la funcio
+\emph{jbInit()}, aquesta funció dibuixa el formulari de la nostra
+funcionalitat, és a dir la \emph{vista}, això es mostra a la
+secció \ref{CreacioVista}. Un exemple de com crear aquest
+constructor és el següent:
+
+
+\begin{figure}[ht]
+    \centering
+       \includegraphics[width=0.8\textwidth]{pantalles/construc.eps}
+\end{figure}
+
+
+\subsection{Creació de la Vista} \label{CreacioVista}
+
+Com s'ha esmentat en l'apartat anterior, la creació de la vista es
+fa en la funció \emph{jbInit()}. La nova classe és una extensió
+d'un \emph{JPanel} i s'ha d'anar amb compte amb aquesta classe, ja
+que en el moment que es fa un \emph{this.add(....)} depenent de la
+versió de \emph{JAVA}, pot ser que no es pugui veure el que s'ha
+construït, per això es recomana possar
+\emph{this.getContentPane().add(....)} que soluciona aquest petit
+problema.
+
+\chapter{Compilació i execució}
+
+Una vegada ja s'ha creat la nova classe, amb les seves vistes i
+insertada dins el menú principal, és l'hora de compilar-ho tot i
+executar-ho i per això \emph{(en entorn Windows)} són necessaris
+els següents elements:
+\begin{itemize}
+    \item Path: Per poder utilitzar el compilador i el linkador de JAVA s'ha de completar la variable d'entorn PATH amb la ruta on es te instalat JAVA, per defecte es mostra la forma seguent:
+    \newline
+    \small\texttt{PATH=$\backslash$j2sdk1.4.2\_07}.
+    \normalsize
+    \item Compilar: Per compilar la nova classe s'ha d'escriure en una finestra de MSDOS
+    \newline
+    \small\texttt{javac -d novaclasse.java}.
+    \normalsize
+    \item Ejecutar: Per ejecutar una vegada s'ha compilat la classe s'ha d'escriure en una finestra de MSDOS
+    \newline
+    \small\texttt{java
+    -Djava.util.logging.config.file=".$\backslash$conf$\backslash$logging.properties"
+    \newline
+    jklass.iu.AplJavaKlass}.
+\normalsize
+\end{itemize}
+
+Es clar, que es pot construir un arxiu amb les dues línees de
+compilació i ejecució, i \emph {llançar-ho} tot amb un .bat.
+
+Una vegada s'ejecuta l'aplicació a part del menú de {\bf
+Java-KLASS} també hi ha una finestra d'informació que està en
+segon pla. Aquesta finestra pot indicar totes i cada una de les
+acciones que fa l'aplicació o només les més rellevants o cap. Per
+controlar aquesta informacio es fa servir l'archiu
+\emph{logging.properties} de la carpeta \emph{conf}. La quantitat
+d'informació ve determinada per la variable \emph{.level} de la
+següent manera:
+\begin{itemize}
+   \item .level= INFO: Indica que només mostrar l'informació més
+    rellevant de les accions de {\bf Java-KLASS}, es a dir si s'ha realitzat l'operació o no.
+    \item .level= ALL: Indica mostrar tota l'informació de les
+    accions de {\bf Java-KLASS}.
+    \item .level= FINER: Indica mostrar absolutament tot, és a
+    dir cada moviment de ratoli, cada cop que estem sobre un menú
+    executable..etc.
+    \item eliminant .level: No s'inidica cap acció.
+\end {itemize}
+
+
+\chapter{Generacio de documentació}
+
+La major part de la documentació, inclús aquest manual, s'ha creat
+utilitzant {\LaTeX} ja que a més de ser un software d'edició i
+creació de documents científics que permet una facil inserció de
+formules i taules, és gratuït.
+
+
+\section{Inserció d'imatges}
+
+És important remarcar que encara que es molt util, {\LaTeX} té
+algun error per compilar alguns tipus d'imatges \emph{(.bmp, .jpg
+...)}, per això en tot el manual s'han fet servir com a imatges
+arxius \emph{.eps} que no donden cap problema a l'hora de generar
+documents \emph{pdf}.
+
+Per fer servir aquestes imatges \emph{.eps}, el que es proposa es
+crear la imatge en \emph{.bmp}, ja que és molt facil de construir
+i desprès transformar aquesta imatge amb algun conversor d'imatges
+a \emph{.eps}. En aquesta memoria s'ha fet servir una distribució
+d'evaluació de \emph{Advanced Batch Converter} que ens deixa 30
+dies per fer les conversions de \emph{.bmp} a \emph{.eps}.
+
+Una vegada creat l'arxiu \emph{.eps}, la imatge ocupa un foli A4
+exactament, per eliminar marges blancs i ajustar el tamany de la
+imatge, s'edita el fitxer \emph{.eps} amb qualsevol edior de text
+i es canvien els paràmetres de la linea \emph{\%\%BoundingBox:}
+per que s'ajustin a la imatge. Com ajut indiquem que els primers 2
+números fan referència a les coordenades x,y on comença la imatge
+i els 2 números següents indiquen les coordenades x,y finals.
+
+\section{Bilbiografia i referències creuades}
+
+Una part molt important en la memòria del projecte és la
+bibliografia, ja que aquesta memòria preten ser un document
+científic, fa referència a molts articles, llibres o publicacions
+dels quals s'ha tret informació per crear i anar modificant {\bf
+Java-KLASS}.
+
+Per crear la bibliografia s'ha optat per utilitzar els arxius
+\emph{.bib} de {\LaTeX}. Un arxiu .bib no es més que un arxiu en
+texte pla, que conté l'informació d'un article, llibre,
+publicació..etc al qual volem fer referència. En el següent
+exemple es mostra una de les entrades del \emph{.bib} fet servir
+en el PFC.
+
+@BOOK\{abr,
+
+  author =       \{Abrams, R.\},
+
+  title =        \{\{Electroconvulsive Therapy\}\},
+
+  publisher =    \{Ed. Oxford University Press.\},
+
+  year =         \{1997\},
+
+  note =         \{Third Edition. NY.US.\},
+
+  \}
+
+Per poder utilitzar l'arxiu \emph{.bib} s'ha d'insertar al
+principi del document {\LaTeX} la següent línea:
+
+$\backslash$bibliography\{arxiubib1, arxiubib2, ...\}
+
+En {\LaTeX} la bibliografia pot ser mostrada en molts estils
+diferents, en aquesta memoria i posteriorment en els següents
+PFC's s'utilitza el tipus \emph{apalike} que mostra en cada
+referencia l'autor o autors i la data de publicació. Per fer que
+es mostri la bibliografia d'aquesta manera s'han d'insertar en el
+document principal de {\LaTeX} les següents linees:
+
+\begin{itemize}
+    \item $\backslash$usepackage[apalike]$\{$dk-bib$\}$
+    \item $\backslash$bibliographystyle$\{$apalike$\}$
+\end{itemize}
+
+Per referenciar les cites bibliografiques en l'arxiu {\LaTeX}
+només hem descriure $\backslash$cite\{abr\} seguit l'exemple
+proposat avans.
+
+Per referenciar imatges, taules, formules....etc només s'ha
+d'insertar a la taula o imatge o formula ...etc la linea
+$\backslash$label\{nom\} on \emph{nom} serà la referència que
+s'utilitzara dins del text posant $\backslash$ref\{nom\}.
+
+Per tal de que tant les referències creuades com la bibliografia
+surtin ben llistades, cal compilar el document {\LaTeX} a
+\emph{BibTex} i després en {\LaTeX} un parell de cops.
+
+\chapter{Altre programari}
+
+L'altre petita part de documentació que no ha estat creada amb
+{\LaTeX} s'ha construit amb el software següent:
+\begin{itemize}
+    \item {\bf Borland JBuilder 8:} Un entorn de desenvolpament que gracies a petites regles dins el codi, genera automaticament la documentació de
+    les classes nomès \emph{clicant} en l'apartat \emph{doc} del programa. El següent ejemple mostra
+    com aquests comentaris generen la documentació.
+    \begin{figure}[ht]
+        \centering
+           \includegraphics[width=0.8\textwidth]{pantalles/cod1.eps}
+    \end{figure}
+    \begin{figure}[ht]
+        \centering
+           \includegraphics[width=0.7\textwidth]{pantalles/cod2.eps}
+    \end{figure}
+    \newpage
+
+Aquesta informació proporcinada per {\bf Borland JBuilder} és en
+format \emph{html} i s'ha de transformar amb qualsevol dels
+programaris lliures a \emph{.pdf} per poder-la insertar dins de la
+documentació.
+
+    \item {\bf pdftk-1.12:} Per insertar els \emph{.pdf} s'utilitza aquest software lliure que serveix per fusionar diferents
+    \emph{.pdf} en un de sol. un exemple d'execució d'aquest programa
+    es:
+
+    pdftk.exe  archivo1.pdf archivo2.pdf archivo3.pdf cat output archivofinal.pdf
+
+
+
+    \item {\bf Rational Rose:} Un entorn de modelatge visual bassat en llenguatge UML, que s'ha fet servir per crear:
+        \begin{itemize}
+            \item Model de Casos d'ús
+            \item Model Conceptual
+            \item Diagrama de clases
+            \item Diagrama de la capa de presentació i nucli
+        \end{itemize}
+    La notació UML afovereix molt la comprensió per part d'un usuari,que no enten
+    res d'informàtica, del funcionament del programa i per un
+    desenvolupador deixa molt clar com son les \emph{caixes negres}
+    del programa, és a dir, mostra com son les coses pero no de
+    quina manera es fan.
+\end{itemize}
+
+\chapter{Generació d'una distribució de Java-KLASS}
+
+Una vegada la nova funcionalitat s'ha provat i perfeccionat és
+l´hora de passar als usuaris la nova versió de {\bf Java-KLASS}.
+
+Per crear una nova distribució es fan els següents passos:
+
+\begin{itemize}
+    \item Compilar totes les classes, per obtenir l'arbre de directoris jklass complert.
+    \item Crear el \emph{.jar} a partir de las classes compiladas. Per fer
+    aixo s'ha d'escriure en una finestra de MSDOS:
+
+    \small\texttt{jar cvf .$\backslash$lib$\backslash$JavaKlass.jar -C .$\backslash$ jklass}.
+
+\normalsize
+    i es crea el \emph{fitxer.jar} en el directori \emph{lib}.
+    \item Ofuscar el \emph{.jar}, es poden fer servir molts aplicatius, pero en aquesta versió s'ha utilitzat el \emph{proguard3.8}. Per
+    ofuscar el codi fent servir aquest programa s'han d'utilitzar els fitxers que es troben dins del subdirectori \emph{lib}:
+    \begin{itemize}
+        \item JavaKlass.pro.
+        \item proguard.jar.
+    \end{itemize}
+    i s'ha d'escriure en una finestra de MSDOS:
+
+    \small\texttt{java -jar .$\backslash$lib$\backslash$proguard.jar @.$\backslash$lib$\backslash$JavaKlass.pro
+    -verbose}
+\normalsize
+    \item Preparar l'arbre de directoris i fitxers com en la figura seguent:
+
+    \newpage
+    \begin{figure}[ht]
+        \centering
+           \includegraphics[width=0.7\textwidth]{pantalles/arbre.eps}
+    \end{figure}
+    \item Crear el \emph{.zip} de l'arbre anterior amb nom \emph{javaklassvX.jar}, on X es la versió de {\bf Java-KLASS}
+    i possar també un fitxer \emph{README.txt}, que conté les modiicacions més
+    importants d'aquesta nova versió.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{desenvolupador/manualDesen.tex}
+%\input{fitxers/fitxers.tex}
+
+\end{document}

@@ -1,0 +1,183 @@
+\documentclass{report}
+
+
+\usepackage[catalan]{babel}
+% Instrucció a Windows per a que accepti els caracters amb accents (á é í ó ú...)
+\usepackage[ansinew]{inputenc}
+% Instrucció a Unix per a que accepti els caracters amb accents (á é í ó ú...)
+% \usepackage[latin1]{inputenc}
+
+% Opcions a usar per PostScript
+\usepackage[dvips] {graphicx}
+\usepackage[dvips] {color}
+%\input{epsf}
+\usepackage{epsfig}
+% Opcions a usar per PDF
+%\usepackage[pdflatex] {graphicx}
+
+%Pel simbol del euro
+\usepackage{eurosym}
+
+%Per poder fer multirow als tabulars
+\usepackage{multirow}
+
+%Para javadoc---------
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{ifthen}
+\definecolor{Light}{gray}{.90}
+%---------------------
+
+\linespread{1.5}
+
+\definecolor{gris}{gray}{0.9}
+
+
+
+\setcounter{secnumdepth}{3} \setcounter{tocdepth}{3}
+\author{Java-KLASS versió 6}
+\title{Manual d'instal·lació}
+
+
+
+
+\begin{document}
+\setlength{\baselineskip}{1.5em}
+\setlength{\parskip}{0em}
+\setlength{\parsep}{0.5em}
+\newfont{\peq}{cmbx9}
+
+% Definició del estil pels exemples,...
+\newenvironment{exemple}{\begin{quote}\small {\bf Exemple:}}{\end{quote}}
+% Definició entorn demo
+\newcommand{\cuadradito}{\vrule width 1.4mm height 1.4mm depth 0 mm}
+\newcommand{\qed}{\hbox{}\nobreak \hfill \cuadradito \par \goodbreak \smallskip}
+\newenvironment{demo}{\begin{quote}\small {\bf Demostració}} {\qed \end{quote}}
+% Definició Descripció
+\newcommand{\descrip}{\indent{\large \sffamily Descripció}}
+% Definició Atributs
+\newcommand{\atrib}{{\indent\large \sffamily Atributs}}
+% Definició Mètodes
+\newcommand{\metod}{{\indent\large \sffamily Operacions}}
+
+% Per posar la l geminada (encara que existeix una altra manera: \l.l)
+\newcommand{\lge}[1]{\hbox{#1\kern-.1em\raise.5ex\hbox{.}\kern-.1em #1}}
+\alph{enumii}\roman{enumii}
+
+%%%%%%%%%%%%emieza titulo
+
+
+\maketitle
+
+
+
+
+%%%%%%%%%%%%%%%%%%termina tutuolo
+
+%%%% inici texte
+%\input{portadaTIT.tex}
+%\input{agrair.tex}
+% Index general
+\tableofcontents
+% Index de figures
+%\listoffigures
+% Index de taules
+%\listoftables
+%\input{capitulo1/intro.tex}
+%\input{capitol2/conceptes.tex}
+%\input{capitol3/basesConeixement.tex}
+%\input{capitol4/requeriments.tex}
+%\input{capitol5/estructures.tex}
+%\input{capitol6/especificacio.tex}
+%\input{capitol7/disseny.tex}
+%\input{capitol8/implementacio.tex}
+%\input{capitol9/cost.tex}
+%\input{capitol10/conclusions.tex}
+% \addcontentsline{toc}{chapter}{Bibliografia}
+%\bibliographystyle{alpha}
+
+% \bibliography{bibliografia/biblio1,bibliografia/marbib,bibliografia/biblio2}
+
+% Afegim les cites que encara que no s'hagin referenciat interessa que surtin
+%\nocite{*}
+
+% ANNEXOS
+%\appendix
+%\input{instalacio/manualInstal.tex}
+ %\input{usuari/manualUs.tex}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%\chapter{Manual del desenvolupador}
+%\label{sec:desenvolupador}
+
+
+
+%\chapter{Manual d'insta\lge lació}
+%\label{sec:ManualDInstal}
+
+
+\chapter{Requeriments previs} \label{sec:RequerimentsPrevis}
+
+Per a poder executar l'aplicació i que funcioni correctament cal
+tenir insta\lge lat el següent programari:
+
+\begin{itemize}
+    \item Entorn d'execució de Java j2re 1.4.1. o superior \\Si es tenen dubtes sobre la seva insta\lge lació mirar:\\ \small\texttt{http://java.sun.com/products/archive/j2se/1.4.1\_07/jre/install.html}.
+    \item Una distribució de {\LaTeX} amb un compilador i un visualitzador, com per exemple MiK{\TeX}. La distribució MiK{\TeX} es pot descarregar i insta\lge lar fent servir l'exe\-cu\-ta\-ble que es troba a:\\ \small\texttt{http://www.tex.ac.uk/tex-archive/systems/win32/miktex/setup/setup.exe} o a: \\ \small\texttt{http://www.miktex.org/setup.html} en l'apartat DOWNLOADS.
+\end{itemize}
+
+\chapter{Procés d'insta\lge lació} \label{sec:ProcesDInstal}
+
+Per insta\lge lar \textbf{Java-KLASS} cal descomprimir el fitxer
+ZIP que conté l'aplicació, i que crearà tot l'arbre de directoris
+i fitxers necessaris. És molt important que l'arbre de directoris
+no \emph{pengi} de cap directori amb espais, ja que llavors no es
+podran reproduir els resultats en {\LaTeX}.
+
+Un cop descomprimit pot ser necesari modificar el fitxer
+\emph{jKLASSv2.bat} si es treballa en un entorn Windows assignant
+a la variable d'entorn JAVA\_HOME el camí fins al directori on es
+troba insta\lge lat l'entorn d'execució de Java (j2re 1.4.1), per
+defecte el programa asigna les següents variables d'entorn:
+
+\begin{itemize}
+    \item JAVA\_HOME=C:\verb'\'j2re1.4.1\_05.
+    \item PATH=\%JAVA\_HOME\%\verb'\'bin;\%PATH\%;.
+\end{itemize}
+
+Si és un entorn Unix/Linux s'haura d'indicar el camí fins al
+directori  de Java (j2re 1.4.1), per defecte el programa asigna
+les seguents variables d'entorn:
+
+\begin{itemize}
+    \item \#!/bin/sh
+    \item JAVA\_HOME="../j2re1.4.1\_05"
+    \item PATH="\$JAVA\_HOME/bin:\$PATH"
+\end{itemize}
+
+El fitxer es troba al directori arrel on s'hagi descomprimit
+l'aplicació i és el que permet executar l'aplicació depenent del
+sistema operatiu en que s'hagi insta\lge lat.
+
+Si es treballa en un entorn Unix/Linux, cal recordar que per
+executar un fitxer cal tenir permisos d'execució (aquests es poden
+assignar executant la comanda 'chmod +x \textit{fitxer}').
+
+Per poder fer servir, la sortida {\LaTeX} de \textbf{Java-KLASS}
+hem de configurar les opcions del menu \emph{Fitxer}, dintre
+l'apartat \emph{Configuració} indicant d'intre de
+\emph{Executable} el \emph{path} on es troba l'arxiu de {\LaTeX},
+Dvi...etc, com es mostra en la figura \ref{fig:Config}.
+
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=\textwidth]{pantalles/Config.eps}
+        \caption{Configuració}
+    \label{fig:Config}
+\end{figure}
+
+
+\end{document}

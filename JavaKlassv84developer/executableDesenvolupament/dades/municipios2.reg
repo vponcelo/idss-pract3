@@ -1,0 +1,3 @@
+((and(>=(POBLA)50000.0)(=(SECTOR)'Servicios))->Gran)
+((=(SECTOR)'Industria)->Tradicional)
+((and(=(SECTOR)'Construccion)(>(AISLA)1.0))->T)

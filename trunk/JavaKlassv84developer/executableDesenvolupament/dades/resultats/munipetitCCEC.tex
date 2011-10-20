@@ -1,0 +1,246 @@
+\documentstyle[psfig,color,12pt]{book}
+\pagestyle{plain}
+\textheight 27 cm
+\textwidth 18.0 cm
+\hoffset -2.5 cm
+\voffset -4.5 cm
+\evensidemargin 1 cm
+\oddsidemargin 1 cm
+\pretolerance 1000
+\tolerance 0
+\definecolor{gris}{gray}{0.9}
+\begin{document}
+\setlength{\baselineskip}{1.5em}
+\setlength{\parskip}{0em}
+\setlength{\parsep}{0.5em}
+\newfont{\peq}{cmbx9}
+\newcommand{\lge}[1]{\hbox{#1\kern-.1em\raise.5ex\hbox{.}\kern-.1em #1}}
+\alph{enumii}\roman{enumii}
+\mbox{ } \vfill
+\begin{center} \Large \bf Qualitat de les Bases de coneixement \end{center} \vfill
+
+\newpage
+\mbox{ }
+{\Large \bf BC0 :}\\
+
+$r0: NOMCOM \in  \{ Alt-Penedes \} \stackrel{1}{\longrightarrow} (NovaClasse2)C11$\\
+
+$r1: NOMCOM \in  \{ Baix-Llobregat \} \stackrel{1}{\longrightarrow} (NovaClasse2)C11$\\
+
+$r2: NOMCOM \in  \{ Barcelones \} \stackrel{1}{\longrightarrow} (NovaClasse2)C11$\\
+
+$r3: NOMCOM \in  \{ Maresme \} \stackrel{1}{\longrightarrow} (NovaClasse2)C11$\\
+
+$r4: NOMCOM \in  \{ V-Oriental \} \stackrel{0,67}{\longrightarrow} (NovaClasse2)C11$\\
+
+$r5: NOMCOM \in  \{ V-Oriental \} \stackrel{0,33}{\longrightarrow} (NovaClasse2)BIGUES$\\
+
+$r6: NOMCOM \in  \{ V-Occidental \} \stackrel{1}{\longrightarrow} (NovaClasse2)C11$\\
+
+$r7: PARTIDO \in  \{ CiU \} \stackrel{0,8}{\longrightarrow} (NovaClasse2)C11$\\
+
+$r8: PARTIDO \in  \{ CiU \} \stackrel{0,2}{\longrightarrow} (NovaClasse2)BIGUES$\\
+
+$r9: PARTIDO \in  \{ PSC \} \stackrel{1}{\longrightarrow} (NovaClasse2)C11$\\
+
+$r10: PARTIDO \in  \{ Otros \} \stackrel{1}{\longrightarrow} (NovaClasse2)C11$\\
+
+$r11: SECTOR \in  \{ Industria \} \stackrel{0,86}{\longrightarrow} (NovaClasse2)C11$\\
+
+$r12: SECTOR \in  \{ Industria \} \stackrel{0,14}{\longrightarrow} (NovaClasse2)BIGUES$\\
+
+$r13: SECTOR \in  \{ Servicios \} \stackrel{1}{\longrightarrow} (NovaClasse2)C11$\\
+
+\newpage
+\vspace{3ex}
+\mbox{ }
+\begin{center} \Large \bf Resultats de la qualitat regla a regla \end{center}
+
+\begin{center}
+\begin{tabular}{|p{3cm}|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{\bf Taula de qualitat} \\ 
+\hline
+{\bf Valors} & {\bf Consecuent} & {\bf Confian\c ca} & {\bf Support} & {\bf Cobertura} \\ 
+ & {\bf } & {\bf } & {\bf } & {\bf relativa} \\ 
+\hline
+\hline
+r0 & (NovaClasse2)C11 & 1 & 0.0714 & 0.0769 \\ 
+\hline
+r1 & (NovaClasse2)C11 & 1 & 0.1429 & 0.1538 \\ 
+\hline
+r2 & (NovaClasse2)C11 & 1 & 0.1429 & 0.1538 \\ 
+\hline
+r3 & (NovaClasse2)C11 & 1 & 0.2857 & 0.3077 \\ 
+\hline
+r4 & (NovaClasse2)C11 & 0.6667 & 0.2143 & 0.1538 \\ 
+\hline
+r5 & (NovaClasse2)BIGUES & 0.3333 & 0.2143 & 1 \\ 
+\hline
+r6 & (NovaClasse2)C11 & 1 & 0.1429 & 0.1538 \\ 
+\hline
+r7 & (NovaClasse2)C11 & 0.8 & 0.3571 & 0.3077 \\ 
+\hline
+r8 & (NovaClasse2)BIGUES & 0.2 & 0.3571 & 1 \\ 
+\hline
+r9 & (NovaClasse2)C11 & 1 & 0.4286 & 0.4615 \\ 
+\hline
+r10 & (NovaClasse2)C11 & 1 & 0.2143 & 0.2308 \\ 
+\hline
+r11 & (NovaClasse2)C11 & 0.8571 & 0.5 & 0.4615 \\ 
+\hline
+r12 & (NovaClasse2)BIGUES & 0.1429 & 0.5 & 1 \\ 
+\hline
+r13 & (NovaClasse2)C11 & 1 & 0.5 & 0.5385 \\ 
+\hline
+\hline
+\end{tabular}
+\end{center} \vfill
+
+
+{\bf Suport total de la base de coneixement:} 4.0714
+
+{\bf Confian\c ca mitjana de la base de coneixement:} 0.7857
+
+{\bf Cobertura global de la base de coneixement:} 1
+\newpage
+\mbox{ } \vfill
+\begin{center} \Large \bf Qualitat de les Bases de coneixement \end{center} \vfill
+
+\newpage
+\mbox{ }
+{\Large \bf BC1 :}\\
+
+$r0: NOMCOM \in  \{ Alt-Penedes \} \stackrel{1}{\longrightarrow} (NovaClasse3)C10$\\
+
+$r1: NOMCOM \in  \{ Baix-Llobregat \} \stackrel{0,5}{\longrightarrow} (NovaClasse3)C10$\\
+
+$r2: NOMCOM \in  \{ Baix-Llobregat \} \stackrel{0,5}{\longrightarrow} (NovaClasse3)C7$\\
+
+$r3: NOMCOM \in  \{ Barcelones \} \stackrel{1}{\longrightarrow} (NovaClasse3)C10$\\
+
+$r4: NOMCOM \in  \{ Maresme \} \stackrel{1}{\longrightarrow} (NovaClasse3)C10$\\
+
+$r5: NOMCOM \in  \{ V-Oriental \} \stackrel{0,5}{\longrightarrow} (NovaClasse3)C10$\\
+
+$r6: NOMCOM \in  \{ V-Oriental \} \stackrel{0,5}{\longrightarrow} (NovaClasse3)C7$\\
+
+$r7: NOMCOM \in  \{ V-Occidental \} \stackrel{1}{\longrightarrow} (NovaClasse3)C10$\\
+
+$r8: PARTIDO \in  \{ CiU \} \stackrel{1}{\longrightarrow} (NovaClasse3)C10$\\
+
+$r9: PARTIDO \in  \{ PSC \} \stackrel{1}{\longrightarrow} (NovaClasse3)C10$\\
+
+$r10: PARTIDO \in  \{ Otros \} \stackrel{0,33}{\longrightarrow} (NovaClasse3)C10$\\
+
+$r11: PARTIDO \in  \{ Otros \} \stackrel{0,67}{\longrightarrow} (NovaClasse3)C7$\\
+
+$r12: SECTOR \in  \{ Industria \} \stackrel{0,83}{\longrightarrow} (NovaClasse3)C10$\\
+
+$r13: SECTOR \in  \{ Industria \} \stackrel{0,17}{\longrightarrow} (NovaClasse3)C7$\\
+
+$r14: SECTOR \in  \{ Servicios \} \stackrel{0,86}{\longrightarrow} (NovaClasse3)C10$\\
+
+$r15: SECTOR \in  \{ Servicios \} \stackrel{0,14}{\longrightarrow} (NovaClasse3)C7$\\
+
+\newpage
+\vspace{3ex}
+\mbox{ }
+\begin{center} \Large \bf Resultats de la qualitat regla a regla \end{center}
+
+\begin{center}
+\begin{tabular}{|p{3cm}|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{\bf Taula de qualitat} \\ 
+\hline
+{\bf Valors} & {\bf Consecuent} & {\bf Confian\c ca} & {\bf Support} & {\bf Cobertura} \\ 
+ & {\bf } & {\bf } & {\bf } & {\bf relativa} \\ 
+\hline
+\hline
+r0 & (NovaClasse3)C10 & 1 & 0.0769 & 0.0909 \\ 
+\hline
+r1 & (NovaClasse3)C10 & 0.5 & 0.1538 & 0.0909 \\ 
+\hline
+r2 & (NovaClasse3)C7 & 0.5 & 0.1538 & 0.5 \\ 
+\hline
+r3 & (NovaClasse3)C10 & 1 & 0.1538 & 0.1818 \\ 
+\hline
+r4 & (NovaClasse3)C10 & 1 & 0.3077 & 0.3636 \\ 
+\hline
+r5 & (NovaClasse3)C10 & 0.5 & 0.1538 & 0.0909 \\ 
+\hline
+r6 & (NovaClasse3)C7 & 0.5 & 0.1538 & 0.5 \\ 
+\hline
+r7 & (NovaClasse3)C10 & 1 & 0.1538 & 0.1818 \\ 
+\hline
+r8 & (NovaClasse3)C10 & 1 & 0.3077 & 0.3636 \\ 
+\hline
+r9 & (NovaClasse3)C10 & 1 & 0.4615 & 0.5455 \\ 
+\hline
+r10 & (NovaClasse3)C10 & 0.3333 & 0.2308 & 0.0909 \\ 
+\hline
+r11 & (NovaClasse3)C7 & 0.6667 & 0.2308 & 1 \\ 
+\hline
+r12 & (NovaClasse3)C10 & 0.8333 & 0.4615 & 0.4545 \\ 
+\hline
+r13 & (NovaClasse3)C7 & 0.1667 & 0.4615 & 0.5 \\ 
+\hline
+r14 & (NovaClasse3)C10 & 0.8571 & 0.5385 & 0.5455 \\ 
+\hline
+r15 & (NovaClasse3)C7 & 0.1429 & 0.5385 & 0.5 \\ 
+\hline
+\hline
+\end{tabular}
+\end{center} \vfill
+
+
+{\bf Suport total de la base de coneixement:} 4.5385
+
+{\bf Confian\c ca mitjana de la base de coneixement:} 0.6875
+
+{\bf Cobertura global de la base de coneixement:} 1
+\newpage
+\mbox{ } \vfill
+\begin{center} \Large \bf Qualitat de les Bases de coneixement \end{center} \vfill
+
+\newpage
+\mbox{ }
+{\Large \bf CCECNovaClasse :}\\
+
+$r1.BC0.BC0.not(r13): \neg (SECTOR \in  \{ Servicios \} )\longrightarrow (NovaClasse2)BIGUES$\\
+
+$r2.BC1.BC0.r13BC1.r9: (SECTOR \in  \{ Servicios \} ) \wedge (PARTIDO \in  \{ PSC \} )\longrightarrow (NovaClasse3)C10$\\
+
+$r3.BC2.BC0.r13BC1.not(r9): (SECTOR \in  \{ Servicios \} ) \wedge (\neg (PARTIDO \in  \{ PSC \} ))\longrightarrow (NovaClasse3)C7$\\
+
+\newpage
+\vspace{3ex}
+\mbox{ }
+\begin{center} \Large \bf Resultats de la qualitat regla a regla \end{center}
+
+\begin{center}
+\begin{tabular}{|p{3cm}|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{\bf Taula de qualitat} \\ 
+\hline
+{\bf Valors} & {\bf Consecuent} & {\bf Confian\c ca} & {\bf Support} & {\bf Cobertura} \\ 
+ & {\bf } & {\bf } & {\bf } & {\bf relativa} \\ 
+\hline
+\hline
+r1.BC0.BC0.not(r13) & (NovaClasse2)BIGUES & 0.1429 & 0.5 & 1 \\ 
+\hline
+r2.BC1.BC0.r13BC1.r9 & (NovaClasse3)C10 & 1 & 0.2143 & 0.2727 \\ 
+\hline
+r3.BC2.BC0.r13BC1.not(r9) & (NovaClasse3)C7 & 0.25 & 0.2857 & 0.5 \\ 
+\hline
+\hline
+\end{tabular}
+\end{center} \vfill
+
+
+{\bf Suport total de la base de coneixement:} 1
+
+{\bf Confian\c ca mitjana de la base de coneixement:} 0.4643
+
+{\bf Cobertura global de la base de coneixement:} 0.3571
+\end{document}

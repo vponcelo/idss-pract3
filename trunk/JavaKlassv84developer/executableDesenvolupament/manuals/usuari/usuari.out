@@ -1,0 +1,33 @@
+\BOOKMARK [0][-]{chapter.1}{Tipus de finestres i disseny de formularis a Java-KLASS}{}
+\BOOKMARK [1][-]{section.1.1}{Tipus de finestres}{chapter.1}
+\BOOKMARK [1][-]{section.1.2}{Disseny de formularis}{chapter.1}
+\BOOKMARK [0][-]{chapter.2}{Funcionalitats de Java-KLASS}{}
+\BOOKMARK [1][-]{section.2.1}{Menu principal}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Fitxer}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.2.1}{Obre}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.2}{Tanca}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.3}{Anomena i desa}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.4}{Importa}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.5}{Exporta BC}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.6}{Configuraci\363}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.7}{Localitzaci\363 de fitxers}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.8}{Localitzaci\363 de resultats}{section.2.2}
+\BOOKMARK [2][-]{subsection.2.2.9}{Surt}{section.2.2}
+\BOOKMARK [1][-]{section.2.3}{Dades}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.3.1}{Selecciona submatriu}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.2}{Edita metadades}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.3}{Elimina propietats}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.4}{Divideix BDD}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.5}{Tractament de Mancants}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.6}{Integra classificaci\363}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.7}{Canvia matriu actual}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.8}{Canvia dendograma actual}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.9}{Defineix ordenacions}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.10}{Recodifica}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.11}{Discretitza}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.12}{Calculadora}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.13}{Definir Actives}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.14}{Matriu de dades}{section.2.3}
+\BOOKMARK [1][-]{section.2.4}{Coneixement}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.4.1}{Editar BC}{section.2.4}
+\BOOKMARK [2][-]{subsection.2.4.2}{Avaluar BC}{section.2.4}

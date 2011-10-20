@@ -1,0 +1,226 @@
+\documentstyle[psfig,color,12pt]{book}
+\pagestyle{plain}
+\textheight 27 cm
+\textwidth 18.0 cm
+\hoffset -2.5 cm
+\voffset -4.5 cm
+\evensidemargin 1 cm
+\oddsidemargin 1 cm
+\pretolerance 1000
+\tolerance 0
+\definecolor{gris}{gray}{0.9}
+\begin{document}
+\setlength{\baselineskip}{1.5em}
+\setlength{\parskip}{0em}
+\setlength{\parsep}{0.5em}
+\newfont{\peq}{cmbx9}
+\newcommand{\lge}[1]{\hbox{#1\kern-.1em\raise.5ex\hbox{.}\kern-.1em #1}}
+\alph{enumii}\roman{enumii}
+\mbox{ } \vfill
+\begin{center} \Large \bf Qualitat de les Bases de coneixement \end{center} \vfill
+
+\newpage
+\mbox{ }
+{\Large \bf BC1 :}\\
+
+$r0: (TAS.omis.post \geq 0) \wedge (TAS.omis.post < 4)\stackrel{1}{\longrightarrow} (NovaClas2)C1$\\
+
+$r1: (TAS.omis.post \geq 4) \wedge (TAS.omis.post \leq 10)\stackrel{0,62}{\longrightarrow} (NovaClas2)C0$\\
+
+$r2: (TAS.omis.post \geq 4) \wedge (TAS.omis.post \leq 10)\stackrel{0,38}{\longrightarrow} (NovaClas2)C1$\\
+
+$r3: (TAS.omis.dife \geq -10) \wedge (TAS.omis.dife < -6)\stackrel{1}{\longrightarrow} (NovaClas2)C1$\\
+
+$r4: (TAS.omis.dife \geq -6) \wedge (TAS.omis.dife \leq 0)\stackrel{0,48}{\longrightarrow} (NovaClas2)C0$\\
+
+$r5: (TAS.omis.dife \geq -6) \wedge (TAS.omis.dife \leq 0)\stackrel{0,52}{\longrightarrow} (NovaClas2)C1$\\
+
+$r6: (TAS.omis.dife>0) \wedge (TAS.omis.dife \leq 1)\stackrel{1}{\longrightarrow} (NovaClas2)C1$\\
+
+$r7: (TAS.error.post \geq 0) \wedge (TAS.error.post < 1)\stackrel{1}{\longrightarrow} (NovaClas2)C1$\\
+
+$r8: (TAS.error.post \geq 1) \wedge (TAS.error.post \leq 10)\stackrel{0,46}{\longrightarrow} (NovaClas2)C0$\\
+
+$r9: (TAS.error.post \geq 1) \wedge (TAS.error.post \leq 10)\stackrel{0,54}{\longrightarrow} (NovaClas2)C1$\\
+
+$r10: (TAS.error.dife \geq -11) \wedge (TAS.error.dife < -9)\stackrel{1}{\longrightarrow} (NovaClas2)C1$\\
+
+$r11: (TAS.error.dife \geq -9) \wedge (TAS.error.dife \leq 0)\stackrel{0,44}{\longrightarrow} (NovaClas2)C0$\\
+
+$r12: (TAS.error.dife \geq -9) \wedge (TAS.error.dife \leq 0)\stackrel{0,56}{\longrightarrow} (NovaClas2)C1$\\
+
+$r13: (TAS.error.dife>0) \wedge (TAS.error.dife \leq 3)\stackrel{1}{\longrightarrow} (NovaClas2)C1$\\
+
+$r14: (Stroop.int.post \geq -25) \wedge (Stroop.int.post \leq -25)\stackrel{1}{\longrightarrow} (NovaClas2)C0$\\
+
+$r15: (Stroop.int.post \geq -18.89) \wedge (Stroop.int.post \leq 17.1)\stackrel{1}{\longrightarrow} (NovaClas2)C1$\\
+
+$r16: (Stroop.int.dife \geq -6.49) \wedge (Stroop.int.dife < 0)\stackrel{1}{\longrightarrow} (NovaClas2)C1$\\
+
+$r17: (Stroop.int.dife \geq 0) \wedge (Stroop.int.dife \leq 0)\stackrel{1}{\longrightarrow} (NovaClas2)C0$\\
+
+$r18: (Stroop.int.dife>0) \wedge (Stroop.int.dife \leq 38.6)\stackrel{1}{\longrightarrow} (NovaClas2)C1$\\
+
+$r19: (WCST.e.pe.dife \geq -50) \wedge (WCST.e.pe.dife \leq 0)\stackrel{0,36}{\longrightarrow} (NovaClas2)C0$\\
+
+$r20: (WCST.e.pe.dife \geq -50) \wedge (WCST.e.pe.dife \leq 0)\stackrel{0,64}{\longrightarrow} (NovaClas2)C1$\\
+
+$r21: (WCST.e.pe.dife>0) \wedge (WCST.e.pe.dife \leq 6)\stackrel{1}{\longrightarrow} (NovaClas2)C1$\\
+
+\newpage
+\vspace{3ex}
+\mbox{ }
+\begin{center} \Large \bf Resultats de la qualitat regla a regla \end{center}
+
+\begin{center}
+\begin{tabular}{|p{3cm}|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{\bf Taula de qualitat} \\ 
+\hline
+{\bf Valors} & {\bf Consecuent} & {\bf Confian\c ca} & {\bf Support} & {\bf Cobertura} \\ 
+ & {\bf } & {\bf } & {\bf } & {\bf relativa} \\ 
+\hline
+\hline
+r0 & (NovaClas2)C1 & 1 & 0.4468 & 0.6774 \\ 
+\hline
+r1 & (NovaClas2)C0 & 0.6154 & 0.5532 & 1 \\ 
+\hline
+r2 & (NovaClas2)C1 & 0.3846 & 0.5532 & 0.3226 \\ 
+\hline
+r3 & (NovaClas2)C1 & 1 & 0.2553 & 0.3871 \\ 
+\hline
+r4 & (NovaClas2)C0 & 0.4848 & 0.7021 & 1 \\ 
+\hline
+r5 & (NovaClas2)C1 & 0.5152 & 0.7021 & 0.5484 \\ 
+\hline
+r6 & (NovaClas2)C1 & 1 & 0.0426 & 0.0645 \\ 
+\hline
+r7 & (NovaClas2)C1 & 1 & 0.2553 & 0.3871 \\ 
+\hline
+r8 & (NovaClas2)C0 & 0.4571 & 0.7447 & 1 \\ 
+\hline
+r9 & (NovaClas2)C1 & 0.5429 & 0.7447 & 0.6129 \\ 
+\hline
+r10 & (NovaClas2)C1 & 1 & 0.1915 & 0.2903 \\ 
+\hline
+r11 & (NovaClas2)C0 & 0.4444 & 0.766 & 1 \\ 
+\hline
+r12 & (NovaClas2)C1 & 0.5556 & 0.766 & 0.6452 \\ 
+\hline
+r13 & (NovaClas2)C1 & 1 & 0.0426 & 0.0645 \\ 
+\hline
+r14 & (NovaClas2)C0 & 1 & 0.3404 & 1 \\ 
+\hline
+r15 & (NovaClas2)C1 & 1 & 0.6596 & 1 \\ 
+\hline
+r16 & (NovaClas2)C1 & 1 & 0.1277 & 0.1935 \\ 
+\hline
+r17 & (NovaClas2)C0 & 1 & 0.3404 & 1 \\ 
+\hline
+r18 & (NovaClas2)C1 & 1 & 0.5319 & 0.8065 \\ 
+\hline
+r19 & (NovaClas2)C0 & 0.3556 & 0.9574 & 1 \\ 
+\hline
+r20 & (NovaClas2)C1 & 0.6444 & 0.9574 & 0.9355 \\ 
+\hline
+r21 & (NovaClas2)C1 & 1 & 0.0426 & 0.0645 \\ 
+\hline
+\hline
+\end{tabular}
+\end{center} \vfill
+
+
+{\bf Suport total de la base de coneixement:} 10.7234
+
+{\bf Confian\c ca mitjana de la base de coneixement:} 0.7727
+
+{\bf Cobertura global de la base de coneixement:} 1
+\newpage
+\mbox{ } \vfill
+\begin{center} \Large \bf Qualitat de les Bases de coneixement \end{center} \vfill
+
+\newpage
+\mbox{ }
+{\Large \bf BC2 :}\\
+
+$r0: (TAS.omis.post \geq 4) \wedge (TAS.omis.post < 10)\stackrel{0,06}{\longrightarrow} (NovaClas3)34$\\
+
+$r1: (TAS.omis.post \geq 4) \wedge (TAS.omis.post < 10)\stackrel{0,94}{\longrightarrow} (NovaClas3)graves13$\\
+
+$r2: (TAS.omis.dife \geq -6) \wedge (TAS.omis.dife < 0)\stackrel{0,06}{\longrightarrow} (NovaClas3)34$\\
+
+$r3: (TAS.omis.dife \geq -6) \wedge (TAS.omis.dife < 0)\stackrel{0,94}{\longrightarrow} (NovaClas3)graves13$\\
+
+$r4: (TAS.error.post \geq 1) \wedge (TAS.error.post < 10)\stackrel{0,06}{\longrightarrow} (NovaClas3)34$\\
+
+$r5: (TAS.error.post \geq 1) \wedge (TAS.error.post < 10)\stackrel{0,94}{\longrightarrow} (NovaClas3)graves13$\\
+
+$r6: (TAS.error.dife \geq -9) \wedge (TAS.error.dife < 0)\stackrel{0,06}{\longrightarrow} (NovaClas3)34$\\
+
+$r7: (TAS.error.dife \geq -9) \wedge (TAS.error.dife < 0)\stackrel{0,94}{\longrightarrow} (NovaClas3)graves13$\\
+
+$r8: (Stroop.int.post \geq -25) \wedge (Stroop.int.post < -25)\stackrel{0,06}{\longrightarrow} (NovaClas3)34$\\
+
+$r9: (Stroop.int.post \geq -25) \wedge (Stroop.int.post < -25)\stackrel{0,94}{\longrightarrow} (NovaClas3)graves13$\\
+
+$r10: (Stroop.int.dife \geq 0) \wedge (Stroop.int.dife < 0)\stackrel{0,06}{\longrightarrow} (NovaClas3)34$\\
+
+$r11: (Stroop.int.dife \geq 0) \wedge (Stroop.int.dife < 0)\stackrel{0,94}{\longrightarrow} (NovaClas3)graves13$\\
+
+$r12: (WCST.e.pe.dife \geq -50) \wedge (WCST.e.pe.dife < 0)\stackrel{0,06}{\longrightarrow} (NovaClas3)34$\\
+
+$r13: (WCST.e.pe.dife \geq -50) \wedge (WCST.e.pe.dife < 0)\stackrel{0,94}{\longrightarrow} (NovaClas3)graves13$\\
+
+\newpage
+\vspace{3ex}
+\mbox{ }
+\begin{center} \Large \bf Resultats de la qualitat regla a regla \end{center}
+
+\begin{center}
+\begin{tabular}{|p{3cm}|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{\bf Taula de qualitat} \\ 
+\hline
+{\bf Valors} & {\bf Consecuent} & {\bf Confian\c ca} & {\bf Support} & {\bf Cobertura} \\ 
+ & {\bf } & {\bf } & {\bf } & {\bf relativa} \\ 
+\hline
+\hline
+r0 & (NovaClas3)34 & 0 & 0.1875 & 0 \\ 
+\hline
+r1 & (NovaClas3)graves13 & 1 & 0.1875 & 0.2 \\ 
+\hline
+r2 & (NovaClas3)34 & 0 & 0.1875 & 0 \\ 
+\hline
+r3 & (NovaClas3)graves13 & 1 & 0.1875 & 0.2 \\ 
+\hline
+r4 & (NovaClas3)34 & 0 & 0.1875 & 0 \\ 
+\hline
+r5 & (NovaClas3)graves13 & 1 & 0.1875 & 0.2 \\ 
+\hline
+r6 & (NovaClas3)34 & 0 & 0.1875 & 0 \\ 
+\hline
+r7 & (NovaClas3)graves13 & 1 & 0.1875 & 0.2 \\ 
+\hline
+r8 & (NovaClas3)34 & * & 0 & 0 \\ 
+\hline
+r9 & (NovaClas3)graves13 & * & 0 & 0 \\ 
+\hline
+r10 & (NovaClas3)34 & * & 0 & 0 \\ 
+\hline
+r11 & (NovaClas3)graves13 & * & 0 & 0 \\ 
+\hline
+r12 & (NovaClas3)34 & 0 & 0.1875 & 0 \\ 
+\hline
+r13 & (NovaClas3)graves13 & 1 & 0.1875 & 0.2 \\ 
+\hline
+\hline
+\end{tabular}
+\end{center} \vfill
+
+
+{\bf Suport total de la base de coneixement:} 1.875
+
+{\bf Confian\c ca mitjana de la base de coneixement:} 0.0714
+
+{\bf Cobertura global de la base de coneixement:} 0.3125
+\newpage

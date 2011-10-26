@@ -1,10 +1,12 @@
 #summary One-sentence summary of this page.
 
-= Introduction =
+= KLASS initial configuration =
 
-Installation and first configurations
+
 
 
 = Details =
 
-Tengo el KLASS corriendo en Ubuntu.
+Hacer el checkout de la carpeta jklass85. Este directorio contiene:
+ conf/
+ src/

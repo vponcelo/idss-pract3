@@ -1,0 +1,5 @@
+((0 Display) (nil 1 13 Q (vermell groc verd)))
+((1  X2) (nil 1 13 Q (vermell groc verd)))
+((1  X3) (nil 1 13 Q (vermell groc verd)))
+((1  X4) (nil 1 13 Q (vermell groc verd)))
+((1  X5) (nil 1 13 Q (vermell groc verd)))

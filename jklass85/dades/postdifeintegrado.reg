@@ -1,0 +1,6 @@
+((and (= (TAS.omis.pre) 10) (= (TAS.omis.dife) 0) (= (Stroop.int.post) -25))-> graves)
+((and (= (TMT.A.pre) 300) (= (TMT.A.dife) 0) (= (TMT.B.pre) 500) (= (TMT.B.dife) 0) (= (Stroop.int.post) -25))-> graves)
+((and (= (TMT.B.pre) 500) (= (TMT.B.dife) 0) (=(WCST.e.pe.pre) 50) (=(WCST.e.pe.dife) 0) (= (Stroop.int.post) -25))-> graves)
+((and (= (TAS.omis.pre) 10) (= (TAS.error.pre) 10) (= (B.d.d.pre) 0) (= (B.d.i.pre) 0) (> (Stroop.int.post) -25)) -> Inhibidos)
+((and (< (TAS.omis.pre) 10) (< (TAS.error.pre) 10))-> valorables)
+((and (> (B.d.d.pre) 0) (> (B.d.i.pre) 0))-> valorables)

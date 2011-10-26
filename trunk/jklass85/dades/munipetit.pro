@@ -1,0 +1,6 @@
+((0 NOMCOM)( NIL 1 14 Q ( Alt_Penedes Baix_Llobregat Barcelones Garraf Maresme V_Oriental V_Occidental)))
+((1 PARTIDO)( NIL 1 14 Q ( CiU PP PSC IC ERC Otros)))
+((2 SECTOR)( NIL 1 14 Q ( Industria Servicios Construccion)))
+((3 CLASE1)( NIL 1 14 Q ( BARCELONA COLLBATO g3 m11 p140 p136 p132 p121 p129 p133)))
+((4 CLASE2)( NIL 1 14 Q ( p128 m12 ARGENTONA r153 g3 r152 r156 SCOLOMACERVE)))
+((5 CLASE3)( NIL 1 14 Q ( z9 SCOLOMACERVE r159 p126 p124 p123 MOLINS m12 BARCELONA)))

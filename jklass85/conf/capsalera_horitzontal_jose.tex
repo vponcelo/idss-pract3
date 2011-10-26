@@ -1,0 +1,47 @@
+\documentclass[a4paper,12pt,notitlepage,twoside]{book}
+\pagestyle{plain} \textheight 22.50 cm \textwidth 14.50 cm
+\evensidemargin 0.60 cm \oddsidemargin 1.25 cm \voffset -1.0 cm
+\pretolerance 1000 \tolerance 0
+
+\usepackage[catalan]{babel}
+% Instrucció a Windows per a que accepti els caracters amb accents (á é í ó ú...)
+\usepackage[ansinew]{inputenc}
+% Instrucció a Unix per a que accepti els caracters amb accents (á é í ó ú...)
+% \usepackage[latin1]{inputenc}
+
+% Opcions a usar per PostScript
+\usepackage[dvips] {graphicx}
+\usepackage[dvips] {color}
+\usepackage{epsfig}
+
+%Pel simbol del euro
+\usepackage{eurosym}
+
+%Per poder fer multirow als tabulars
+\usepackage{multirow}
+
+%Para javadoc---------
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{ifthen}
+\usepackage{lscape}
+
+
+\definecolor{Light}{gray}{.90}
+%---------------------
+
+\linespread{1.5}
+
+\definecolor{gris}{gray}{0.9}
+
+
+\begin{document}
+\setlength{\baselineskip}{1.5em} \setlength{\parskip}{0em}
+\setlength{\parsep}{0.5em}
+\newfont{\peq}{cmbx9}
+
+% Per posar la l geminada (encara que existeix una altra manera: \l.l)
+\newcommand{\lge}[1]{\hbox{#1\kern-.1em\raise.5ex\hbox{.}\kern-.1em #1}}
+\alph{enumii}\roman{enumii}
+
+\begin{landscape}

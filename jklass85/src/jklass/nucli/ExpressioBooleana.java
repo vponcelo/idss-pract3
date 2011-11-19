@@ -1,5 +1,9 @@
 package jklass.nucli;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Vector;
 
 /**
  * Classe que representa a una expressió booleana 
@@ -263,6 +267,31 @@ public class ExpressioBooleana {
 	  public String escriureNormalLatex()throws Exception{		 
 		  return null;
 	  }
+	  
+	  /**
+	   * Return a HashSet with the identifier of all properties (variables) in the boolean expression
+	   * @return arraylist<String>
+	   */	  
+	  public HashSet<String> getPropietats(){
+		  HashSet<String> plist = new HashSet<String>();
+		  if(this instanceof EBLogica){
+			  EBLogica aux = (EBLogica) this;
+			  Iterator<ExpressioBooleana> it = aux.alFills.iterator();
+			  while (it.hasNext()){
+				  ExpressioBooleana eb = it.next();
+				  HashSet<String> laux = eb.getPropietats();	
+				  plist.addAll(laux);
+			  }
+		  }else if(this instanceof EBRelacional){
+			  EBRelacional aux = (EBRelacional) this;
+			  String varName = ((Propietat)aux.ovar).obtenirId(); 
+			  plist.add(varName);
+//			  THIS IS THE WAY TO GET THE PROPERTY (VARIABLE) NAME
+//			  System.out.println("Adding property (nv) "+((Propietat)aux.ovar).obtenirId() );					  
+		  }
+		  return plist;
+	  }
+	  
 	  
 	  /**
 	   * Escriu recursivament les operacions

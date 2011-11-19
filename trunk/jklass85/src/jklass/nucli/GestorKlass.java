@@ -5,7 +5,9 @@
    import java.io.IOException;
    import java.util.logging.*;
    import java.util.ArrayList;
+import java.util.HashSet;
    import java.util.Hashtable;
+import java.util.List;
    import java.util.Vector;
 	import java.util.Iterator;
  
@@ -2955,6 +2957,47 @@ public void SetearEstadoActual(String var)throws Exception{
 	}
 	
 	
+	/**
+	 * Return a subset of rules which do not contains any variable especified in properties  
+	 * @param rules
+	 * @param properties
+	 * @return subset of rules Vector<Regla>
+	 */
+	public Vector<Regla> cleanRules(Vector<Regla> rules, HashSet<String> properties){
+		Vector<Regla> finalRules = new Vector<Regla>();
+		Iterator<Regla> it = rules.iterator();
+		HashSet<String> pcopy = new HashSet<String>(properties);
+		System.out.println("CLEAN RULES: "+properties.toString());
+		while (it.hasNext()){
+			pcopy = new HashSet<String>(properties);
+			Regla r1 = it.next();
+			System.out.println("RULE:"+r1.toStringRegla());
+			pcopy.retainAll(r1.expressio.getPropietats()); // INTERSECTION set
+			if (pcopy.isEmpty()){ //if the intersection is empty
+				finalRules.add(r1);
+				System.out.println("   -> Adding rule");
+			}else{
+				System.out.println("   -> Intersection found in variables "+pcopy.toString());
+			}
+		}			
+		return finalRules;
+	}
+	
+	/**
+	 * Return a set with the properties (variables) referenced in every rules of rules
+	 * @param rules
+	 * @return hashset
+	 */
+	public HashSet<String> getRulesProperties(Vector<Regla> rules){
+		HashSet<String> prop1 = new HashSet<String>();
+		Iterator<Regla> it1 = rules.iterator();
+		while (it1.hasNext()){
+			Regla r1 = it1.next();
+			prop1.addAll(r1.expressio.getPropietats());
+		}
+		return prop1;
+	}
+		
 	
 	/**
 	 * 
@@ -3001,7 +3044,7 @@ public void SetearEstadoActual(String var)throws Exception{
 		Regla tmpBestRule0, tmpBestRule1;
 		Vector<Regla> tmpBLCWAFirst = new Vector<Regla>();
 		Vector<Regla> tmpBLCWASecond = new Vector<Regla>();
-		//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+		//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<3<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 		switch(kiMethod)
 		{
 			case CCEC_BLC_NoCWA_Simple: //Best Local Concept and No Close-World Assumption Simple
@@ -3072,7 +3115,46 @@ public void SetearEstadoActual(String var)throws Exception{
 				}
 				break;
 			//NUEVO ALBERTO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-			case CCEC_BLC_pCWA:
+			case CCEC_BLC_pCWA:	
+				
+				/**
+				 * @new by Marco.
+				 * He copiado el case "CCEC_BLC_CWA" y lo he adaptado al caso "CCEC_BLC_pCWA"	
+				 */
+				HashSet<String> prop1 = getRulesProperties(tmpMaxRegla1_Regles); // properties of rules1
+				HashSet<String> prop2 = getRulesProperties(tmpMaxRegla2_Regles); // properties of rules1
+				Vector<Regla> cleanTmpMaxReglas1, cleanTmpMaxReglas2;
+				// Now we build the set of rules not having intersection of properties (variables)
+				cleanTmpMaxReglas1 = cleanRules(tmpMaxRegla1_Regles, prop2);
+				cleanTmpMaxReglas2 = cleanRules(tmpMaxRegla2_Regles, prop1);
+				Regla cleanBestRule0, cleanBestRule1;
+				if(max1[COVERINGR_IDX] == 1) { //si ConvR = 1 (pg 113 de Thesis Ale)
+					tmpBestRule0 = this.composeRule(tmpMaxRegla1_Regles, new AND());
+					cleanBestRule0 = this.composeRule(cleanTmpMaxReglas1, new AND());
+				} else {
+					tmpBestRule0 = this.composeRule(tmpMaxRegla1_Regles, new OR());
+					cleanBestRule0 = this.composeRule(cleanTmpMaxReglas1, new OR());
+				}				
+				if(max2[COVERINGR_IDX] == 1) { //si ConvR = 1 (pg 113 de Thesis Ale)
+					tmpBestRule1 = this.composeRule(tmpMaxRegla2_Regles, new AND());
+					cleanBestRule1 = this.composeRule(cleanTmpMaxReglas2, new AND());
+				} else {
+					tmpBestRule1 = this.composeRule(tmpMaxRegla2_Regles, new OR());
+					cleanBestRule1 = this.composeRule(cleanTmpMaxReglas2, new OR());
+				}
+				tmpBLCWAFirst.add(tmpBestRule0);
+				if (cleanBestRule1 != null)
+					tmpBLCWAFirst.add(this.negateRule(cleanBestRule1));
+				bestRules[0] = this.composeRule(tmpBLCWAFirst, new OR());
+				
+				tmpBLCWASecond.add(tmpBestRule1);
+				if (cleanBestRule0 != null)
+					tmpBLCWASecond.add(this.negateRule(cleanBestRule0));
+				bestRules[1] = this.composeRule(tmpBLCWASecond, new OR());
+				
+				
+				/** Commented by Marco */
+				/*
 				if(tmpMaxRegla1_Regles.size() == 1 && tmpMaxRegla2_Regles.size() == 1){
 					if(tmpMaxRegla1_Regles.firstElement().equalAntecedents(tmpMaxRegla2_Regles.firstElement())){
 						bestRules[0] = tmpMaxRegla1_Regles.firstElement();//(10.21) Thesis
@@ -3119,7 +3201,7 @@ public void SetearEstadoActual(String var)throws Exception{
 						bestRules[1] = this.composeRule(tmpBLCWASecond, new OR());//(10.28) Thesis
 					}
 				}
-				
+				*/
 				break;
 			case CCEC_BLGC_CWA:
 				
@@ -3485,6 +3567,9 @@ public void SetearEstadoActual(String var)throws Exception{
 	 */
 	public Regla composeRule(Vector<Regla> regles, EBLogica op) throws Exception
 	{
+		if (regles.size()==0){
+			return null;
+		}
 		Iterator<Regla> it = regles.iterator();
 		
 		String nom = "";

@@ -45,10 +45,9 @@ import jklass.util.OpcionsDis;
     public static final int CCEC_BLC_NoCWA = 1;//Best Local Concept and No Close-World Assumption
     public static final int CCEC_BLC_CWA = 2;//Best Local Concept and Close-World Assumption
     public static final int CCEC_BGC_NoCWA = 3;//Best Global Concept and No Close-World Assumption
-    public static final int CCEC_BGC_CWA = 4;//Best Global Concept and Close-World Assumption
-    //NUEVO ALBERTO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    public static final int CCEC_BGC_CWA = 4;//Best Global Concept and Close-World Assumption    
     public static final int CCEC_BLC_pCWA = 5;//Best Local Concept and partial-Close-World Assumption
-    public static final int CCEC_BLGC_CWA = 6;//Best Local-Global Concept and Close-World Assumption
+    public static final int CCEC_BLGC_CWA = 6;//Best Local-Global Concept and Close-World Assumption    
 	//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	
     
@@ -2958,6 +2957,120 @@ public void SetearEstadoActual(String var)throws Exception{
 	
 	
 	/**
+	 * This function apply the blc&pcwa: we clean the redundant variables, keeping the highest confidence and coverage. 
+	 * @param rules1
+	 * @param rules2
+	 * @return Vector<Regla>[] corresponding to the arguments.
+	 * @author Marco Villegas
+	 * @throws Exception 
+	 */
+	public Object[] cleanRules(Vector<Regla> rules1, Vector<Regla> rules2) throws Exception{
+		Vector<Regla> fRules1 = new Vector<Regla>();
+		Vector<Regla> fRules2 = new Vector<Regla>();
+		Object[] returnRules = new Object[2];
+		Iterator<Regla> it1 = rules1.iterator();
+		Iterator<Regla> it2 = rules2.iterator();
+		HashSet<String> pg1 = getRulesProperties(rules1);
+		HashSet<String> pg2 = getRulesProperties(rules2);
+		HashSet<String> inters = pg1, rest1 = pg1, rest2=pg2;
+		inters.retainAll(pg2);		
+		float cov1=0, cov2=0, conf1=0, conf2=0;
+		if (inters.isEmpty()){
+			// There is no intersection
+			logger.info("No intersection");
+			returnRules[0]=rules1;
+			returnRules[1]=rules2;			
+		}else{
+			logger.info("There are intersections!!"+inters.toString());
+			Iterator<String> iti = inters.iterator();
+			Regla r1 = null, r2 = null;
+			while (iti.hasNext()){
+				
+				
+				String str = iti.next();
+				logger.info("   "+str);
+				// Seek the rule in vector rules1
+				
+				it1 = rules1.iterator();				
+				while (it1.hasNext()){			
+					r1 = it1.next();
+					if(r1.expressio.getPropietats().contains(str)){
+						conf1 = r1.confidence();
+						cov1 = r1.coveringR();
+						break;
+					}
+				}
+				//  Seek the rule in vector rules2
+				it2 = rules2.iterator();
+				while (it2.hasNext()){			
+					r2 = it2.next();
+					if(r2.expressio.getPropietats().contains(str)){
+						conf2 = r2.confidence();
+						cov2 = r2.coveringR();
+						break;
+					}
+				}
+				logger.info("   Cov1="+cov1+" Cov2="+cov2);
+				logger.info("Rule1: "+r1.toStringRegla());
+				logger.info("Rule2: "+r2.toStringRegla());
+				if (cov1>cov2){					
+					fRules1.add(r1);
+					Regla aux_r1 = new Regla(r1.expressio,r2.getConseguent(),r1.identificador, r1.getGestor(), null);					
+					aux_r1.setConseguent(r2.getConseguent());
+					
+					logger.info("Rule aux: "+aux_r1.toStringRegla());					
+					logger.info("Rule aux neg: "+this.negateRule(aux_r1).toStringRegla());
+					fRules2.add(this.negateRule(aux_r1));
+				} else if (cov2>cov1){
+					fRules2.add(r2);
+					Regla aux_r2 = new Regla(matriuActual);					
+					aux_r2.setConseguent(r1.getConseguent());
+					fRules1.add(this.negateRule(aux_r2));
+				} else {
+					fRules2.add(r2);
+					fRules1.add(r1);
+				}				
+			}
+			it1 = fRules1.iterator();
+			while (it1.hasNext()){
+				r1 = it1.next();
+				logger.info("RULES1 "+r1.toStringRegla());
+			}
+			it2 = fRules2.iterator();
+			while (it2.hasNext()){
+				r2 = it2.next();
+				logger.info("RULES2 "+r2.toStringRegla());
+			}
+			
+			// Now we add the non-intersected rules
+			it1 = rules1.iterator();				
+			while (it1.hasNext()){			
+				r1 = it1.next();
+				rest1 = r1.expressio.getPropietats();
+				rest1.retainAll(inters);
+				if(rest1.isEmpty()){
+					fRules1.add(r1);
+					break;
+				}
+			}
+			//   rules2
+			it2 = rules2.iterator();				
+			while (it2.hasNext()){			
+				r2 = it2.next();
+				rest2 = r2.expressio.getPropietats();
+				rest2.retainAll(inters);
+				if(rest2.isEmpty()){
+					fRules2.add(r2);
+					break;
+				}
+			}				
+			returnRules[0]=fRules1;
+			returnRules[1]=fRules2;			
+		}
+		return returnRules; 
+	}
+	
+	/**
 	 * Return a subset of rules which do not contains any variable especified in properties  
 	 * @param rules
 	 * @param properties
@@ -2987,17 +3100,83 @@ public void SetearEstadoActual(String var)throws Exception{
 	 * Return a set with the properties (variables) referenced in every rules of rules
 	 * @param rules
 	 * @return hashset
+	 * @author Marco Villegas Garcia
 	 */
 	public HashSet<String> getRulesProperties(Vector<Regla> rules){
 		HashSet<String> prop1 = new HashSet<String>();
+		HashSet<String> aux_prop; 
 		Iterator<Regla> it1 = rules.iterator();
+		float conf=0;
 		while (it1.hasNext()){
 			Regla r1 = it1.next();
-			prop1.addAll(r1.expressio.getPropietats());
+			try {
+				conf = r1.confidence();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			aux_prop = r1.expressio.getPropietats();
+			System.out.println("RULE CONFIDENCE: " + Float.toString(conf) + " "+ aux_prop);
+			prop1.addAll(aux_prop);
 		}
 		return prop1;
 	}
 		
+	
+	
+	/**
+	 * Execute the method BL_pCWA on the arguments.
+	 * @param r1 Vector<Regla>
+	 * @param r2 Vector<Regla>
+	 * @return Object[] of two positions, corresponding to the arguments
+	 * @throws Exception 
+	 */
+	public Regla[] BL_pCWA(Vector<Regla> tmpMaxRegla1_Regles, Vector<Regla> tmpMaxRegla2_Regles, float[] max1, float[] max2) throws Exception{
+		/**
+		 * @new by Marco Villegas.
+		 * He copiado el case "CCEC_BLC_CWA" y lo he adaptado al caso "CCEC_BLC_pCWA"	
+		 */
+		HashSet<String> prop1;
+		HashSet<String> prop2;
+		Vector<Regla> cleanTmpMaxReglas1, cleanTmpMaxReglas2;
+		Regla cleanBestRule0, cleanBestRule1;
+		Regla[] bestRules = new Regla[2];
+		
+		Regla tmpBestRule0, tmpBestRule1;
+		Vector<Regla> tmpBLCWAFirst = new Vector<Regla>();
+		Vector<Regla> tmpBLCWASecond = new Vector<Regla>();
+		
+		prop1 = getRulesProperties(tmpMaxRegla1_Regles); // properties of rules1
+		prop2 = getRulesProperties(tmpMaxRegla2_Regles); // properties of rules1				
+		// Now we build the set of rules not having intersection of properties (variables)
+		cleanTmpMaxReglas1 = cleanRules(tmpMaxRegla1_Regles, prop2);
+		cleanTmpMaxReglas2 = cleanRules(tmpMaxRegla2_Regles, prop1);
+		
+		if(max1[COVERINGR_IDX] == 1) { //si ConvR = 1 (pg 113 de Thesis Ale)
+			tmpBestRule0 = this.composeRule(tmpMaxRegla1_Regles, new AND());
+			cleanBestRule0 = this.composeRule(cleanTmpMaxReglas1, new AND());
+		} else {
+			tmpBestRule0 = this.composeRule(tmpMaxRegla1_Regles, new OR());
+			cleanBestRule0 = this.composeRule(cleanTmpMaxReglas1, new OR());
+		}				
+		if(max2[COVERINGR_IDX] == 1) { //si ConvR = 1 (pg 113 de Thesis Ale)
+			tmpBestRule1 = this.composeRule(tmpMaxRegla2_Regles, new AND());
+			cleanBestRule1 = this.composeRule(cleanTmpMaxReglas2, new AND());
+		} else {
+			tmpBestRule1 = this.composeRule(tmpMaxRegla2_Regles, new OR());
+			cleanBestRule1 = this.composeRule(cleanTmpMaxReglas2, new OR());
+		}
+		tmpBLCWAFirst.add(tmpBestRule0);
+		if (cleanBestRule1 != null)
+			tmpBLCWAFirst.add(this.negateRule(cleanBestRule1));
+		bestRules[0] = this.composeRule(tmpBLCWAFirst, new OR());
+		
+		tmpBLCWASecond.add(tmpBestRule1);
+		if (cleanBestRule0 != null)
+			tmpBLCWASecond.add(this.negateRule(cleanBestRule0));
+		bestRules[1] = this.composeRule(tmpBLCWASecond, new OR());
+		return bestRules;
+	}
 	
 	/**
 	 * 
@@ -3045,6 +3224,8 @@ public void SetearEstadoActual(String var)throws Exception{
 		Vector<Regla> tmpBLCWAFirst = new Vector<Regla>();
 		Vector<Regla> tmpBLCWASecond = new Vector<Regla>();
 		//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<3<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+		Vector<Regla> m5Rules1, m5Rules2;
+		
 		switch(kiMethod)
 		{
 			case CCEC_BLC_NoCWA_Simple: //Best Local Concept and No Close-World Assumption Simple
@@ -3113,233 +3294,19 @@ public void SetearEstadoActual(String var)throws Exception{
 				} else {
 					this.buildBGCWArules(bestRules, 1, max2, tmpMaxRegla2_Regles, tmpMaxRegla1_Regles.get(0).conseguent); //crea la bestrule[1] i posa el bestrules[0] = bestrules[1]
 				}
-				break;
-			//NUEVO ALBERTO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-			case CCEC_BLC_pCWA:	
-				
+				break;			
+			case CCEC_BLC_pCWA:
 				/**
-				 * @new by Marco.
-				 * He copiado el case "CCEC_BLC_CWA" y lo he adaptado al caso "CCEC_BLC_pCWA"	
+				 * @new by Marco Villegas.
 				 */
-				HashSet<String> prop1 = getRulesProperties(tmpMaxRegla1_Regles); // properties of rules1
-				HashSet<String> prop2 = getRulesProperties(tmpMaxRegla2_Regles); // properties of rules1
-				Vector<Regla> cleanTmpMaxReglas1, cleanTmpMaxReglas2;
-				// Now we build the set of rules not having intersection of properties (variables)
-				cleanTmpMaxReglas1 = cleanRules(tmpMaxRegla1_Regles, prop2);
-				cleanTmpMaxReglas2 = cleanRules(tmpMaxRegla2_Regles, prop1);
-				Regla cleanBestRule0, cleanBestRule1;
-				if(max1[COVERINGR_IDX] == 1) { //si ConvR = 1 (pg 113 de Thesis Ale)
-					tmpBestRule0 = this.composeRule(tmpMaxRegla1_Regles, new AND());
-					cleanBestRule0 = this.composeRule(cleanTmpMaxReglas1, new AND());
-				} else {
-					tmpBestRule0 = this.composeRule(tmpMaxRegla1_Regles, new OR());
-					cleanBestRule0 = this.composeRule(cleanTmpMaxReglas1, new OR());
-				}				
-				if(max2[COVERINGR_IDX] == 1) { //si ConvR = 1 (pg 113 de Thesis Ale)
-					tmpBestRule1 = this.composeRule(tmpMaxRegla2_Regles, new AND());
-					cleanBestRule1 = this.composeRule(cleanTmpMaxReglas2, new AND());
-				} else {
-					tmpBestRule1 = this.composeRule(tmpMaxRegla2_Regles, new OR());
-					cleanBestRule1 = this.composeRule(cleanTmpMaxReglas2, new OR());
-				}
-				tmpBLCWAFirst.add(tmpBestRule0);
-				if (cleanBestRule1 != null)
-					tmpBLCWAFirst.add(this.negateRule(cleanBestRule1));
-				bestRules[0] = this.composeRule(tmpBLCWAFirst, new OR());
-				
-				tmpBLCWASecond.add(tmpBestRule1);
-				if (cleanBestRule0 != null)
-					tmpBLCWASecond.add(this.negateRule(cleanBestRule0));
-				bestRules[1] = this.composeRule(tmpBLCWASecond, new OR());
-				
-				
-				/** Commented by Marco */
-				/*
-				if(tmpMaxRegla1_Regles.size() == 1 && tmpMaxRegla2_Regles.size() == 1){
-					if(tmpMaxRegla1_Regles.firstElement().equalAntecedents(tmpMaxRegla2_Regles.firstElement())){
-						bestRules[0] = tmpMaxRegla1_Regles.firstElement();//(10.21) Thesis
-						bestRules[1] = tmpMaxRegla2_Regles.firstElement();//(10.22) Thesis
-					} else{
-						tmpBLCWAFirst.add(tmpMaxRegla1_Regles.firstElement());
-						tmpBLCWAFirst.add(this.negateRule(tmpMaxRegla2_Regles.firstElement()));
-						bestRules[0] = composeRule(tmpBLCWAFirst, new OR());//(10.23) Thesis
-						
-						tmpBLCWASecond.add(tmpMaxRegla2_Regles.firstElement());
-						tmpBLCWASecond.add(this.negateRule(tmpMaxRegla1_Regles.firstElement()));
-						bestRules[1] = this.composeRule(tmpBLCWASecond, new OR());//(10.24) Thesis
-					}
-				} else if(max1[CONFIDENCE_IDX] == 1){
-					if(max1[COVERINGR_IDX] == 1 || max2[COVERINGR_IDX] == 1) {	
-						tmpBLCWASecond.add(this.composeRule(tmpMaxRegla1_Regles, new AND()));//First Term
-						if(!generateValidSet(tmpMaxRegla2_Regles,tmpMaxRegla1_Regles,tmpBLCWAFirst).isEmpty()){
-							tmpBestRule0 = negateRule(this.composeRule(tmpBLCWAFirst, new OR()));	
-							tmpBLCWASecond.add(tmpBestRule0);//Second term
-						}
-						bestRules[0] = this.composeRule(tmpBLCWASecond, new OR());//(10.25) Thesis
-						tmpBLCWASecond.clear();
-					
-						tmpBLCWASecond.add(this.composeRule(tmpMaxRegla2_Regles, new AND()));//First Term
-						if(!generateValidSet(tmpMaxRegla1_Regles,tmpMaxRegla2_Regles,tmpBLCWAFirst).isEmpty()){
-							tmpBestRule1 = negateRule(this.composeRule(tmpBLCWAFirst, new OR()));	
-							tmpBLCWASecond.add(tmpBestRule1);//Second term		
-						}
-						bestRules[1] = this.composeRule(tmpBLCWASecond, new OR());//(10.26) Thesis
-					} else {
-						tmpBLCWASecond.add(this.composeRule(tmpMaxRegla1_Regles, new OR()));//First Term
-						if(!generateValidSet(tmpMaxRegla2_Regles,tmpMaxRegla1_Regles,tmpBLCWAFirst).isEmpty()){
-							tmpBestRule0 = negateRule(this.composeRule(tmpBLCWAFirst, new AND()));	
-							tmpBLCWASecond.add(tmpBestRule0);//Second term
-						}
-						bestRules[0] = this.composeRule(tmpBLCWASecond, new OR());//(10.27) Thesis
-						tmpBLCWASecond.clear();
-					
-						tmpBLCWASecond.add(this.composeRule(tmpMaxRegla2_Regles, new OR()));//First Term
-						if(!generateValidSet(tmpMaxRegla1_Regles,tmpMaxRegla2_Regles,tmpBLCWAFirst).isEmpty()){
-							tmpBestRule1 = negateRule(this.composeRule(tmpBLCWAFirst, new AND()));	
-							tmpBLCWASecond.add(tmpBestRule1);//Second term		
-						}
-						bestRules[1] = this.composeRule(tmpBLCWASecond, new OR());//(10.28) Thesis
-					}
-				}
-				*/
+				bestRules = BL_pCWA(tmpMaxRegla1_Regles, tmpMaxRegla2_Regles, max1, max2);
 				break;
-			case CCEC_BLGC_CWA:
-				
-				if(tmpMaxRegla1_Regles.size() == 1 && tmpMaxRegla2_Regles.size() == 1){
-					if(tmpMaxRegla1_Regles.firstElement().equalAntecedents(tmpMaxRegla2_Regles.firstElement())){
-						if(max1[COVERINGR_IDX] > max2[COVERINGR_IDX]){
-							bestRules[0] = tmpMaxRegla1_Regles.firstElement();//(10.29) Thesis
-							bestRules[1] = this.negateRule(bestRules[0]);//(10.30) Thesis
-						} else {
-							bestRules[1] = tmpMaxRegla2_Regles.firstElement();//(10.31) Thesis
-							bestRules[0] = this.negateRule(bestRules[1]);//(10.32) Thesis
-						}
-					} else{
-						tmpBLCWAFirst.add(tmpMaxRegla1_Regles.firstElement());
-						tmpBLCWAFirst.add(this.negateRule(tmpMaxRegla2_Regles.firstElement()));
-						bestRules[0] = composeRule(tmpBLCWAFirst, new OR());//(10.33) Thesis
-						
-						tmpBLCWASecond.add(tmpMaxRegla2_Regles.firstElement());
-						tmpBLCWASecond.add(this.negateRule(tmpMaxRegla1_Regles.firstElement()));
-						bestRules[1] = this.composeRule(tmpBLCWASecond, new OR());//(10.34) Thesis
-					}
-				} else {
-					if(max1[CONFIDENCE_IDX] == 1){
-						if(max1[COVERINGR_IDX] == 1 || max2[COVERINGR_IDX] == 1) {	
-							bestRules[0] = this.composeRule(tmpMaxRegla1_Regles, new AND());//(10.35) Thesis
-							bestRules[1] = this.composeRule(tmpMaxRegla1_Regles, new OR());
-							bestRules[1] = negateRule(bestRules[1]);//(10.36) Thesis, by Morgan's Law
-						} else {
-							if(!generateValidSet(tmpMaxRegla1_Regles,tmpMaxRegla2_Regles,tmpBLCWAFirst).isEmpty()){
-								tmpBestRule0 = this.composeRule(tmpBLCWAFirst, new OR());		
-								tmpBLCWASecond.add(tmpBestRule0);//First term
-							}
-							if(!generateValidSet(tmpMaxRegla2_Regles,tmpMaxRegla1_Regles,tmpBLCWAFirst).isEmpty()){
-								tmpBestRule0 = this.composeRule(tmpBLCWAFirst, new AND());	
-								tmpBLCWASecond.add(negateRule(tmpBestRule0));//Second term
-							}
-							if(!generateSubset(tmpMaxRegla1_Regles, max2[COVERINGR_IDX], tmpBLCWAFirst).isEmpty()){
-								tmpBestRule0 = this.composeRule(tmpBLCWAFirst, new OR());	
-								tmpBLCWASecond.add(tmpBestRule0);//Third term
-							}
-							if(!generateSubset(tmpMaxRegla2_Regles, max1[COVERINGR_IDX], tmpBLCWAFirst).isEmpty()){
-								tmpBestRule0 = this.composeRule(tmpBLCWAFirst, new AND());	
-								tmpBLCWASecond.add(negateRule(tmpBestRule0));//Forth term
-							}
-							bestRules[0] = this.composeRule(tmpBLCWASecond, new OR());//(10.37) Thesis
-							tmpBLCWASecond.clear();
-						
-							if(!generateValidSet(tmpMaxRegla2_Regles,tmpMaxRegla1_Regles,tmpBLCWAFirst).isEmpty()){
-								tmpBestRule1 = this.composeRule(tmpBLCWAFirst, new OR());		
-								tmpBLCWASecond.add(tmpBestRule1);//First term
-							}
-							if(!generateValidSet(tmpMaxRegla1_Regles,tmpMaxRegla2_Regles,tmpBLCWAFirst).isEmpty()){
-								tmpBestRule1 = this.composeRule(tmpBLCWAFirst, new AND());	
-								tmpBLCWASecond.add(negateRule(tmpBestRule1));//Second term		
-							}
-							if(!generateSubset(tmpMaxRegla2_Regles, max1[COVERINGR_IDX], tmpBLCWAFirst).isEmpty()){
-								tmpBestRule1 = this.composeRule(tmpBLCWAFirst, new OR());	
-								tmpBLCWASecond.add(tmpBestRule1);//Third term
-							}
-							if(!generateSubset(tmpMaxRegla1_Regles, max2[COVERINGR_IDX], tmpBLCWAFirst).isEmpty()){
-								tmpBestRule1 = this.composeRule(tmpBLCWAFirst, new AND());	
-								tmpBLCWASecond.add(negateRule(tmpBestRule1));//Forth term
-							}
-							bestRules[1] = this.composeRule(tmpBLCWASecond, new OR());//(10.38) Thesis
-						}
-					}//AND WE DO NOTHING IN CASE THERE ARE NO RULES WITH CONFIDENCE_IDX < 1, at least that is what seems to be expressed in the thesis
-				}
-				break;
-				/**
-				 * GENERALIZED CCEC_BLC_pCWA
-				 * No sólo cuando hay una sola regla, sino cuando alguna de las reglas comparte alguna variable, se hace la diferenciacion.
-				 		if(max1[COVERINGR_IDX] == 1) { //si ConvR = 1 (pg 113 de Thesis Ale)
-							tmpBestRule0 = this.composeRule(tmpMaxRegla1_Regles, new AND());
-						} else {
-							tmpBestRule0 = this.composeRule(tmpMaxRegla1_Regles, new OR());
-						}
-						
-						if(max2[COVERINGR_IDX] == 1) { //si ConvR = 1 (pg 113 de Thesis Ale)
-							tmpBestRule1 = this.composeRule(tmpMaxRegla2_Regles, new AND());
-						} else {
-							tmpBestRule1 = this.composeRule(tmpMaxRegla2_Regles, new OR());
-						}
-						System.out.println(tmpBestRule0.toStringReglaNormal());
-						System.out.println(tmpBestRule1.toStringReglaNormal());
-						
-						if(tmpBestRule0.equalAntecedents(tmpBestRule1)){
-							bestRules[0] = tmpBestRule0;
-							bestRules[1] = tmpBestRule1;
-						}	else	{
-							tmpBLCWAFirst.add(tmpBestRule0);
-							tmpBLCWAFirst.add(this.negateRule(tmpBestRule1));
-							bestRules[0] = this.composeRule(tmpBLCWAFirst, new OR());
-							
-							tmpBLCWASecond.add(tmpBestRule1);
-							tmpBLCWASecond.add(this.negateRule(tmpBestRule0));
-							bestRules[1] = this.composeRule(tmpBLCWASecond, new OR());
-						}
-					break;	
-				*/
-				/**
-				 * GENERALIZED CCEC_BLGC_CWA
-				 * No sólo cuando hay una sola regla, sino cuando alguna de las reglas comparte alguna variable, se hace la diferenciacion.
-				 		if(max1[COVERINGR_IDX] == 1) { //si ConvR = 1 (pg 113 de Thesis Ale)
-							tmpBestRule0 = this.composeRule(tmpMaxRegla1_Regles, new AND());
-						} else {
-							tmpBestRule0 = this.composeRule(tmpMaxRegla1_Regles, new OR());
-						}
-						
-						if(max2[COVERINGR_IDX] == 1) { //si ConvR = 1 (pg 113 de Thesis Ale)
-							tmpBestRule1 = this.composeRule(tmpMaxRegla2_Regles, new AND());
-						} else {
-							tmpBestRule1 = this.composeRule(tmpMaxRegla2_Regles, new OR());
-						}
-						System.out.println(tmpBestRule0.toStringReglaNormal());
-						System.out.println(tmpBestRule1.toStringReglaNormal());
-						
-						if(tmpBestRule0.equalAntecedents(tmpBestRule1)){
-							if(max1[COVERINGR_IDX] > max2[COVERINGR_IDX]){
-								bestRules[0] = tmpMaxRegla1_Regles.firstElement();
-								bestRules[1] = this.negateRule(bestRules[0]);
-							} else {
-								bestRules[1] = tmpMaxRegla2_Regles.firstElement();
-								bestRules[0] = this.negateRule(bestRules[1]);
-							}
-						} else {
-							tmpBLCWAFirst.add(tmpBestRule0);
-							tmpBLCWAFirst.add(this.negateRule(tmpBestRule1));
-							bestRules[0] = this.composeRule(tmpBLCWAFirst, new OR());
-							
-							tmpBLCWASecond.add(tmpBestRule1);
-							tmpBLCWASecond.add(this.negateRule(tmpBestRule0));
-							bestRules[1] = this.composeRule(tmpBLCWASecond, new OR());
-						}
-						break;
-				 */
-				
-
-			
+			case CCEC_BLGC_CWA:				
+				Object[] obj = cleanRules(tmpMaxRegla1_Regles, tmpMaxRegla2_Regles);
+				m5Rules1 = (Vector<Regla>) obj[0];
+				m5Rules2 = (Vector<Regla>) obj[1];
+				bestRules = BL_pCWA(m5Rules1, m5Rules2, max1, max2);
+				break;				
 		}
 		
 		return bestRules;
@@ -3522,7 +3489,7 @@ public void SetearEstadoActual(String var)throws Exception{
 			case CCEC_BGC_CWA: //Best Global Concept and Close-World Assumption
 			//NUEVO ALBERTO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 			case CCEC_BLC_pCWA:
-			case CCEC_BLGC_CWA:
+			case CCEC_BLGC_CWA:			
 			//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 				//We maximize the confident
 				if(conf > max[CONFIDENCE_IDX])

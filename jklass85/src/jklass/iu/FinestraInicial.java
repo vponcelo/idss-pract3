@@ -83,7 +83,7 @@ public class FinestraInicial extends JWindow {
     jLabel1.setFont(new java.awt.Font("Dialog", 1, 20));
     jLabel1.setRequestFocusEnabled(true);
     jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
-    jLabel1.setText("Java-KLASS v8.4 (2011)");
+    jLabel1.setText("Java-KLASS v8.6 (2011)");
     jLabel2.setFont(new java.awt.Font("Dialog", 0, 16));
     jLabel2.setBorder(border3);
     jLabel2.setHorizontalAlignment(SwingConstants.CENTER);

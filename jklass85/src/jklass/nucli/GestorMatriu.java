@@ -1924,7 +1924,7 @@ import jklass.iu.PanelClassificaEst;
          String op;
          Hashtable opcEst;
       
-      // Tractament de la llista de vars Num / Num
+         // Tractament de la llista de vars Num / Num
          if ((llistaVar[0] == null) || (llistaVar[1] == null)) {
             lon = 0;
          } 
@@ -1978,6 +1978,7 @@ import jklass.iu.PanelClassificaEst;
                proC = (PropCategorica) propietats.obtenirPropietat(llistaKs[1]);
                min = proN.obtenirEstadistics().obtenirMin();
                max = proN.obtenirEstadistics().obtenirMax();
+               logger.warning("PROPIETATS: "+proC.llModsOrdre);
                calculs[1][i] = new CalculsBivNC(proC.llModsOrdre, proN.obtenirRangMin(),
                                          proN.obtenirRangMax(), min, max);
                calcNC = (CalculsBivNC) calculs[1][i];
@@ -6142,9 +6143,119 @@ llProps = propietats.llistarIDsPropietasEstados(varsest);
           * @author Laia Riera Guerra
           */ 
        public void ferDescripBC(ArrayList nomsBC,ArrayList llistaVariables,Vector[] llistaEstads,Vector[] llistaEstadsC,Opcions opcUniv,Opcions opcClass,int avaluacio,int tipusDescriptiva,int esPart,boolean printRegles, String subfix) throws Exception,CreacioFitxerException, OpcioIncorrectaException, ParamIncorrecteException, CalculException {
+           FitxerTex fitxer;
+           String nomBase, nomFitxer;
+           GeneradorTex gen;	   
+           String nomBC;
+           ArrayList al;
+           String[][] llistaVar;
+           String[][] llistaVarC;
+           CalculsUniv[][] calculsU;
+           CalculsClass[] calculsC;
+           ArrayList alCalculsU=new ArrayList();
+           ArrayList alCalculsC=new ArrayList();
+           ArrayList alReglesNormals=new ArrayList();
+           ArrayList alNomsRegles=new ArrayList();
+           nomBase = dirResultats + new File(nom).getName();
+           //nomFitxer = nomBase + "dreg";
+           nomFitxer = nomBase + subfix;
+           
+           fitxer = new FitxerTex(nomFitxer);
+           gen = new GeneradorTex(fitxer); 
+           try {
+              for(int i=0;i<nomsBC.size();i++){	
+                 nomBC=(String)nomsBC.get(i);
+                 ArrayList alRegles=this.escriureReglaNormal(nomBC);
+                 alReglesNormals.add(alRegles);
+                 if(avaluacio==1){
+                    ArrayList nomsRegles=this.obtenirNomsReglesBC(nomBC);
+                    alNomsRegles.add(nomsRegles);
+                 }
+                 else if(avaluacio==2){
+                    ArrayList nomsRegles=this.obtenirNomsReglesBC(nomBC);
+                    ArrayList consequents=new ArrayList();
+                    for(int s=0;s<nomsRegles.size();s++){
+                       BaseConeixement BaseC=this.obtenirBC(nomBC);
+                       String snom=(String)nomsRegles.get(s);
+                       String c=this.obtenirConsequent(snom, BaseC);
+                       consequents.add(c);
+                    }
+                    alNomsRegles.add(consequents);	    			
+                 }
+                 else{
+                    ArrayList bc=new ArrayList();
+                    bc.add(nomBC);
+                    alNomsRegles.add(bc);
+                 }
+              	
+                 switch (tipusDescriptiva) {
+                    case 1:	    	    			
+                       al=(ArrayList)llistaVariables.get(i);
+                       llistaVar=(String[][])al.get(0);
+                       calculsU = ferCalculsUniv(llistaVar,llistaEstads, opcUniv);
+                       alCalculsU.add(calculsU);
+                       logger.fine("Calculs per descr. univariant realitzats.");	    			
+                       break;	       
+                    case 2:	    			
+                       al=(ArrayList)llistaVariables.get(i);
+                       llistaVarC=(String[][])al.get(1);
+                       calculsC = ferCalculsClass(llistaVarC,llistaEstadsC, opcClass);
+                       alCalculsC.add(calculsC);
+                       logger.fine("Calculs per descr. per classes realitzats.");
+                       break;
+                    case 3:	    			
+                       al=(ArrayList)llistaVariables.get(i);
+                       llistaVar=(String[][])al.get(0);         
+                       calculsU = ferCalculsUniv(llistaVar,llistaEstads, opcUniv);
+                       alCalculsU.add(calculsU);
+                       llistaVarC=(String[][])al.get(1);
+                       calculsC = ferCalculsClass(llistaVarC,llistaEstadsC, opcClass);
+                       alCalculsC.add(calculsC);
+                       logger.fine("Calculs per descr.univariant i per classes realitzats.");	    			
+                       break;
+                 }
+              
+              }
+              gen.generarLtxPerVarsBC(nomsBC,llistaVariables,llistaEstads,llistaEstadsC,opcUniv,opcClass,avaluacio,tipusDescriptiva,alCalculsU,alCalculsC,alReglesNormals,alNomsRegles,ordreProps,esPart,printRegles);
+           }
+               catch (CreacioFitxerException e) {
+                 throw e;
+              }
+               catch (IOException e) {
+                 throw new CreacioFitxerException("Error d'escriptura: " + e.getMessage());
+              }
+               catch (Exception e) {
+                 throw e;
+              }
+            
+        }
+       /**
+        * 
+        * @param nomsBC
+        * @param llistaVariables
+        * @param llistaEstads
+        * @param llistaEstadsC
+        * @param opcUniv
+        * @param opcClass
+        * @param avaluacio
+        * @param tipusDescriptiva
+        * @param esPart
+        * @param printRegles
+        * @param subfix
+        * @param gen
+        * @throws Exception
+        * @throws CreacioFitxerException
+        * @throws OpcioIncorrectaException
+        * @throws ParamIncorrecteException
+        * @throws CalculException
+        */
+       public void ferDescripBC(ArrayList nomsBC,ArrayList llistaVariables,Vector[] llistaEstads,Vector[] llistaEstadsC,
+    		   Opcions opcUniv,Opcions opcClass,int avaluacio,int tipusDescriptiva,int esPart,boolean printRegles, String subfix
+    		   ,GeneradorTex gen) 
+    				   throws Exception,CreacioFitxerException, OpcioIncorrectaException, ParamIncorrecteException, CalculException {
          FitxerTex fitxer;
          String nomBase, nomFitxer;
-         GeneradorTex gen;	   
+         	   
          String nomBC;
          ArrayList al;
          String[][] llistaVar;
@@ -6155,12 +6266,18 @@ llProps = propietats.llistarIDsPropietasEstados(varsest);
          ArrayList alCalculsC=new ArrayList();
          ArrayList alReglesNormals=new ArrayList();
          ArrayList alNomsRegles=new ArrayList();
-         nomBase = dirResultats + new File(nom).getName();
-         //nomFitxer = nomBase + "dreg";
-         nomFitxer = nomBase + subfix;
-         
-         fitxer = new FitxerTex(nomFitxer);
-         gen = new GeneradorTex(fitxer); 
+         /**
+          * @autor Marco Villegas. 28-12-2011.
+          * Now this function will receive a <code> GeneradorTex </code> object, to write the results.
+          * It is necessary to include in a single file a DescripBC from differents matrixes.
+          */
+         if (gen == null){
+        	 nomBase = dirResultats + new File(nom).getName();
+             nomFitxer = nomBase + subfix;             
+             fitxer = new FitxerTex(nomFitxer);
+             gen = new GeneradorTex(fitxer);
+         }
+          
          try {
             for(int i=0;i<nomsBC.size();i++){	
                nomBC=(String)nomsBC.get(i);
@@ -6385,7 +6502,7 @@ llProps = propietats.llistarIDsPropietasEstados(varsest);
         * @author Alfons Bosch, Patrícia Garcia
         * @return
         */
-       public BaseConeixement generacioReglesBoxPlot(String[][] llistaVars, boolean descriptiva, boolean mkmz, boolean revisat) throws Exception{
+       public BaseConeixement generacioReglesBoxPlot(String[][] llistaVars, boolean descriptiva, boolean mkmz, boolean revisat) throws Exception{    	
    		String nomBC = this.nomBCPerDefecte();
    		BaseConeixementProb bc = crearBCProb(nomBC);
        
@@ -6414,14 +6531,40 @@ llProps = propietats.llistarIDsPropietasEstados(varsest);
         * @throws Exception
         * @author Alfons Bosch, Patrícia Garcia
         */
-       private boolean generarReglesBoxPlotClasse(String[] varsCat, String[] varsNum, String varClasse, boolean mkmz, boolean revisat, BaseConeixementProb bc) throws Exception{
+       private boolean generarReglesBoxPlotClasse(String[] varsCat, String[] varsNum, 
+    		   String varClasse, boolean mkmz, boolean revisat, BaseConeixementProb bc) 
+    				   throws Exception{    	
        	//Realitzem la discretització boxplot based de les variables numeriques
+    	   System.out.println("Generar reglas boxplot: ");
+    	   System.out.println("CATEGORICAS:");
+    	   for (String s : varsCat){
+    		   System.out.println(s);
+    	   }
+    	   System.out.println("NUMERICAS:");
+    	   for (String s : varsNum){
+    		   System.out.println(s);
+    	   }
+    	   System.out.println("VarCLASE: " + varClasse +
+    			   ((PropCategorica) this.obtenirPropietat(varClasse)).getLlModalitats());
+    	   System.out.println("MKMZ-revisat:"+mkmz+" "+revisat);
+    	   
        	String[][] numeriquesBBD= new String[2][];
        	String[] varClasseArray = new String[1];
        	varClasseArray[0] = varClasse;
        	numeriquesBBD[0] = varsNum;
        	numeriquesBBD[1] = varClasseArray;
        	List[] intervals = discretitzarBoxPlot(numeriquesBBD, false, revisat,mkmz);
+        System.out.println("INTERVALOS DISCRETIZ");
+        int j = 0;
+       	for (Object l : intervals[1]){       		
+			float[] b = (float[]) ((List) l).get(0);
+			// System.out.println(b[0]+" "+b[1]+" "+b[2]+" "+b[3]);
+			List ls = (List)intervals[1].get(j);
+			System.out.println(varsNum[j] + " " + b[0] + " " + b[1]+ " "+ ls.get(1)+ " "+ ls.get(2));
+			j += 1;
+     	   
+       	}
+       	
        	List<PropCategorica> varsNumeriquesCat = intervals[0];
       
        	//Creem i omplim els inputs de la funcio que realitzarà els calculs
@@ -6462,25 +6605,31 @@ llProps = propietats.llistarIDsPropietasEstados(varsest);
          		String varCat=llistaVarCalculs[5][indexCat];
            	        
            	//Per cada modalitat de la variable cateogrica
+         		System.out.println("GENERAR_REGLA_PROB_NUM");
            	for ( String modVarCategorica : calculCC.obtenirModalitatsY() ){
            		//Obtenim les frecuencies
            		CalculsUnivCateg freqsPerModalitat = calculCC.obtenirCalculsUniv(modVarCategorica);
            		for (int i=0;i<freqsPerModalitat.obtenirLonLlistaMods();i++){
            			//Generem una regla per cada una de les modalitats de classe
            			String modalitatClasse = freqsPerModalitat.obtenirModalitat(i);
-           			float freqRelativa = freqsPerModalitat.obtenirFreqRel(i);
-           			
+           			float freqRelativa = freqsPerModalitat.obtenirFreqRel(i);           			
            			//La variable original era categòrica (a partir de IndexCat totes seran numeriques)
            			if ( indexCat < iniciVariablesDiscretitzades ){
            				bc.generarReglaProb(varCat,modVarCategorica,varClasse,modalitatClasse,freqRelativa);
            			}
            			//La variable original era numèrica
            			else{
-           				int indexNumActual = indexCat-iniciVariablesDiscretitzades;
-           				bc.generarReglaProbNumerica(varsNum[indexNumActual],numeroModalitat,(List)intervals[1].get(indexNumActual),varClasse,modalitatClasse,freqRelativa);
+           				int indexNumActual = indexCat-iniciVariablesDiscretitzades;   
+           				
+           				System.out.println(varsNum[indexNumActual]+"  " + numeroModalitat+ "  "+
+           						varClasse+ "  " +
+           						modalitatClasse+"  "+ freqRelativa);           				
+           				
+           				bc.generarReglaProbNumerica(varsNum[indexNumActual],numeroModalitat,
+           						(List)intervals[1].get(indexNumActual),varClasse,modalitatClasse,
+           						freqRelativa);
            			}
            		}
-           		
            		numeroModalitat++;
            	}
            	indexCat++;
@@ -6488,6 +6637,11 @@ llProps = propietats.llistarIDsPropietasEstados(varsest);
            
            for ( PropCategorica propAux : (List<PropCategorica>)intervals[0] ){
            	this.eliminarPropietat(propAux);
+           }
+           Iterator it = bc.alNomsRegles.iterator();
+           while (it.hasNext()){
+        	   Regla r = bc.obtenirRegla((String)it.next());
+        	   System.out.println(r.toStringRegla());
            }
        	return true;
        }

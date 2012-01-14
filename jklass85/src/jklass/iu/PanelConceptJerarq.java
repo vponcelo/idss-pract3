@@ -658,10 +658,18 @@ public class PanelConceptJerarq extends JPanel
 						nomClass, jCheckBoxGenerarMKMZ.isSelected(), jCheckBoxRevisat.isSelected(), results, rules, 
 						jCheckBoxInformacioBC.isSelected(), crt);*/
 					
+//					ok = gestor.obtenirConceptJerarq(llistaVars, numClass, nomTall, frPare.obtenirDirActual(), frPare.obtenirNomDades(),
+//							nomClass, jCheckBoxGenerarMKMZ.isSelected(), jCheckBoxRevisat.isSelected(), results, rules, 
+//							jCheckBoxInformacioBC.isSelected(), crt,llistaBC);
+					
+					/**
+					 * New by Marco Villegas - 14-01-2012
+					 */
+				
+					String nameFileTex = new String("ConceptJerarq");
 					ok = gestor.obtenirConceptJerarq(llistaVars, numClass, nomTall, frPare.obtenirDirActual(), frPare.obtenirNomDades(),
 							nomClass, jCheckBoxGenerarMKMZ.isSelected(), jCheckBoxRevisat.isSelected(), results, rules, 
-							jCheckBoxInformacioBC.isSelected(), crt,llistaBC);
-				
+							jCheckBoxInformacioBC.isSelected(), crt,llistaBC, nameFileTex);
 					if (ok) 
 				    {
 				    	frPare.actualitzarBarraEstat("S'ha realitzat la conceptualització jeràrquica correctament.", false);

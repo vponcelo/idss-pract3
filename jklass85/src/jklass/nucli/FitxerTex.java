@@ -15,7 +15,7 @@ import java.text.ParseException;
  * @author Mª del Mar Colillas
  * @version v.0
  */
-class FitxerTex extends Fitxer {
+public class FitxerTex extends Fitxer {
   /**
    * Objecte que permet donar format a un número.
    */

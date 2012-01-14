@@ -851,7 +851,7 @@ public void treureRegla(String sNom) {
 							convertit[s]=new Dada("1");
 							p.actualitzarLliure("1");
 						}
-						System.out.println("El convertit "+s+" = "+convertit[s].obtenirValor());
+						//System.out.println("El convertit "+s+" = "+convertit[s].obtenirValor());
 					}
 					llistaProp.add(p);
 				}else{
@@ -875,7 +875,7 @@ public void treureRegla(String sNom) {
 							convertit[s]=new Dada(reg);
 							p.actualitzarLliure(reg);
 						}
-						System.out.println("El convertit "+s+" = "+convertit[s].obtenirValor());
+						//System.out.println("El convertit "+s+" = "+convertit[s].obtenirValor());
 					}
 					llistaProp.add(p);
 				}		
@@ -926,7 +926,7 @@ public void treureRegla(String sNom) {
 						convertit[j]=new Dada("1");
 						p.actualitzarLliure("1");
 					}
-					System.out.println("El convertit "+j+" = "+convertit[j].obtenirValor());
+					//System.out.println("El convertit "+j+" = "+convertit[j].obtenirValor());
 				}
 				llistaProp.add(p);
 			}else{
@@ -950,7 +950,7 @@ public void treureRegla(String sNom) {
 						convertit[j]=new Dada(reg);
 						p.actualitzarLliure(reg);
 					}
-					System.out.println("El convertit "+j+" = "+convertit[j].obtenirValor());
+					//System.out.println("El convertit "+j+" = "+convertit[j].obtenirValor());
 				}
 				llistaProp.add(p);
 			}			

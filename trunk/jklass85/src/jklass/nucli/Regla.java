@@ -263,7 +263,7 @@ public class Regla {
 		int card = 0;		//number of objects satisfying the antecedent and the consequent
 		int n = 0;			//number of objects satisfying the consequent
 		float res = -1;
-		
+			
 		int pos = conseguent.indexOf(")");
 		String nomClass = conseguent.substring(1, pos);
 		String subCons = conseguent.substring(pos+1);

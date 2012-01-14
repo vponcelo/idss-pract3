@@ -54,7 +54,7 @@ abstract class Fitxer {
     nom = nomFitxer;
   }
 
-  String obtenirDirAbsolut(){
+  public String obtenirDirAbsolut(){
     return new File(nom).getParent();
   }
 

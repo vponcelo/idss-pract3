@@ -25,14 +25,16 @@ import java.util.*;
  * @version v.4
  */
 
-class GeneradorTex {
+public class GeneradorTex {
   private static Logger logger=Logger.getLogger(GeneradorTex.class.getName());
   private FitxerTex fTex;
 
-  GeneradorTex(FitxerTex fitxer) {
+  public GeneradorTex(FitxerTex fitxer) {
     fTex = fitxer;
   }
-
+  public FitxerTex getFitxerTex(){
+		return this.fTex;
+	}
   void escriureTitol(String titol) throws IOException{
     String str;
 

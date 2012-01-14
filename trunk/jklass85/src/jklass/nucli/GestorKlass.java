@@ -3433,12 +3433,13 @@ public class GestorKlass {
 	 * 
 	 * @author Esther Lozano
 	 * @author Grup SISPD QT 2009-2010
+	 * @throws Exception 
 	 */
 	public boolean obtenirConceptJerarq(String[][] llistaVars, String numClass,
 			String nomTall, File file, String nomMatriu, String nomClase,
 			boolean generar, boolean revisat, Vector results,
 			Vector<Regla> rules, boolean intermediesBC, int kiMethod,
-			ArrayList llistaNomsBc, String nameFileTex) {
+			ArrayList llistaNomsBc, String nameFileTex) throws Exception {
 		boolean ok = true;
 		String nomCls;
 		int numCls = Integer.parseInt(numClass);
@@ -3520,8 +3521,9 @@ public class GestorKlass {
 //				System.out.println(rule.toStringRegla());
 //			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			e.printStackTrace();			
 			ok = false;
+			throw e;
 		}
 
 		return ok;

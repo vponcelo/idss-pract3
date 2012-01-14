@@ -667,9 +667,16 @@ public class PanelConceptJerarq extends JPanel
 					 */
 				
 					String nameFileTex = new String("ConceptJerarq");
-					ok = gestor.obtenirConceptJerarq(llistaVars, numClass, nomTall, frPare.obtenirDirActual(), frPare.obtenirNomDades(),
-							nomClass, jCheckBoxGenerarMKMZ.isSelected(), jCheckBoxRevisat.isSelected(), results, rules, 
-							jCheckBoxInformacioBC.isSelected(), crt,llistaBC, nameFileTex);
+					String msj = "";
+					try {
+						ok = gestor.obtenirConceptJerarq(llistaVars, numClass, nomTall, frPare.obtenirDirActual(), frPare.obtenirNomDades(),
+								nomClass, jCheckBoxGenerarMKMZ.isSelected(), jCheckBoxRevisat.isSelected(), results, rules, 
+								jCheckBoxInformacioBC.isSelected(), crt,llistaBC, nameFileTex);
+					} catch (Exception e2) {
+						// TODO Auto-generated catch block
+						msj = e2.getMessage();
+						e2.printStackTrace();
+					}
 					if (ok) 
 				    {
 				    	frPare.actualitzarBarraEstat("S'ha realitzat la conceptualització jeràrquica correctament.", false);
@@ -701,7 +708,7 @@ public class PanelConceptJerarq extends JPanel
 				    }
 				    else 
 				    {
-				      frPare.actualitzarBarraEstat("No ha estat possible realitzar la conceptualització jeràrquica", true);
+				      frPare.actualitzarBarraEstat("No ha estat possible realitzar la conceptualització jeràrquica: "+msj, true);
 		
 				    }
 				    frPare.remove(this);
